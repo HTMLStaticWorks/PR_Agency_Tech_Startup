@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise PR Solutions | Prism PR Alternate Experience</title>
+    <meta name="description" content="Experience Prism PR's alternate layout designed for enterprise tech partners. Focused on results, data, and global reach.">
+    <!-- Links and Meta - same as index.html -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar (Same as index) -->
+    <nav class="navbar navbar-expand-lg navbar-prism sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
+                <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">PRISM<span class="text-primary">PR</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 ms-lg-3 mt-3 mt-lg-0">
+                        <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
+                            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                                <mask class="moon" id="moon-mask">
+                                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                                    <circle cx="24" cy="10" r="6" fill="black" />
+                                </mask>
+                                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                                <g class="sun-beams" stroke="currentColor">
+                                    <line x1="12" y1="1" x2="12" y2="3" />
+                                    <line x1="12" y1="21" x2="12" y2="23" />
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                    <line x1="1" y1="12" x2="3" y2="12" />
+                                    <line x1="21" y1="12" x2="23" y2="12" />
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                                </g>
+                            </svg>
+                        </button>
+                        <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                        <a href="login.html" class="btn btn-prism btn-prism-primary btn-sm">Client Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home 2: Split Layout Hero -->
+    <section class="min-vh-100 d-flex align-items-center py-5 home2-hero">
+        <div class="container">
+            <div class="row g-0 rounded-4 overflow-hidden shadow-lg bg-theme-white">
+                <div class="col-lg-6 p-5 d-flex flex-column justify-content-center">
+                    <h1 class="display-3 fw-bold mb-4">Results Built for <br><span class="text-gradient">Scale</span></h1>
+                    <p class="lead text-muted mb-5">Prism PR index2 offers a data-driven approach to communications. We don't just pitch; we engineer narratives that move markets.</p>
+                    <div class="d-grid gap-3 d-md-flex">
+                        <a href="contact.html" class="btn btn-prism btn-prism-primary px-5">Start Campaign</a>
+                        <a href="about.html" class="btn btn-prism btn-prism-outline px-5">Our Method</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 bg-dark text-white p-5 d-flex flex-column justify-content-center position-relative" data-bs-theme="dark">
+                    <div class="hero-gradient" style="opacity: 0.3;"></div>
+                    <div class="mb-5">
+                        <h2 class="h1 mb-4">The Enterprise Choice</h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-center gap-3">
+                                <i class="bi bi-check-circle-fill text-secondary"></i>
+                                <span>Global Bureau Access (London, NYC, Singapore)</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center gap-3">
+                                <i class="bi bi-check-circle-fill text-secondary"></i>
+                                <span>Dedicated Crisis Monitoring AI</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center gap-3">
+                                <i class="bi bi-check-circle-fill text-secondary"></i>
+                                <span>Quarterly Impact Reporting</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="p-4 rounded-3 border border-white border-opacity-10 bg-theme-white bg-opacity-5">
+                            <p class="mb-2 italic opacity-75">"Prism PR's enterprise portal is a game-changer for our internal marketing team."</p>
+                            <p class="small fw-bold mb-0">— Director of Comms, CloudScale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Stats -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="display-4 fw-bold text-primary mb-2">98%</div>
+                    <p class="text-muted small fw-bold text-uppercase">Placement Success</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="display-4 fw-bold text-primary mb-2">12B+</div>
+                    <p class="text-muted small fw-bold text-uppercase">Total Impressions</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="display-4 fw-bold text-primary mb-2">450</div>
+                    <p class="text-muted small fw-bold text-uppercase">Active Tech Logos</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="display-4 fw-bold text-primary mb-2">$5B</div>
+                    <p class="text-muted small fw-bold text-uppercase">Client Funding Raised</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="section-padding bg-theme-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="assets/images/modern-agency-office.png" class="img-fluid rounded-5 shadow-2xl" alt="Methodology">
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="text-primary fw-bold text-uppercase ls-1">Our Methodology</h6>
+                    <h2 class="display-5 fw-bold mb-4">Engineered for <span class="text-primary">Impact</span></h2>
+                    <p class="lead text-muted mb-5">We apply a quantitative approach to PR, merging high-level narrative design with algorithmic placement strategies.</p>
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="flex-shrink-0 fs-3 text-secondary"><i class="bi bi-cpu"></i></div>
+                        <div>
+                            <h5>Deep Tech Immersion</h5>
+                            <p class="small text-muted">We don't just write releases; we understand your source code and whitepapers.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4">
+                        <div class="flex-shrink-0 fs-3 text-secondary"><i class="bi bi-intersect"></i></div>
+                        <div>
+                            <h5>Cross-Channel Synergy</h5>
+                            <p class="small text-muted">Mapping your story across print, digital, social, and executive stages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Network Section -->
+    <section class="section-padding bg-theme-light">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold">Strategic <span class="text-secondary">Network</span></h2>
+                    <p class="text-muted">Unparalleled access to the global tech media landscape.</p>
+                </div>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="prism-card">
+                        <div class="feature-visual">
+                            <img src="assets/images/media-spotlight.png" alt="Technical Whitepapers">
+                        </div>
+                        <h4>Technical Whitepapers</h4>
+                        <p class="small text-muted">Converting complex technology into stories that resonate with Tier-1 journalists.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="prism-card">
+                        <div class="feature-visual">
+                            <img src="assets/images/services_hero_bg.png" alt="Exclusive Briefings">
+                        </div>
+                        <h4>Exclusive Briefings</h4>
+                        <p class="small text-muted">Curated private rounds for top-tier reporters during critical stealth exits.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="prism-card border-warning">
+                        <div class="feature-visual">
+                            <img src="assets/images/blog-thumb-3.png" alt="Crisis Protocol">
+                        </div>
+                        <h4>Crisis Protocol</h4>
+                        <p class="small text-muted">Military-grade reputation protection for high-growth technical infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Hubs Section -->
+    <section class="section-padding bg-dark text-white" data-bs-theme="dark">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <h2 class="display-5 fw-bold mb-4">Global <span class="text-gradient">Reach</span></h2>
+                    <p class="opacity-75 mb-5">Strategizing from the world's primary innovation hubs to ensure your story breaks in every relevant market.</p>
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="fw-bold fs-4">Silicon Valley</div>
+                            <div class="small opacity-50">Headquarters</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fw-bold fs-4">London</div>
+                            <div class="small opacity-50">EMEA Hub</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fw-bold fs-4">Singapore</div>
+                            <div class="small opacity-50">APAC Outreach</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fw-bold fs-4">Tel Aviv</div>
+                            <div class="small opacity-50">Cyber & AI Center</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="position-relative p-5 bg-theme-white bg-opacity-5 rounded-4 border border-white border-opacity-10">
+                        <h4 class="mb-4">Recent Global Placements</h4>
+                        <div class="list-group list-group-flush bg-transparent">
+                            <div class="list-group-item bg-transparent text-white border-white border-opacity-10 px-0">
+                                <div class="d-flex justify-content-between">
+                                    <span>The New York Times</span>
+                                    <span class="text-secondary small">Business Tech</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item bg-transparent text-white border-white border-opacity-10 px-0">
+                                <div class="d-flex justify-content-between">
+                                    <span>FT.com</span>
+                                    <span class="text-secondary small">Market Insight</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item bg-transparent text-white border-white border-opacity-10 px-0">
+                                <div class="d-flex justify-content-between">
+                                    <span>Nikkei Asia</span>
+                                    <span class="text-secondary small">Emerging Tech</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA index2 -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="display-6 fw-bold mb-4">Partner with the <span class="text-dark">Best</span></h2>
+            <p class="mb-5 lead opacity-75">Join the network of top-tier deep tech startups.</p>
+            <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold text-primary">Get Started</a>
+        </div>
+    </section>
+
+    <footer class="section-padding bg-theme-white border-top">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
+                        <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
+                    </a>
+                    <p class="text-muted mb-4 small">Strategic tech startup communications. We bridge the gap between complex innovation and global media influence.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-primary fs-5" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-primary fs-5" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-primary fs-5" aria-label="Github"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Media Relations</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Press Kit Strategy</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Crisis Management</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Media Training</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Explore</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">Agency Story</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-muted text-decoration-none small">Technical Insights</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-muted text-decoration-none small">Pricing Plans</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact Hub</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Stay Informed</h5>
+                    <p class="text-muted small">Get the latest deep-tech PR insights delivered to your inbox.</p>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control rounded-start-pill ps-4 py-3" placeholder="Founder's Email" required>
+                            <button type="submit" class="btn btn-primary rounded-end-pill px-4">Join Hub</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="opacity-10">
+            <div class="row align-items-center g-3 mt-4">
+                <div class="col-md-6">
+                    <p class="text-muted small mb-0">&copy; 2026 Prism PR Agency. Elevating the next technical billion.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0 footer-links">
+                        <li class="list-inline-item me-4"><a href="#" class="text-muted small text-decoration-none">Privacy Engine</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted small text-decoration-none">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

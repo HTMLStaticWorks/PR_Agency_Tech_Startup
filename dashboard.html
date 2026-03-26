@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard | Prism PR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-theme-light">
+
+    <!-- Dash Sidebar (Simplified with Offcanvas for Mobile) -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar (Desktop) -->
+            <div class="col-lg-2 bg-theme-white d-none d-lg-block border-end min-vh-100 p-4 sticky-top">
+                <a href="index.html" class="navbar-brand d-flex align-items-center mb-5">
+                    <i class="bi bi-pentagon-half text-primary fs-3 me-2"></i>
+                    <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
+                </a>
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item"><a class="nav-link active rounded-3 bg-primary bg-opacity-10 text-primary fw-bold" href="#"><i class="bi bi-speedometer2 me-2"></i> Overview</a></li>
+                    <li class="nav-item"><a class="nav-link text-muted" href="#"><i class="bi bi-newspaper me-2"></i> Mentions</a></li>
+                    <li class="nav-item"><a class="nav-link text-muted" href="#"><i class="bi bi-folder me-2"></i> Press Kits</a></li>
+                    <li class="nav-item"><a class="nav-link text-muted" href="#"><i class="bi bi-calendar-event me-2"></i> Calendar</a></li>
+                    <li class="nav-item mt-5"><a class="nav-link text-muted" href="#"><i class="bi bi-gear me-2"></i> Settings</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="login.html"><i class="bi bi-box-arrow-left me-2"></i> Logout</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-10 p-4 p-md-5">
+                <header class="d-flex justify-content-between align-items-center mb-5">
+                    <div>
+                        <h1 class="h3 fw-bold mb-1">Welcome back, <span class="text-primary">NeuroLink AI</span></h1>
+                        <p class="text-muted small mb-0">Your PR campaign is currently <span class="badge bg-success bg-opacity-10 text-success">Scaling High</span></p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-outline-secondary btn-sm rounded-circle p-2"><i class="bi bi-bell"></i></button>
+                        <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
+                            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                                <mask class="moon" id="moon-mask">
+                                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                                    <circle cx="24" cy="10" r="6" fill="black" />
+                                </mask>
+                                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                                <g class="sun-beams" stroke="currentColor">
+                                    <line x1="12" y1="1" x2="12" y2="3" />
+                                    <line x1="12" y1="21" x2="12" y2="23" />
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                    <line x1="1" y1="12" x2="3" y2="12" />
+                                    <line x1="21" y1="12" x2="23" y2="12" />
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                                </g>
+                            </svg>
+                        </button>
+                        <button id="rtl-toggle" class="btn btn-link text-main p-0"><i class="bi bi-translate"></i></button>
+                        <img src="https://i.pravatar.cc/40?u=neurolink" class="rounded-circle border" width="40" height="40" alt="Avatar">
+                    </div>
+                </header>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="prism-card shadow-sm border-0">
+                            <p class="text-muted small fw-bold text-uppercase mb-2">Total Mentions</p>
+                            <div class="h2 fw-bold mb-0">128</div>
+                            <div class="text-success small"><i class="bi bi-arrow-up-short"></i> +12.5% this week</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="prism-card shadow-sm border-0">
+                            <p class="text-muted small fw-bold text-uppercase mb-2">Media Reach</p>
+                            <div class="h2 fw-bold mb-0">1.2M</div>
+                            <div class="text-success small"><i class="bi bi-arrow-up-short"></i> +5.2% this week</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="prism-card shadow-sm border-0">
+                            <p class="text-muted small fw-bold text-uppercase mb-2">Press Kit Status</p>
+                            <div class="badge-status bg-success text-white px-3 py-1 rounded-pill small d-inline-block mt-2">Ready</div>
+                            <button class="btn btn-link btn-sm text-primary btn-update-kit p-0 ms-2">Update</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart & Calendar Section -->
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="prism-card shadow-sm border-0">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h4 class="fw-bold h5 mb-0">Mention Velocity</h4>
+                                <select class="form-select form-select-sm w-25">
+                                    <option>Last 7 Days</option>
+                                    <option>Last 30 Days</option>
+                                </select>
+                            </div>
+                            <!-- Simple Custom Chart (CSS Based) -->
+                            <div class="d-flex align-items-end gap-3" style="height: 200px;">
+                                <div class="flex-grow-1 bg-theme-light rounded-top position-relative" style="height: 40%;">
+                                    <div class="chart-bar-inner bg-primary rounded-top position-absolute bottom-0 start-0 w-0 h-100 transition-normal" data-percentage="40%"></div>
+                                </div>
+                                <div class="flex-grow-1 bg-theme-light rounded-top position-relative" style="height: 60%;">
+                                    <div class="chart-bar-inner bg-primary rounded-top position-absolute bottom-0 start-0 w-0 h-100 transition-normal" data-percentage="60%"></div>
+                                </div>
+                                <div class="flex-grow-1 bg-theme-light rounded-top position-relative" style="height: 100%;">
+                                    <div class="chart-bar-inner bg-primary rounded-top position-absolute bottom-0 start-0 w-0 h-100 transition-normal" data-percentage="100%"></div>
+                                </div>
+                                <div class="flex-grow-1 bg-theme-light rounded-top position-relative" style="height: 80%;">
+                                    <div class="chart-bar-inner bg-primary rounded-top position-absolute bottom-0 start-0 w-0 h-100 transition-normal" data-percentage="80%"></div>
+                                </div>
+                                <div class="flex-grow-1 bg-theme-light rounded-top position-relative" style="height: 50%;">
+                                    <div class="chart-bar-inner bg-primary rounded-top position-absolute bottom-0 start-0 w-0 h-100 transition-normal" data-percentage="50%"></div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-3 text-muted small">
+                                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="prism-card shadow-sm border-0">
+                            <h4 class="fw-bold h5 mb-4">PR Calendar</h4>
+                            <div class="calendar-grid mb-4">
+                                <div class="row g-2 text-center small fw-bold opacity-50 mb-2">
+                                    <div class="col">M</div><div class="col">T</div><div class="col">W</div><div class="col">T</div><div class="col">F</div>
+                                </div>
+                                <div class="row g-2 text-center">
+                                    <div class="col cal-day rounded p-2" data-event="No events">24</div>
+                                    <div class="col cal-day rounded p-2 active bg-primary text-white" data-event="TechCrunch Pitch Call @ 10AM">25</div>
+                                    <div class="col cal-day rounded p-2" data-event="Wired Q&A @ 2PM">26</div>
+                                    <div class="col cal-day rounded p-2" data-event="No events">27</div>
+                                    <div class="col cal-day rounded p-2" data-event="Campaign Review">28</div>
+                                </div>
+                            </div>
+                            <div id="event-details" class="p-3 bg-theme-light rounded-3 small text-muted">Select a date to see events.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Mentions Table -->
+                <div class="prism-card shadow-sm border-0 mt-5">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold h5 mb-0">Recent Mentions</h4>
+                        <input type="text" id="mention-search" class="form-control form-control-sm w-25" placeholder="Search mentions...">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="bg-theme-light">
+                                <tr class="small text-uppercase text-muted">
+                                    <th>Outlet</th>
+                                    <th>Headline</th>
+                                    <th>Reach</th>
+                                    <th>Sentiment</th>
+                                    <th>Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="mention-row">
+                                    <td><span class="fw-bold">TechCrunch</span></td>
+                                    <td>NeuroLink AI raises $50M to build...</td>
+                                    <td>850K</td>
+                                    <td><span class="badge bg-success-subtle text-success">Positive</span></td>
+                                    <td><a href="#" class="btn btn-link p-0 text-primary"><i class="bi bi-box-arrow-up-right"></i></a></td>
+                                </tr>
+                                <tr class="mention-row">
+                                    <td><span class="fw-bold">Wired</span></td>
+                                    <td>The future of AI is biological...</td>
+                                    <td>1.2M</td>
+                                    <td><span class="badge bg-success-subtle text-success">Positive</span></td>
+                                    <td><a href="#" class="btn btn-link p-0 text-primary"><i class="bi bi-box-arrow-up-right"></i></a></td>
+                                </tr>
+                                <tr class="mention-row">
+                                    <td><span class="fw-bold">The Verge</span></td>
+                                    <td>NeuroLink's new chip is faster...</td>
+                                    <td>400K</td>
+                                    <td><span class="badge bg-primary-subtle text-primary">Neutral</span></td>
+                                    <td><a href="#" class="btn btn-link p-0 text-primary"><i class="bi bi-box-arrow-up-right"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Dashboard Footer -->
+                <footer class="mt-5 pt-5 border-top">
+                    <div class="row align-items-center g-3">
+                        <div class="col-md-6">
+                            <p class="text-muted small mb-0">&copy; 2026 Prism PR Agency Portal. All rights reserved.</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item me-3"><a href="#" class="text-muted small text-decoration-none">Support</a></li>
+                                <li class="list-inline-item"><a href="#" class="text-muted small text-decoration-none">Privacy</a></li>
+                                <li class="list-inline-item"><a href="index.html" class="text-primary small text-decoration-none fw-bold">Main Site <i class="bi bi-arrow-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

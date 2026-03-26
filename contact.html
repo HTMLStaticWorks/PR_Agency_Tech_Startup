@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Let's Pitch Your Story</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar (Same as index) -->
+    <nav class="navbar navbar-expand-lg navbar-prism sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
+                <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">PRISM<span class="text-primary">PR</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 ms-lg-3 mt-3 mt-lg-0">
+                        <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
+                            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                                <mask class="moon" id="moon-mask">
+                                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                                    <circle cx="24" cy="10" r="6" fill="black" />
+                                </mask>
+                                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                                <g class="sun-beams" stroke="currentColor">
+                                    <line x1="12" y1="1" x2="12" y2="3" />
+                                    <line x1="12" y1="21" x2="12" y2="23" />
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                    <line x1="1" y1="12" x2="3" y2="12" />
+                                    <line x1="21" y1="12" x2="23" y2="12" />
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                                </g>
+                            </svg>
+                        </button>
+                        <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                        <a href="login.html" class="btn btn-prism btn-prism-primary btn-sm">Client Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Contact Hero -->
+    <header class="section-padding position-relative overflow-hidden text-white" style="min-height: 80vh; display: flex; align-items: center; background: url('assets/images/contact_hero_bg.png') center/cover no-repeat;">
+        <!-- Glassmorphism Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-65 backdrop-blur-sm"></div>
+        
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row g-5 justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="badge-pill-pitch mb-4 mx-auto">Pitch Your Story</div>
+                    <h1 class="display-3 fw-bold mb-4 text-white" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Let's Build the <br><span class="text-primary">Future</span> Together</h1>
+                    <p class="lead opacity-90 mb-5 mx-auto" style="max-width: 600px;">The world's biggest tech stories start here. Whether you're in stealth mode or scaling globally, our team is ready to amplify your mission.</p>
+                    
+                    <div class="row g-4 justify-content-center text-start">
+                        <div class="col-md-5">
+                            <div class="contact-hero-card">
+                                <div class="icon-box">
+                                    <i class="bi bi-geo-alt fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Global HQ</h6>
+                                    <p class="text-muted small mb-0">Palo Alto, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="contact-hero-card">
+                                <div class="icon-box">
+                                    <i class="bi bi-envelope fs-5"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-0">Email Us</h6>
+                                    <p class="text-muted small mb-0">pitch@prismpr.agency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="mt-5 text-center">
+                        <p class="text-white opacity-75 small fw-bold text-uppercase tracking-widest mb-3">Connect With Us</p>
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="#" class="icon-box text-decoration-none" style="width: 56px; height: 56px; border-radius: 14px; font-size: 1.5rem;" aria-label="Twitter">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="#" class="icon-box text-decoration-none" style="width: 56px; height: 56px; border-radius: 14px; font-size: 1.5rem;" aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Section 2: Message Hub (Contact Form) -->
+    <section class="section-padding bg-theme-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Send a Message</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Fill out the form below and our strategy team will be in touch within 24 hours.</p>
+            </div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="prism-card p-4 p-md-5 shadow-lg border-0 bg-theme-white rounded-4">
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-4 text-start">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Full Name</label>
+                                    <input type="text" class="form-control bg-theme-light border-0 rounded-3 py-3" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Company Email</label>
+                                    <input type="email" class="form-control bg-theme-light border-0 rounded-3 py-3" placeholder="john@startup.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold">Niche / Industry</label>
+                                    <select class="form-select bg-theme-light border-0 rounded-3 py-3" required>
+                                        <option value="" selected disabled>Select industry</option>
+                                        <option>AI / Machine Learning</option>
+                                        <option>Blockchain / Fintech</option>
+                                        <option>SaaS / Enterprise</option>
+                                        <option>Biotech / HealthTech</option>
+                                        <option>Other Deep Tech</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold">What is your objective?</label>
+                                    <textarea class="form-control bg-theme-light border-0 rounded-3 py-3" rows="4" placeholder="Briefly describe your goals..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-prism btn-prism-primary w-100 py-3 mt-2">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="contact-tile-card h-100">
+                        <div class="icon-circle">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="label">Email</div>
+                            <div class="value">hello@prismpr.agency</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="contact-tile-card h-100">
+                        <div class="icon-circle">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div>
+                            <div class="label">Phone</div>
+                            <div class="value">+1 (555) 123-4567</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="contact-tile-card h-100">
+                        <div class="icon-circle">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div>
+                            <div class="label">Office Address</div>
+                            <div class="value">123 Automation Way, Palo Alto, CA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Section 3: Global Innovation Hubs -->
+    <section class="section-padding bg-theme-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Global Innovation Hubs</h2>
+                <p class="text-muted">Strategic presence in the world's most active tech ecosystems.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="prism-card p-4 border-0 shadow-sm text-center">
+                        <div class="icon-box bg-primary-subtle text-primary p-3 rounded-circle d-inline-flex mb-3">
+                            <i class="bi bi-buildings fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">Palo Alto (HQ)</h5>
+                        <p class="text-muted small">88 Silicon Valley Blvd<br>Palo Alto, CA 94301</p>
+                        <hr class="opacity-10">
+                        <p class="mb-0 small fw-bold text-primary"><i class="bi bi-clock me-1"></i> Pacific Time (PT)</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="prism-card p-4 border-0 shadow-sm text-center">
+                        <div class="icon-box bg-secondary-subtle text-secondary p-3 rounded-circle d-inline-flex mb-3">
+                            <i class="bi bi-compass fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">London</h5>
+                        <p class="text-muted small">12 Tech City Square<br>Shoreditch, EC1V 2NX</p>
+                        <hr class="opacity-10">
+                        <p class="mb-0 small fw-bold text-secondary"><i class="bi bi-clock me-1"></i> Greenwich Mean (GMT)</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="prism-card p-4 border-0 shadow-sm text-center">
+                        <div class="icon-box bg-accent-subtle text-accent p-3 rounded-circle d-inline-flex mb-3" style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                            <i class="bi bi-globe fs-3"></i>
+                        </div>
+                        <h5 class="fw-bold">Singapore</h5>
+                        <p class="text-muted small">7 Straits View<br>Marina One East Tower</p>
+                        <hr class="opacity-10">
+                        <p class="mb-0 small fw-bold text-accent"><i class="bi bi-clock me-1"></i> Singapore Time (SGT)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Specialist Support Channels -->
+    <section class="section-padding bg-theme-light">
+        <div class="container">
+            <div class="row g-5 justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-4">Specialist <span class="text-primary">Channels</span></h2>
+                    <p class="text-muted mb-4 mx-auto" style="max-width: 600px;">For specific needs, reach out directly to our dedicated departments for faster response times and specialized expertise.</p>
+                    <a href="login.html" class="btn btn-prism btn-prism-outline mb-5">Access Client Portal</a>
+                </div>
+                
+                <div class="col-12">
+                    <div class="row g-4 justify-content-center text-start">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="prism-card p-4 border-0 shadow-sm h-100">
+                                <h6 class="fw-bold text-primary mb-2">Media Relations</h6>
+                                <p class="small text-muted mb-3">Journalists, creators, and interview requests.</p>
+                                <a href="mailto:media@prismpr.agency" class="text-decoration-none small fw-bold">media@prismpr.agency &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="prism-card p-4 border-0 shadow-sm h-100">
+                                <h6 class="fw-bold text-secondary mb-2">Careers</h6>
+                                <p class="small text-muted mb-3">Join our team of tech storytellers and experts.</p>
+                                <a href="mailto:careers@prismpr.agency" class="text-decoration-none small fw-bold">careers@prismpr.agency &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="prism-card p-4 border-0 shadow-sm h-100">
+                                <h6 class="fw-bold text-accent mb-2" style="color: #f59e0b;">Partnerships</h6>
+                                <p class="small text-muted mb-3">VCs, accelerators, and ecosystem partners.</p>
+                                <a href="mailto:partners@prismpr.agency" class="text-decoration-none small fw-bold">partners@prismpr.agency &rarr;</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="prism-card p-4 border-0 shadow-sm h-100">
+                                <h6 class="fw-bold text-main mb-2">Technical Support</h6>
+                                <p class="small text-muted mb-3">Reporting issues with our digital platforms.</p>
+                                <a href="mailto:support@prismpr.agency" class="text-decoration-none small fw-bold">support@prismpr.agency &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Concierge FAQ -->
+    <section class="section-padding bg-theme-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold">Concierge FAQ</h2>
+                        <p class="text-muted">Instant answers to common inquiries about our strategic process.</p>
+                    </div>
+                    <div class="accordion accordion-flush prism-card p-0 overflow-hidden border-0 shadow-sm" id="contactFAQ">
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold py-4 px-4 bg-theme-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How fast do you respond to media inquiries?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-muted small">
+                                    Our dedicated media desk monitors all incoming requests 24/7. Journalists can expect a response within 2 hours, while general inquiries typically receive a reply within one business day.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-theme-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do you work with pre-seed or stealth startups?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-muted small">
+                                    Absolutely. We specialize in "Stealth to Series A" transitions. We often work with founders months before their public launch to build the foundation of their technical narrative and press kit.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-theme-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Can we schedule a physical meeting at your offices?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-muted small">
+                                    While we operate primarily in a digital-first environment for global reach, our Innovation Hubs in Palo Alto, London, and Singapore are available for scheduled strategy sessions with existing clients and partners.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Digital Navigation (Map) -->
+    <section class="position-relative" style="height: 400px; overflow: hidden;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.632247657271!2d-122.1438780242131!3d37.44188337207044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbaec00000001%3A0x0!2s88%20Silicon%20Valley%20Blvd%2C%20Palo%20Alto%2C%20CA%2094301!5e0!3m2!1sen!2sus!4v1711360000000!5m2!1sen!2sus" 
+            width="100%" 
+            height="400" 
+            style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <footer class="section-padding bg-theme-white border-top">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
+                        <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
+                    </a>
+                    <p class="text-muted mb-4 small">Strategic tech startup communications. We bridge the gap between complex innovation and global media influence.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-primary fs-5" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-primary fs-5" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-primary fs-5" aria-label="Github"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Media Relations</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Press Kit Strategy</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Crisis Management</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Media Training</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h5 class="fw-bold mb-4">Explore</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">Agency Story</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-muted text-decoration-none small">Technical Insights</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-muted text-decoration-none small">Pricing Plans</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact Hub</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Stay Informed</h5>
+                    <p class="text-muted small">Get the latest deep-tech PR insights delivered to your inbox.</p>
+                    <form class="mt-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control rounded-start-pill ps-4 py-3" placeholder="Founder's Email" required>
+                            <button type="submit" class="btn btn-primary rounded-end-pill px-4">Join Hub</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="opacity-10">
+            <div class="row align-items-center g-3 mt-4">
+                <div class="col-md-6">
+                    <p class="text-muted small mb-0">&copy; 2026 Prism PR Agency. Elevating the next technical billion.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0 footer-links">
+                        <li class="list-inline-item me-4"><a href="#" class="text-muted small text-decoration-none">Privacy Engine</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted small text-decoration-none">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

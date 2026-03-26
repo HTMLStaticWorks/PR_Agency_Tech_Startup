@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://prismpr.agency/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://prismpr.agency/index2.html</loc><priority>0.8</priority></url>
+  <url><loc>https://prismpr.agency/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://prismpr.agency/services.html</loc><priority>0.8</priority></url>
+  <url><loc>https://prismpr.agency/pricing.html</loc><priority>0.8</priority></url>
+  <url><loc>https://prismpr.agency/blog.html</loc><priority>0.7</priority></url>
+  <url><loc>https://prismpr.agency/contact.html</loc><priority>0.9</priority></url>
+  <url><loc>https://prismpr.agency/dashboard.html</loc><priority>0.5</priority></url>
+</urlset>
