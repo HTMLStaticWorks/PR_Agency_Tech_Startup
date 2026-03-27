@@ -60,25 +60,41 @@
                 <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
                 <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">PRISM<span class="text-primary">PR</span></h5>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index2.html">Home 2</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
+                                <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Media Relations</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Press Kit Strategy</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 ms-lg-3 mt-3 mt-lg-0">
+                    <div class="d-flex align-items-center gap-3">
                         <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
                             <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
                                 <mask class="moon" id="moon-mask">
@@ -101,7 +117,8 @@
                         <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
-                        <a href="login.html" class="btn btn-prism btn-prism-primary btn-sm">Client Login</a>
+                        <a href="login.html" class="btn btn-outline-primary btn-prism btn-sm">Client Login</a>
+                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -123,9 +140,9 @@
                     </div>
                     <div class="mt-5 d-flex align-items-center gap-4 justify-content-center">
                         <div class="d-flex -space-x-2">
-                            <img src="https://i.pravatar.cc/40?u=tech1" class="rounded-circle border border-2 border-white" width="40" height="40" alt="Founder">
-                            <img src="https://i.pravatar.cc/40?u=tech2" class="rounded-circle border border-2 border-white ms-n2" width="40" height="40" alt="Founder">
-                            <img src="https://i.pravatar.cc/40?u=tech3" class="rounded-circle border border-2 border-white ms-n2" width="40" height="40" alt="Founder">
+                            <img src="https://i.pravatar.cc/40?u=1" class="rounded-circle border border-2 border-white" width="40" height="40" alt="Founder">
+                            <img src="https://i.pravatar.cc/40?u=2" class="rounded-circle border border-2 border-white ms-n2" width="40" height="40" alt="Founder">
+                            <img src="https://i.pravatar.cc/40?u=3" class="rounded-circle border border-2 border-white ms-n2" width="40" height="40" alt="Founder">
                         </div>
                         <div class="small">
                             <span class="fw-bold">500+</span> Startups accelerated
@@ -134,7 +151,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="position-relative">
-                        <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\hero_pr_dashboard_mockup_1774528322071.png" class="img-fluid rounded-4 shadow-lg border border-white border-opacity-10" alt="Strategic PR Dashboard">
+                        <img src="assets/images/hero-image.png" class="img-fluid rounded-4 shadow-lg border border-white border-opacity-10" alt="Strategic PR Dashboard">
                     </div>
                 </div>
             </div>
@@ -168,7 +185,7 @@
                 <div class="col-md-4">
                     <div class="prism-card text-center">
                         <div class="feature-visual">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\stealth_to_scale_launch_roadmap_1774527686364.png" alt="Media outreach illustration">
+                            <img src="assets/images/media-spotlight.png" alt="Media outreach illustration">
                         </div>
                         <h3>Precision Media Outreach</h3>
                         <p class="text-muted">Direct connections to top deep-tech journalists and industry influencers globally.</p>
@@ -178,7 +195,7 @@
                 <div class="col-md-4">
                     <div class="prism-card text-center">
                         <div class="feature-visual">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\artificial_narrative_design_1774527606596.png" alt="Press kit imagery">
+                            <img src="assets/images/service-details.png" alt="Press kit imagery">
                         </div>
                         <h3>Press Kit Engineering</h3>
                         <p class="text-muted">High-performance digital press kits that make it effortless for journalists to cover you.</p>
@@ -188,7 +205,7 @@
                 <div class="col-md-4">
                     <div class="prism-card text-center">
                         <div class="feature-visual">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\security_breach_crisis_management_1774527653655.png" alt="Crisis mitigation concept">
+                            <img src="assets/images/modern-agency-office.png" alt="Crisis mitigation concept">
                         </div>
                         <h3>Crisis Mitigation</h3>
                         <p class="text-muted">Protect your reputation with rapid-response strategies tailored for high-stakes tech launches.</p>
@@ -203,7 +220,7 @@
     <section class="section-padding bg-theme-light">
         <div class="container">
             <div class="row g-5 align-items-center justify-content-center text-center">
-                <div class="col-lg-5 col-xl-5 text-lg-start">
+                <div class="col-lg-6 col-xl-5 mx-auto">
                     <h2 class="display-5 fw-bold mb-4 text-main">Results Speak Louder Than <span class="text-primary">Pitch Decks</span></h2>
                     <p class="lead text-muted">"Prism PR took us from stealth mode to front-page news on TechCrunch in under 6 weeks. Their deep tech understanding is unparalleled."</p>
                     <div class="mt-4">
@@ -211,16 +228,16 @@
                         <p class="small text-muted">CEO, NeuroLink AI</p>
                     </div>
                 </div>
-                <div class="col-lg-7 col-xl-7">
+                <div class="col-lg-8 col-xl-7 mx-auto">
                     <div class="row g-4 justify-content-center">
                         <div class="col-md-6">
-                            <div class="p-4 rounded-4 bg-theme-white border border-primary border-opacity-10 trusted-card h-100">
+                            <div class="p-4 rounded-4 bg-theme-white border border-primary border-opacity-10 trusted-card">
                                 <h4 class="h5 mb-3 text-main">TechCrunch Feature</h4>
                                 <p class="small text-strong">Secured exclusive coverage for our Series B round within 24 hours of engagement.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="p-4 rounded-4 bg-theme-white border border-primary border-opacity-10 trusted-card h-100">
+                            <div class="p-4 rounded-4 bg-theme-white border border-primary border-opacity-10 trusted-card">
                                 <h4 class="h5 mb-3 text-main">Forbes Top 50</h4>
                                 <p class="small text-strong">Nominated and featured our founder in the prestigious 'Future of AI' list.</p>
                             </div>
@@ -250,7 +267,7 @@
                     <div class="prism-card p-0 overflow-hidden border-0 shadow-lg">
                         <div class="row g-0">
                             <div class="col-sm-5">
-                                <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\case_study_ai_neurolink_1774528388220.png" class="img-fluid h-100 object-fit-cover" alt="NeuroLink Funding Case Study">
+                                <img src="assets/images/case_study_neurolink.png" class="img-fluid h-100 object-fit-cover" alt="NeuroLink Funding Case Study">
                             </div>
                             <div class="col-sm-7 p-4">
                                 <div class="badge bg-primary-subtle text-primary mb-3">AI & Robotics</div>
@@ -275,7 +292,7 @@
                     <div class="prism-card p-0 overflow-hidden border-0 shadow-lg">
                         <div class="row g-0">
                             <div class="col-sm-5">
-                                <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\case_study_saas_cloudscale_1774528409263.png" class="img-fluid h-100 object-fit-cover" alt="CloudScale Launch Case Study">
+                                <img src="assets/images/case_study_cloudscale.png" class="img-fluid h-100 object-fit-cover" alt="CloudScale Launch Case Study">
                             </div>
                             <div class="col-sm-7 p-4">
                                 <div class="badge bg-secondary-subtle text-secondary mb-3">SaaS Automation</div>
@@ -313,7 +330,7 @@
                 <div class="col-lg-4">
                     <div class="prism-card h-100 text-center p-5">
                         <div class="mb-4">
-                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=200&h=200" class="rounded-circle shadow-sm mb-3 border border-primary border-opacity-10" width="80" height="80" alt="Sarah Jenkins">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200" class="rounded-circle shadow-sm mb-3 border border-primary border-opacity-10" width="80" height="80" alt="Sarah Jenkins">
                             <i class="bi bi-quote testimonial-quote text-primary d-block fs-1"></i>
                         </div>
                         <p class="mb-4 lead italic">"Prism PR understood our technical complexity immediately. They didn't just get us press; they helped define our narrative for the next decade."</p>
@@ -324,7 +341,7 @@
                 <div class="col-lg-4">
                     <div class="prism-card h-100 text-center p-5">
                         <div class="mb-4">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\personal_branding_founder_1774527628594.png" class="rounded-circle shadow-sm mb-3 border border-secondary border-opacity-10" width="80" height="80" alt="Marcus Thorne">
+                            <img src="assets/images/marcus_thorne.png" class="rounded-circle shadow-sm mb-3 border border-secondary border-opacity-10" width="80" height="80" alt="Marcus Thorne">
                             <i class="bi bi-quote testimonial-quote text-secondary d-block fs-1"></i>
                         </div>
                         <p class="mb-4 lead italic">"The ROI was evident within the first 30 days. Our inbound investor inquiries tripled after the Wired feature they secured."</p>
@@ -354,7 +371,7 @@
                         <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
                         <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
                     </a>
-                    <p class="text-muted mb-4 small">Strategic tech startup communications. We bridge the gap between complex innovation and global media influence.</p>
+                    <p class="text-strong mb-4 small">Strategic tech startup communications. We bridge the gap between complex innovation and global media influence.</p>
                     <div class="d-flex gap-3">
                         <a href="#" class="text-primary fs-5" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                         <a href="#" class="text-primary fs-5" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
@@ -364,24 +381,24 @@
                 <div class="col-sm-6 col-lg-2">
                     <h5 class="fw-bold mb-4">Services</h5>
                     <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Media Relations</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Press Kit Strategy</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Crisis Management</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Media Training</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-strong text-decoration-none small">Media Relations</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-strong text-decoration-none small">Press Kit Strategy</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-strong text-decoration-none small">Crisis Management</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-strong text-decoration-none small">Media Training</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-lg-2">
                     <h5 class="fw-bold mb-4">Explore</h5>
                     <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">Agency Story</a></li>
-                        <li class="mb-2"><a href="blog.html" class="text-muted text-decoration-none small">Technical Insights</a></li>
-                        <li class="mb-2"><a href="pricing.html" class="text-muted text-decoration-none small">Pricing Plans</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact Hub</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-strong text-decoration-none small">Agency Story</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-strong text-decoration-none small">Technical Insights</a></li>
+                        <li class="mb-2"><a href="pricing.html" class="text-strong text-decoration-none small">Pricing Plans</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-strong text-decoration-none small">Contact Hub</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-4">Stay Informed</h5>
-                    <p class="text-muted small">Get the latest deep-tech PR insights delivered to your inbox.</p>
+                    <p class="text-strong small">Get the latest deep-tech PR insights delivered to your inbox.</p>
                     <form class="mt-4">
                         <div class="input-group">
                             <input type="email" class="form-control rounded-start-pill ps-4 py-3" placeholder="Founder's Email" required>
@@ -393,12 +410,12 @@
             <hr class="opacity-10">
             <div class="row align-items-center g-3 mt-4">
                 <div class="col-md-6">
-                    <p class="text-muted small mb-0">&copy; 2026 Prism PR Agency. Elevating the next technical billion.</p>
+                    <p class="text-strong small mb-0">&copy; 2026 Prism PR Agency. Elevating the next technical billion.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <ul class="list-inline mb-0 footer-links">
-                        <li class="list-inline-item me-4"><a href="#" class="text-muted small text-decoration-none">Privacy Engine</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-muted small text-decoration-none">Terms of Service</a></li>
+                        <li class="list-inline-item me-4"><a href="#" class="text-strong small text-decoration-none">Privacy Engine</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-strong small text-decoration-none">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
