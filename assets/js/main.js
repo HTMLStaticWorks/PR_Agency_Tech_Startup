@@ -77,16 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         behavior: 'smooth'
                     });
                     
-                    // Auto-close offcanvas if open (Bootstrap 5)
-                    const offcanvasElement = document.querySelector('.offcanvas.show');
-                    if (offcanvasElement) {
-                        const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
-                        if (bsOffcanvas) {
-                            bsOffcanvas.hide();
+                    // Auto-collapse navbar if open (Bootstrap 5)
+                    const navbarCollapse = document.querySelector('.navbar-collapse.show');
+                    if (navbarCollapse) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
                         } else {
                             // Fallback if instance not found
-                            const closeBtn = offcanvasElement.querySelector('.btn-close');
-                            if (closeBtn) closeBtn.click();
+                            const navbarToggler = document.querySelector('.navbar-toggler');
+                            if (navbarToggler) navbarToggler.click();
                         }
                     }
                 }
