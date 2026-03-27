@@ -681,13 +681,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 11. FOOTER REFINEMENTS */
-footer a.text-muted {
-    transition: var(--transition-fast);
+/* 11. FOOTER REFINEMENTS */
+footer .footer-links a {
+    transition: all var(--transition-normal);
+    display: inline-block;
 }
 
-footer a.text-muted:hover {
+footer .footer-links a:hover,
+footer .footer-links a:focus-visible {
     color: var(--primary-color) !important;
-    padding-left: 4px;
+    transform: translateX(5px);
+    text-decoration: none;
 }
 
 footer .d-flex.gap-3 a {
@@ -696,17 +700,6 @@ footer .d-flex.gap-3 a {
 
 footer .d-flex.gap-3 a:hover {
     transform: translateY(-5px) scale(1.1);
-}
-
-.footer-links a {
-    color: rgba(15, 23, 42, 0.85);
-    transition: color var(--transition-normal), transform var(--transition-fast);
-}
-
-.footer-links a:hover,
-.footer-links a:focus-visible {
-    color: var(--primary-color);
-    transform: translateY(-1px);
 }
 
 footer .btn-primary {
@@ -725,19 +718,19 @@ footer .btn-primary:hover {
     background: var(--secondary-color) !important;
     border-color: var(--secondary-color) !important;
     box-shadow: 0 12px 25px rgba(79, 70, 229, 0.4);
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px) scale(1.05);
     filter: brightness(1.1);
 }
 
-.footer-links a {
-    color: rgba(15, 23, 42, 0.85);
-    transition: color var(--transition-normal), transform var(--transition-fast);
+/* Bottom Footer Links */
+footer .list-inline-item a {
+    transition: all var(--transition-normal);
+    display: inline-block;
 }
 
-.footer-links a:hover,
-.footer-links a:focus-visible {
-    color: var(--primary-color);
-    transform: translateY(-1px);
+footer .list-inline-item a:hover {
+    transform: translateY(-2px) !important;
+    color: var(--primary-color) !important;
 }
 
 /* Newsletter Section Refinement */
