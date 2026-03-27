@@ -1,6 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="light">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prismpr.agency/blog.html">
+    <meta property="og:title" content="Technical Insights | Prism PR Blog">
+    <meta property="og:description" content="Deep tech communications strategies, media tips, and agency news from Prism PR.">
+    <meta property="og:image" content="assets/images/og-image.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Insights | Prism PR Blog</title>
@@ -10,32 +19,48 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navbar (Same as index) -->
+    <!-- Sticky Navbar -->
     <nav class="navbar navbar-expand-lg navbar-prism sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
                 <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">PRISM<span class="text-primary">PR</span></h5>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index2.html">Home 2</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
+                                <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Media Relations</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Press Kit Strategy</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 ms-lg-3 mt-3 mt-lg-0">
+                    <div class="d-flex align-items-center gap-3">
                         <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
                             <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
                                 <mask class="moon" id="moon-mask">
@@ -58,12 +83,19 @@
                         <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
-                        <a href="login.html" class="btn btn-prism btn-prism-primary btn-sm">Client Login</a>
+                        <a href="login.html" class="btn btn-outline-primary btn-prism btn-sm">Client Login</a>
+                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm">Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    
+
+
+    
+
 
     <!-- Blog Header -->
     <section class="section-padding text-center position-relative overflow-hidden text-white" style="background: url('assets/images/media-spotlight.png') center/cover no-repeat; min-height: 400px; display: flex; align-items: center;">
@@ -88,7 +120,7 @@
             <div class="prism-card p-0 overflow-hidden border-0 shadow-lg mb-0 transition-up">
                 <div class="row g-0">
                     <div class="col-lg-7">
-                        <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\artificial_narrative_design_1774527606596.png" class="img-fluid h-100 object-fit-cover w-100" style="min-height: 480px;" alt="Deep Tech Narrative Analysis">
+                        <img src="assets/images/hero-image.png" class="img-fluid h-100 object-fit-cover w-100" style="min-height: 480px;" alt="Deep Tech Narrative Analysis">
                     </div>
                     <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center">
                         <div class="badge bg-primary-subtle text-primary mb-3 align-self-start py-2 px-3 rounded-pill fw-bold">Featured Analysis</div>
@@ -98,10 +130,10 @@
                             <img src="https://i.pravatar.cc/48?u=author1" class="rounded-circle shadow-sm" alt="Sarah Chen">
                             <div>
                                 <div class="fw-bold">Sarah Chen</div>
-                                <div class="small text-muted">March 25, 2026 • 8 min read</div>
+                                <div class="small text-muted">March 25, 2026 â€¢ 8 min read</div>
                             </div>
                         </div>
-                        <a href="blog-details.html" class="btn btn-prism btn-prism-primary py-3 fw-bold">Read Analysis</a>
+                        <a href="blog-details.html" class="btn btn-prism btn-prism-primary py-3 fw-bold text-center w-100">Read Analysis</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +146,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 p-0 overflow-hidden border-0 shadow-sm transition-up">
                         <div class="position-relative overflow-hidden" style="height: 240px;">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\stealth_to_scale_launch_roadmap_1774527686364.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Stealth to Scale">
+                            <img src="assets/images/blog-thumb-1.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Stealth to Scale">
                             <div class="position-absolute top-0 start-0 m-3">
                                 <span class="badge bg-primary py-2 px-3 rounded-pill fw-bold">PR Strategy</span>
                             </div>
@@ -132,7 +164,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 p-0 overflow-hidden border-0 shadow-sm transition-up">
                         <div class="position-relative overflow-hidden" style="height: 240px;">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\personal_branding_founder_1774527628594.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Founder Branding">
+                            <img src="assets/images/blog-thumb-2.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Founder Branding">
                             <div class="position-absolute top-0 start-0 m-3">
                                 <span class="badge bg-secondary py-2 px-3 rounded-pill fw-bold">Media Trends</span>
                             </div>
@@ -150,7 +182,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 p-0 overflow-hidden border-0 shadow-sm transition-up">
                         <div class="position-relative overflow-hidden" style="height: 240px;">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\security_breach_crisis_management_1774527653655.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Crisis Management">
+                            <img src="assets/images/blog-thumb-3.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Crisis Management">
                             <div class="position-absolute top-0 start-0 m-3">
                                 <span class="badge bg-accent py-2 px-3 rounded-pill fw-bold" style="background-color: #f59e0b !important; color: white !important;">Crisis Mgmt</span>
                             </div>
@@ -265,3 +297,5 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+

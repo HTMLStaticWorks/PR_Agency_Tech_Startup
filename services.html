@@ -1,6 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="light">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prismpr.agency/services.html">
+    <meta property="og:title" content="Our Services | PR Solutions for High-Growth Startups">
+    <meta property="og:description" content="Explore our full range of PR services including media relations, press kit engineering, and crisis management.">
+    <meta property="og:image" content="assets/images/og-image.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | PR Solutions for High-Growth Startups</title>
@@ -11,32 +20,48 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navbar (Same as index) -->
+    <!-- Sticky Navbar -->
     <nav class="navbar navbar-expand-lg navbar-prism sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
                 <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">PRISM<span class="text-primary">PR</span></h5>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index2.html">Home 2</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
+                                <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Media Relations</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Press Kit Strategy</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 ms-lg-3 mt-3 mt-lg-0">
+                    <div class="d-flex align-items-center gap-3">
                         <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
                             <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
                                 <mask class="moon" id="moon-mask">
@@ -59,12 +84,19 @@
                         <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
-                        <a href="login.html" class="btn btn-prism btn-prism-primary btn-sm">Client Login</a>
+                        <a href="login.html" class="btn btn-outline-primary btn-prism btn-sm">Client Login</a>
+                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm">Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    
+
+
+    
+
 
     <!-- Services Hero -->
     <section class="section-padding position-relative overflow-hidden text-white" style="background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat; min-height: 450px; display: flex; align-items: center;">
@@ -89,7 +121,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\stealth_to_scale_launch_roadmap_1774527686364.png" class="w-100 h-100" style="object-fit: cover;" alt="Global Media Relations">
+                            <img src="assets/images/clarity_mission.png" class="w-100 h-100 object-fit-cover" alt="Global Media Relations">
                         </div>
                         <h3>Global Media Relations</h3>
                         <p class="text-muted">Pitching to TechCrunch, Wired, The Verge, and tier-1 business outlets.</p>
@@ -99,14 +131,14 @@
                             <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Targeted Reporter Lists</li>
                             <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Interview Hosting</li>
                         </ul>
-                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto">Details</a>
+                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto text-center">Details</a>
                     </div>
                 </div>
                 <!-- Service 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\case_study_saas_cloudscale_1774528409263.png" class="w-100 h-100" style="object-fit: cover;" alt="Launch Campaigns">
+                            <img src="assets/images/service-details.png" class="w-100 h-100 object-fit-cover" alt="Launch Campaigns">
                         </div>
                         <h3>Launch Campaigns</h3>
                         <p class="text-muted">High-impact strategies for product launches and funding announcements.</p>
@@ -116,14 +148,14 @@
                             <li class="mb-2"><i class="bi bi-check2 text-secondary me-2"></i> Influencer Partnerships</li>
                             <li class="mb-2"><i class="bi bi-check2 text-secondary me-2"></i> KPI-Driven Reporting</li>
                         </ul>
-                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto">Details</a>
+                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto text-center">Details</a>
                     </div>
                 </div>
                 <!-- Service 3 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\security_breach_crisis_management_1774527653655.png" class="w-100 h-100" style="object-fit: cover;" alt="Crisis Management">
+                            <img src="assets/images/modern-agency-office.png" class="w-100 h-100 object-fit-cover" alt="Crisis Management">
                         </div>
                         <h3>Crisis Management</h3>
                         <p class="text-muted">Rapid response for security breaches, outages, and reputation repair.</p>
@@ -133,14 +165,14 @@
                             <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i> Executive Briefing</li>
                             <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i> Dark Site Setup</li>
                         </ul>
-                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto">Details</a>
+                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto text-center">Details</a>
                     </div>
                 </div>
                 <!-- Service 4 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\hero_pr_dashboard_mockup_1774528322071.png" class="w-100 h-100" style="object-fit: cover;" alt="Press Kit Engineering">
+                            <img src="assets/images/hero-image.png" class="w-100 h-100 object-fit-cover" alt="Press Kit Engineering">
                         </div>
                         <h3>Press Kit Engineering</h3>
                         <p class="text-muted">High-performance digital press kits that make it effortless for journalists to cover you.</p>
@@ -150,14 +182,14 @@
                             <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i> Asset Hosting</li>
                             <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i> Data-Driven Pitching</li>
                         </ul>
-                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto">Details</a>
+                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto text-center">Details</a>
                     </div>
                 </div>
                 <!-- Service 5 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800" class="w-100 h-100" style="object-fit: cover;" alt="Media Training">
+                            <img src="assets/images/about-image.png" class="w-100 h-100 object-fit-cover" alt="Media Training">
                         </div>
                         <h3>Media Training</h3>
                         <p class="text-muted">Briefing founders for the spotlight and mastering the art of the interview.</p>
@@ -167,14 +199,14 @@
                             <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Narrative Refinement</li>
                             <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> On-Camera Coaching</li>
                         </ul>
-                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto">Details</a>
+                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto text-center">Details</a>
                     </div>
                 </div>
                 <!-- Service 6 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="prism-card h-100 d-flex flex-column">
                         <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\personal_branding_founder_1774527628594.png" class="w-100 h-100" style="object-fit: cover;" alt="Thought Leadership">
+                            <img src="assets/images/services_hero_bg.png" class="w-100 h-100 object-fit-cover" alt="Thought Leadership">
                         </div>
                         <h3>Thought Leadership</h3>
                         <p class="text-muted">Strategic positioning of your founders as leading voices in their technical domains.</p>
@@ -184,7 +216,7 @@
                             <li class="mb-2"><i class="bi bi-check2 text-danger me-2"></i> Speaking Placement</li>
                             <li class="mb-2"><i class="bi bi-check2 text-danger me-2"></i> Newsletter strategy</li>
                         </ul>
-                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto">Details</a>
+                        <a href="service-details.html" class="btn btn-prism btn-prism-outline w-100 mt-auto text-center">Details</a>
                     </div>
                 </div>
             </div>
@@ -350,3 +382,5 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+

@@ -1,6 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="light">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Media Relations & Strategy | Prism PR">
+    <meta property="og:description" content="Detailed overview of our media relations and strategic communications services for tech startups.">
+    <meta property="og:image" content="assets/images/og-image.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Relations Detail | Prism PR</title>
@@ -10,32 +18,48 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navbar (Same as index) -->
+    <!-- Sticky Navbar -->
     <nav class="navbar navbar-expand-lg navbar-prism sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
                 <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">PRISM<span class="text-primary">PR</span></h5>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index2.html">Home 2</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
+                                <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Media Relations</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Press Kit Strategy</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 ms-lg-3 mt-3 mt-lg-0">
+                    <div class="d-flex align-items-center gap-3">
                         <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
                             <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
                                 <mask class="moon" id="moon-mask">
@@ -58,19 +82,26 @@
                         <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
-                        <a href="login.html" class="btn btn-prism btn-prism-primary btn-sm">Client Login</a>
+                        <a href="login.html" class="btn btn-outline-primary btn-prism btn-sm">Client Login</a>
+                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm">Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
+    
+
+
+    
+
+
     <!-- Service Detail Content -->
     <section class="section-padding">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-8">
-                    <img src="C:\Users\WELCOME\.gemini\antigravity\brain\cbb76380-ee5f-45e9-98ac-fe2d8f92c007\stealth_to_scale_launch_roadmap_1774527686364.png" class="img-fluid rounded-4 mb-5 shadow-sm" alt="Media Spotlight">
+                <div class="col-lg-8 d-flex justify-content-center">
+                    <img src="assets/images/media-spotlight.png" class="img-fluid rounded-4 mb-5 shadow-sm service-detail-hero" alt="Media Spotlight">
                     <h1 class="display-4 fw-bold mb-4">Precision Media Relations</h1>
                     <p class="lead text-muted mb-4">Our media relations service goes beyond simple press releases. We build long-term relationships between your founders and the world's most influential tech journalists.</p>
                     
@@ -88,10 +119,32 @@
                         <li class="list-group-item bg-transparent py-3">3. The Pitch: Personalized, data-driven outreach.</li>
                         <li class="list-group-item bg-transparent py-3">4. Post-Placement Amplification: Making sure the story lives forever.</li>
                     </ol>
+                    <section class="border rounded-4 p-4 bg-theme-light mb-5">
+                        <h3 class="fw-bold mb-3">Press Kit Strategy</h3>
+                        <p class="text-muted mb-3">Don't just pitch, invite coverage. Our press kits turn every launch into a story-ready asset with media-ready bios, logos, captions, and bespoke media training notes.</p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small text-muted">
+                                    <li class="mb-2"><i class="bi bi-file-earmark-check text-primary me-2"></i> High-resolution assets + captions</li>
+                                    <li class="mb-2"><i class="bi bi-mic text-primary me-2"></i> Interview-ready talking points</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small text-muted">
+                                    <li class="mb-2"><i class="bi bi-graph-up text-primary me-2"></i> Metrics dashboards for journalists</li>
+                                    <li class="mb-2"><i class="bi bi-shield-lock text-primary me-2"></i> Crisis-safe approvals workflow</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 mt-4 flex-wrap">
+                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Press Kits</span>
+                            <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle">Launch Toolkits</span>
+                        </div>
+                    </section>
                 </div>
                 
                 <div class="col-lg-4">
-                    <div class="sticky-top" style="top: 100px;">
+                    <div class="sticky-top service-sidebar">
                         <div class="prism-card mb-4 bg-primary text-white border-0">
                             <h3>Need a Custom Strategy?</h3>
                             <p class="opacity-75 small mb-4">Book a 30-minute discovery call with our Head of Global Media.</p>
@@ -174,3 +227,5 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+

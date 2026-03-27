@@ -1,6 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="light">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coming Soon | Prism PR Newsroom">
+    <meta property="og:description" content="Exciting updates and technical PR insights are coming soon to the Prism PR platform.">
+    <meta property="og:image" content="assets/images/og-image.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon | Prism PR Newsroom</title>
@@ -17,25 +25,41 @@
                 <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
                 <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">PRISM<span class="text-primary">PR</span></h5>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index2.html">Home 2</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
+                                <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Media Relations</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Press Kit Strategy</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 ms-lg-3 mt-3 mt-lg-0">
+                    <div class="d-flex align-items-center gap-3">
                         <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
                             <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
                                 <mask class="moon" id="moon-mask">
@@ -58,12 +82,22 @@
                         <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
-                        <a href="login.html" class="btn btn-prism btn-prism-primary btn-sm">Client Login</a>
+                        <a href="login.html" class="btn btn-outline-primary btn-prism btn-sm">Client Login</a>
+                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm">Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    
+
+
+    
+
+
+    
+
     <section class="section-padding position-relative overflow-hidden min-vh-100 d-flex align-items-center text-center">
         <div class="hero-gradient" style="opacity: 0.3;"></div>
         <div class="container position-relative">
@@ -151,3 +185,6 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+

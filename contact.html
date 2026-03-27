@@ -1,6 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" data-bs-theme="light">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prismpr.agency/contact.html">
+    <meta property="og:title" content="Contact Us | Let's Pitch Your Story">
+    <meta property="og:description" content="Get in touch with Prism PR for strategic media relations and communication consulting. Let's showcase your startup's innovation globally.">
+    <meta property="og:image" content="assets/images/og-image.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Let's Pitch Your Story</title>
@@ -10,32 +19,48 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navbar (Same as index) -->
+    <!-- Sticky Navbar -->
     <nav class="navbar navbar-expand-lg navbar-prism sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
                 <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
             </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">PRISM<span class="text-primary">PR</span></h5>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index2.html">Home 2</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
+                                <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Media Relations</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Press Kit Strategy</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 ms-lg-3 mt-3 mt-lg-0">
+                    <div class="d-flex align-items-center gap-3">
                         <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
                             <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
                                 <mask class="moon" id="moon-mask">
@@ -58,12 +83,19 @@
                         <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
-                        <a href="login.html" class="btn btn-prism btn-prism-primary btn-sm">Client Login</a>
+                        <a href="login.html" class="btn btn-outline-primary btn-prism btn-sm">Client Login</a>
+                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm">Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    
+
+
+    
+
 
     <!-- Section 1: Contact Hero -->
     <header class="section-padding position-relative overflow-hidden text-white" style="min-height: 80vh; display: flex; align-items: center; background: url('assets/images/contact_hero_bg.png') center/cover no-repeat;">
@@ -159,7 +191,7 @@
                                     <textarea class="form-control bg-theme-light border-0 rounded-3 py-3" rows="4" placeholder="Briefly describe your goals..." required></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-prism btn-prism-primary w-100 py-3 mt-2">Send Message</button>
+                                    <button type="submit" class="btn btn-prism btn-prism-primary w-100 py-3 mt-2 text-center">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -353,16 +385,19 @@
     </section>
 
     <!-- Section 6: Digital Navigation (Map) -->
-    <section class="position-relative" style="height: 400px; overflow: hidden;">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.632247657271!2d-122.1438780242131!3d37.44188337207044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbaec00000001%3A0x0!2s88%20Silicon%20Valley%20Blvd%2C%20Palo%20Alto%2C%20CA%2094301!5e0!3m2!1sen!2sus!4v1711360000000!5m2!1sen!2sus" 
-            width="100%" 
-            height="400" 
-            style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <section class="section-padding">
+        <div class="container">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.632247657271!2d-122.1438780242131!3d37.44188337207044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbaec00000001%3A0x0!2s88%20Silicon%20Valley%20Blvd%2C%20Palo%20Alto%2C%20CA%2094301!5e0!3m2!1sen!2sus!4v1711360000000!5m2!1sen!2sus"
+                    class="rounded-4"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
     </section>
 
     <footer class="section-padding bg-theme-white border-top">
@@ -428,3 +463,5 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+

@@ -159,7 +159,10 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 16px;
     padding: var(--space-5);
     transition: var(--transition-normal);
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    min-height: 100%;
 }
 
 .prism-card:hover {
@@ -247,23 +250,44 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(248, 248, 252, 0.6) !important;
 }
 
-.footer-links a {
-    color: rgba(15, 23, 42, 0.85);
-    transition: color var(--transition-normal);
-}
-
-.footer-links a:hover,
-.footer-links a:focus-visible {
-    color: var(--primary-color);
-}
-
 .feature-visual {
-    width: 88px;
-    height: 88px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 24px;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+.feature-card-content {
+    flex: 1;
+}
+
+.feature-cta {
+    margin-top: auto;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: var(--transition-normal);
+}
+
+.feature-cta:hover {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 992px) {
+    .feature-visual {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .feature-visual {
+        width: 88px;
+        height: 88px;
+    }
 }
 
 .feature-visual img {
@@ -271,6 +295,19 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.global-network-img {
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .global-network-img {
+        max-width: 100%;
+    }
 }
 
 /* Trusted partners need bolder glyphs/text for contrast */
@@ -283,11 +320,71 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(15, 23, 42, 0.85);
 }
 
+.trusted-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
+
 .trusted-card h4 {
     color: var(--text-main);
 }
 .trusted-card p {
     color: rgba(15, 23, 42, 0.85);
+}
+
+.case-study-card {
+    border-radius: 28px !important;
+    padding: 0;
+}
+
+.case-study-card .row {
+    min-height: 100%;
+}
+
+.case-study-img {
+    border-radius: 0 0 0 28px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.auth-card {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 48px;
+    border-radius: 32px;
+}
+
+.auth-link {
+    transition: var(--transition-fast);
+}
+
+.auth-link:hover,
+.auth-link:focus-visible {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.service-detail-hero {
+    max-width: 580px;
+    width: 100%;
+    height: auto;
+}
+
+.service-sidebar {
+    top: 120px;
+}
+
+@media (max-width: 991.98px) {
+    .service-sidebar {
+        position: static !important;
+        top: auto !important;
+    }
+}
+
+.case-study-card .col-sm-7 {
+    min-height: 100%;
 }
 
 /* Navbar */
@@ -337,6 +434,20 @@ h1, h2, h3, h4, h5, h6 {
     transition: width 0.1s ease;
 }
 
+.table-responsive table {
+    min-width: 520px;
+}
+
+.table-responsive td,
+.table-responsive th {
+    padding: 1.25rem 1.5rem;
+    white-space: normal;
+}
+
+.table-responsive tbody td {
+    font-size: 0.95rem;
+}
+
 /* 6. SECTIONS */
 
 /* Hero Section */
@@ -355,6 +466,12 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
 }
 
+[data-bs-theme="light"] .hero-section {
+    background-color: #f8fafc;
+    background: linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)), url('../images/tech-network-bg.svg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
 .hero-section h1,
 .hero-section h2,
 .hero-section h3,
@@ -363,6 +480,16 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section .small {
     color: #f8fafc !important; /* Force light color on dark hero background */
     text-shadow: 0 10px 20px rgba(15, 23, 42, 0.25);
+}
+
+[data-bs-theme="light"] .hero-section h1,
+[data-bs-theme="light"] .hero-section h2,
+[data-bs-theme="light"] .hero-section h3,
+[data-bs-theme="light"] .hero-section .lead,
+[data-bs-theme="light"] .hero-section .text-muted,
+[data-bs-theme="light"] .hero-section .small {
+    color: var(--text-main) !important;
+    text-shadow: none;
 }
 
 /* Home 1 Custom Background Override */
@@ -529,6 +656,17 @@ footer .d-flex.gap-3 a:hover {
     transform: translateY(-5px) scale(1.1);
 }
 
+.footer-links a {
+    color: rgba(15, 23, 42, 0.85);
+    transition: color var(--transition-normal), transform var(--transition-fast);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
 footer .btn-primary {
     transition: var(--transition-normal);
     background: linear-gradient(135deg, var(--primary-color), #4c6ef5);
@@ -543,6 +681,17 @@ footer .btn-primary:hover {
     box-shadow: 0 12px 25px rgba(16, 185, 129, 0.45);
     transform: translateY(-2px) scale(1.02);
     filter: brightness(1.05);
+}
+
+.footer-links a {
+    color: rgba(15, 23, 42, 0.85);
+    transition: color var(--transition-normal), transform var(--transition-fast);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--primary-color);
+    transform: translateY(-1px);
 }
 
 /* Newsletter Section Refinement */
@@ -577,19 +726,30 @@ footer .btn-primary:focus-visible {
 }
 /* 12. CUSTOM THEME TOGGLE */
 .theme-toggle {
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     cursor: pointer;
-    padding: 8px;
+    padding: 0;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition-normal);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: var(--text-main);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
 }
 
 .theme-toggle:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+[data-bs-theme="dark"] .navbar-prism .theme-toggle {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 .sun-and-moon {
@@ -849,4 +1009,7 @@ footer .btn-primary:focus-visible {
 
 [data-bs-theme="dark"] .blog-body blockquote {
     background: rgba(255,255,255,0.05);
+}
+.case-study-card .col-sm-5 {
+    align-items: stretch;
 }

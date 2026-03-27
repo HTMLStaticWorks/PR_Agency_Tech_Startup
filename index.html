@@ -26,6 +26,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="alternate icon" href="assets/images/favicon.svg">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -60,37 +63,42 @@
                 <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
                 <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Home
-                        </a>
-                        <ul class="dropdown-menu border-0 shadow-sm">
-                            <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
-                            <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu border-0 shadow-sm">
-                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
-                            <li><a class="dropdown-item" href="service-details.html">Media Relations</a></li>
-                            <li><a class="dropdown-item" href="service-details.html">Press Kit Strategy</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-                <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-                    <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
+                                <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Media Relations</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Press Kit Strategy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3">
+                        <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
                             <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
                                 <mask class="moon" id="moon-mask">
                                     <rect x="0" y="0" width="100%" height="100%" fill="white" />
@@ -125,7 +133,7 @@
         <div class="hero-gradient"></div>
         <div class="container">
             <div class="row align-items-center g-5">
-                <div class="col-lg-6 text-center">
+                <div class="col-lg-6 text-center d-flex flex-column justify-content-center align-items-center">
                     <span class="badge bg-primary-subtle text-primary border border-primary-subtle mb-3 px-3 py-2">Deep Tech PR Specialists</span>
                     <h1 class="display-1 fw-bold mb-4">Scale Your <span class="text-gradient">Tech Story</span> Globally</h1>
                     <p class="lead text-muted mb-5">We bridge the gap between complex deep tech innovation and top-tier media outlets. Strategic exposure for startups that matter.</p>
@@ -182,9 +190,11 @@
                         <div class="feature-visual">
                             <img src="assets/images/media-spotlight.png" alt="Media outreach illustration">
                         </div>
-                        <h3>Precision Media Outreach</h3>
-                        <p class="text-muted">Direct connections to top deep-tech journalists and industry influencers globally.</p>
-                        <a href="service-details.html" class="text-primary fw-bold text-decoration-none small">Learn more <i class="bi bi-arrow-right"></i></a>
+                        <div class="feature-card-content">
+                            <h3>Precision Media Outreach</h3>
+                            <p class="text-muted">Direct connections to top deep-tech journalists and industry influencers globally.</p>
+                        </div>
+                        <a href="service-details.html" class="feature-cta text-primary fw-bold text-decoration-none small">Learn more <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -192,9 +202,11 @@
                         <div class="feature-visual">
                             <img src="assets/images/service-details.png" alt="Press kit imagery">
                         </div>
-                        <h3>Press Kit Engineering</h3>
-                        <p class="text-muted">High-performance digital press kits that make it effortless for journalists to cover you.</p>
-                        <a href="service-details.html" class="text-primary fw-bold text-decoration-none small">Learn more <i class="bi bi-arrow-right"></i></a>
+                        <div class="feature-card-content">
+                            <h3>Press Kit Engineering</h3>
+                            <p class="text-muted">High-performance digital press kits that make it effortless for journalists to cover you.</p>
+                        </div>
+                        <a href="service-details.html" class="feature-cta text-primary fw-bold text-decoration-none small">Learn more <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -202,9 +214,11 @@
                         <div class="feature-visual">
                             <img src="assets/images/modern-agency-office.png" alt="Crisis mitigation concept">
                         </div>
-                        <h3>Crisis Mitigation</h3>
-                        <p class="text-muted">Protect your reputation with rapid-response strategies tailored for high-stakes tech launches.</p>
-                        <a href="service-details.html" class="text-primary fw-bold text-decoration-none small">Learn more <i class="bi bi-arrow-right"></i></a>
+                        <div class="feature-card-content">
+                            <h3>Crisis Mitigation</h3>
+                            <p class="text-muted">Protect your reputation with rapid-response strategies tailored for high-stakes tech launches.</p>
+                        </div>
+                        <a href="service-details.html" class="feature-cta text-primary fw-bold text-decoration-none small">Learn more <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -251,7 +265,7 @@
                     <h6 class="text-primary fw-bold text-uppercase ls-1">Success Stories</h6>
                     <h2 class="display-5 fw-bold mb-0">Proven <span class="text-primary">Impact</span></h2>
                 </div>
-                <div class="col-lg-6 text-lg-end mt-3 mt-lg-0">
+                <div class="col-lg-6 text-lg-start mt-3 mt-lg-0">
                     <a href="services.html" class="btn btn-link text-main text-decoration-none fw-bold">View All Documentation <i class="bi bi-arrow-right ms-2"></i></a>
                 </div>
             </div>
@@ -259,15 +273,17 @@
             <div class="row g-4">
                 <!-- Case Study 1 -->
                 <div class="col-md-6">
-                    <div class="prism-card p-0 overflow-hidden border-0 shadow-lg">
-                        <div class="row g-0">
-                            <div class="col-sm-5">
-                                <img src="assets/images/case_study_neurolink.png" class="img-fluid h-100 object-fit-cover" alt="NeuroLink Funding Case Study">
+                    <div class="prism-card p-0 overflow-hidden border-0 shadow-lg case-study-card">
+                        <div class="row g-0 h-100">
+                            <div class="col-sm-5 d-flex">
+                                <img src="assets/images/case_study_neurolink.png" class="img-fluid h-100 object-fit-cover case-study-img" alt="NeuroLink Funding Case Study">
                             </div>
-                            <div class="col-sm-7 p-4">
-                                <div class="badge bg-primary-subtle text-primary mb-3">AI & Robotics</div>
-                                <h4>NeuroLink Funding</h4>
-                        <p class="text-strong small">Secured exclusive coverage in Wired and TechCrunch for a $50M Series B launch.</p>
+                            <div class="col-sm-7 p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="badge bg-primary-subtle text-primary mb-3">AI & Robotics</div>
+                                    <h4>NeuroLink Funding</h4>
+                                    <p class="text-strong small">Secured exclusive coverage in Wired and TechCrunch for a $50M Series B launch.</p>
+                                </div>
                                 <div class="d-flex gap-3 mt-4">
                                     <div>
                                         <div class="fw-bold text-primary">420%</div>
@@ -284,15 +300,17 @@
                 </div>
                 <!-- Case Study 2 -->
                 <div class="col-md-6">
-                    <div class="prism-card p-0 overflow-hidden border-0 shadow-lg">
-                        <div class="row g-0">
-                            <div class="col-sm-5">
-                                <img src="assets/images/case_study_cloudscale.png" class="img-fluid h-100 object-fit-cover" alt="CloudScale Launch Case Study">
+                    <div class="prism-card p-0 overflow-hidden border-0 shadow-lg case-study-card">
+                        <div class="row g-0 h-100">
+                            <div class="col-sm-5 d-flex">
+                                <img src="assets/images/case_study_cloudscale.png" class="img-fluid h-100 object-fit-cover case-study-img" alt="CloudScale Launch Case Study">
                             </div>
-                            <div class="col-sm-7 p-4">
-                                <div class="badge bg-secondary-subtle text-secondary mb-3">SaaS Automation</div>
-                                <h4>CloudScale Launch</h4>
-                                <p class="text-strong small">Dominated Product Hunt #1 and secured 15+ tier-1 media mentions in 48 hours.</p>
+                            <div class="col-sm-7 p-4 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="badge bg-secondary-subtle text-secondary mb-3">SaaS Automation</div>
+                                    <h4>CloudScale Launch</h4>
+                                    <p class="text-strong small">Dominated Product Hunt #1 and secured 15+ tier-1 media mentions in 48 hours.</p>
+                                </div>
                                 <div class="d-flex gap-3 mt-4">
                                     <div>
                                         <div class="fw-bold text-secondary">#1</div>

@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="faviconTitle">
+  <title id="faviconTitle">Prism PR logo</title>
+  <defs>
+    <linearGradient id="prismGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d6efd"/>
+      <stop offset="100%" stop-color="#5f1aff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" ry="12" fill="#f8fafc"/>
+  <circle cx="32" cy="32" r="26" fill="url(#prismGrad)"/>
+  <path d="M21 24h8a7 7 0 0 1 0 14h-8z" fill="#fff" opacity="0.9"/>
+  <path d="M29 24h8a7 7 0 0 1 0 14h-8z" fill="#fff" opacity="0.6" transform="translate(4 0)"/>
+  <path d="M20 24v16h6l5-4a5 5 0 0 0 0-8l-5-4z" fill="#fff"/>
+  <path d="M32 24v16h6a7 7 0 0 0 0-14h-6z" fill="#fff" opacity="0.8"/>
+</svg>
