@@ -536,11 +536,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Home 1 Custom Background Override */
 .hero-home-1 {
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat !important;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), radial-gradient(circle at 50% 50%, #1a1d21 0%, #0f172a 100%) !important;
 }
 
 [data-bs-theme="dark"] .hero-home-1 {
-    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat !important;
+    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), radial-gradient(circle at 50% 50%, #0a0c10 0%, #0f172a 100%) !important;
 }
 
 .hero-gradient {
@@ -634,6 +634,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-theme-light {
     background-color: var(--bg-light) !important;
+}
+
+.bg-main {
+    background-color: var(--secondary-color) !important;
+    color: var(--accent-color) !important;
+}
+
+.bg-main .text-secondary {
+    color: #94a3b8 !important; /* Slate 400 - much better contrast on dark navy */
+}
+
+.bg-main .opacity-75,
+[data-bs-theme="dark"] .opacity-75 {
+    opacity: 0.9 !important;
+}
+
+.bg-main h1, .bg-main h2, .bg-main h3, .bg-main h4, .bg-main h5, .bg-main h6 {
+    color: var(--accent-color) !important;
 }
 
 /* Blur Utilities */

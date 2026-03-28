@@ -1,0 +1,33 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="600" fill="#212529" rx="16"/>
+  <defs>
+    <linearGradient id="herograd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d6efd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#20c997;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background Pattern -->
+  <path d="M0 450L1200 450M200 0V600M400 0V600M600 0V600M800 0V600M1000 0V600" stroke="white" stroke-width="1" opacity="0.05"/>
+  <!-- Analytics Grid -->
+  <g transform="translate(100, 100)">
+    <!-- Column 1 -->
+    <rect x="0" y="0" width="200" height="300" rx="12" fill="white" opacity="0.05" stroke="white" stroke-width="1" opacity="0.2"/>
+    <text x="20" y="40" fill="white" font-family="Outfit, sans-serif" font-weight="bold" font-size="14" opacity="0.6">MEDIA REACH</text>
+    <path d="M40 260C60 220 80 240 100 180C120 120 140 160 160 100" stroke="#0d6efd" stroke-width="3" fill="none"/>
+    <!-- Column 2 -->
+    <rect x="250" y="0" width="200" height="300" rx="12" fill="white" opacity="0.05" stroke="white" stroke-width="1" opacity="0.2"/>
+    <text x="270" y="40" fill="white" font-family="Outfit, sans-serif" font-weight="bold" font-size="14" opacity="0.6">MENTIONS</text>
+    <rect x="275" y="100" width="150" height="20" rx="10" fill="#20c997" opacity="0.8"/>
+    <rect x="275" y="140" width="120" height="20" rx="10" fill="#20c997" opacity="0.6"/>
+    <rect x="275" y="180" width="140" height="20" rx="10" fill="#20c997" opacity="0.4"/>
+    <!-- Column 3 -->
+    <rect x="500" y="0" width="200" height="300" rx="12" fill="white" opacity="0.05" stroke="white" stroke-width="1" opacity="0.2"/>
+    <text x="520" y="40" fill="white" font-family="Outfit, sans-serif" font-weight="bold" font-size="14" opacity="0.6">SENTIMENT</text>
+    <circle cx="600" cy="180" r="60" stroke="#fd7e14" stroke-width="8" stroke-dasharray="280 376" opacity="0.8"/>
+    <!-- Column 4 -->
+    <rect x="750" y="0" width="200" height="300" rx="12" fill="white" opacity="0.05" stroke="white" stroke-width="1" opacity="0.2"/>
+    <text x="770" y="40" fill="white" font-family="Outfit, sans-serif" font-weight="bold" font-size="14" opacity="0.6">VELOCITY</text>
+    <path d="M790 280L810 240L830 250L850 200L870 210L890 150L910 180" stroke="#6f42c1" stroke-width="3" fill="none"/>
+  </g>
+  <text x="600" y="550" text-anchor="middle" fill="white" font-family="Outfit, sans-serif" font-weight="bold" font-size="24" opacity="0.8" style="letter-spacing: 4px;">PRISM PR GLOBAL DASHBOARD</text>
+</svg>
