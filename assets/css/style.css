@@ -175,8 +175,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .prism-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg), 0 20px 40px rgba(99, 102, 241, 0.1);
     border-color: var(--primary-color);
+}
+
+.prism-card img {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.prism-card:hover img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.premium-img-container {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(15, 23, 42, 0.05) 100%);
+}
+
+.premium-img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .transition-up {
@@ -920,10 +943,10 @@ footer .btn-primary:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 64px; /* Fixed width to prevent stretching (ovals) */
-    height: 64px; /* Fixed height for perfect circles */
-    flex-shrink: 0; /* Prevents compression in flex layouts */
-    margin: 0 auto 1.5rem; /* Centers horizontally and adds spacing */
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    margin: 0 auto 1.5rem;
     background: var(--bg-light);
     border: 1px solid var(--border-color);
     border-radius: 12px;
