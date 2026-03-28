@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360" height="220" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
+  <defs>
+    <linearGradient id="ai-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="ai-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="24" ry="24" fill="url(#ai-gradient)"/>
+  <circle cx="80" cy="80" r="35" fill="#ffffff20"/>
+  <circle cx="260" cy="60" r="30" fill="#ffffff25"/>
+  <circle cx="210" cy="150" r="28" fill="#ffffff25"/>
+  <path d="M90 120 L140 170 L210 140 L260 190" fill="none" stroke="#ffffff90" stroke-width="3" stroke-linecap="round"/>
+  <path d="M60 170 L110 120 L180 160" fill="none" stroke="#d4d3ff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="140" cy="60" r="6" fill="#fcd34d"/>
+  <circle cx="190" cy="130" r="6" fill="#34d399"/>
+  <rect x="60" y="150" width="80" height="45" rx="12" fill="#ffffff10" stroke="#ffffff40" stroke-width="1"/>
+  <rect x="200" y="30" width="100" height="35" rx="10" fill="#ffffff15" stroke="#ffffff30" stroke-width="1"/>
+  <rect x="200" y="110" width="110" height="20" rx="6" fill="#ffffff25"/>
+  <rect x="40" y="40" width="40" height="40" rx="12" fill="url(#ai-glow)"/>
+  <rect x="120" y="40" width="30" height="30" rx="20" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="300" cy="170" r="8" fill="#38bdf8"/>
+</svg>

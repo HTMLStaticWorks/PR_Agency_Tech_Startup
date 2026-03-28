@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand-lg navbar-prism sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
+                <img src="assets/images/favicon.svg" width="32" height="32" class="me-2 rounded-2" alt="Prism PR Logo">
                 <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -74,8 +74,18 @@
                         <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
                             <i class="bi bi-translate"></i>
                         </button>
-                        <a href="login.html" class="btn btn-prism btn-prism-outline btn-sm navbar-btn"><i class="bi bi-person-circle"></i> Client Login</a>
-                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm navbar-btn">Get Started</a>
+                        <a href="login.html" class="btn btn-outline-primary btn-prism btn-sm btn-prism-ghost navbar-btn">
+                            <span class="btn-icon-circle">
+                                <i class="bi bi-person-badge"></i>
+                            </span>
+                            Client Login
+                        </a>
+                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm navbar-btn">
+                            <span class="btn-icon-circle bg-white bg-opacity-10 text-white">
+                                <i class="bi bi-rocket-takeoff"></i>
+                            </span>
+                            Get Started
+                        </a>
                     </div>
                 </div>
             </div>
@@ -107,6 +117,115 @@
             <div class="blog-search-container">
                 <i class="bi bi-search blog-search-icon"></i>
                 <input type="text" class="blog-search-input" placeholder="Search insights, strategies, or trends...">
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Insight Cards -->
+    <section class="section-padding bg-theme-white">
+        <div class="container">
+            <div class="row align-items-center justify-content-between mb-4">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold mb-2 text-main">Premium insights for bold founders</h2>
+                    <p class="text-muted mb-0">Narratives that simplify complex innovation and give journalists a signal they can trust.</p>
+                </div>
+                <div class="col-auto">
+                    <a href="blog-details.html" class="text-primary fw-bold text-decoration-none small d-inline-flex align-items-center gap-1">
+                        View all briefings <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-4 insight-grid">
+                <div class="col-md-6 col-lg-4">
+                    <article class="prism-card insight-card h-100">
+                        <div class="premium-img-container mb-4">
+                            <img src="assets/images/ai_strategy_insight.svg" alt="Artificial Intelligence Strategy illustration">
+                        </div>
+                        <span class="badge fw-semibold mb-3 px-3 py-2" style="background-color: rgba(99, 102, 241, 0.12); color: #4f46e5;">Artificial Intelligence</span>
+                        <h3 class="h5 fw-bold mb-2">Artificial Intelligence Strategy</h3>
+                        <p class="text-muted small mb-3">The Founder's Guide to Pitching LLMs in 2026 — how to communicate complex neural frameworks to non-technical editors without losing the story.</p>
+                        <a href="blog-details.html" class="text-primary fw-bold small d-inline-flex align-items-center gap-1">
+                            Read article <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="prism-card insight-card h-100">
+                        <div class="premium-img-container mb-4">
+                            <img src="assets/images/web3_media_insight.svg" alt="Web3 Decentralized Media illustration">
+                        </div>
+                        <span class="badge fw-semibold mb-3 px-3 py-2" style="background-color: rgba(14, 165, 233, 0.12); color: #0ea5e9;">Web3 &amp; Crypto</span>
+                        <h3 class="h5 fw-bold mb-2">Web3 Decentralized Media</h3>
+                        <p class="text-muted small mb-3">Beyond the Hype: Building Trust in Decentralized Media — strategic approaches to reputation management for layer-2 protocols and DeFi startups.</p>
+                        <a href="blog-details.html" class="text-primary fw-bold small d-inline-flex align-items-center gap-1">
+                            Read article <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="prism-card insight-card h-100">
+                        <div class="premium-img-container mb-4">
+                            <img src="assets/images/crisis_dashboard_insight.svg" alt="Crisis Tech Dashboard illustration">
+                        </div>
+                        <span class="badge fw-semibold mb-3 px-3 py-2" style="background-color: rgba(248, 113, 113, 0.15); color: #dc2626;">Crisis Tech</span>
+                        <h3 class="h5 fw-bold mb-2">Crisis Tech Dashboard</h3>
+                        <p class="text-muted small mb-3">Managing Stealth Exits and Technical Outage Communications — the anatomy of a rapid-response strategy for technical failures and reputational risks.</p>
+                        <a href="blog-details.html" class="text-primary fw-bold small d-inline-flex align-items-center gap-1">
+                            Read article <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Domination Section -->
+    <section class="section-padding bg-theme-light">
+        <div class="container text-center">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-2">Everything You Need for <span class="text-primary">Media Domination</span></h2>
+                    <p class="lead text-muted mb-0">A full-stack PR platform designed for the fast-paced tech ecosystem.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="prism-card media-card h-100">
+                        <div class="media-card-icon mb-4 bg-gradient-primary text-white">
+                            <i class="bi bi-broadcast-pin fs-3"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Precision Outreach</h3>
+                        <p class="text-muted small mb-4">Curated journalist lists, message testing, and tailored outreach cadences for each launch phase.</p>
+                        <a href="services.html" class="text-primary fw-bold small d-inline-flex align-items-center gap-1">
+                            Learn more <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="prism-card media-card h-100">
+                        <div class="media-card-icon mb-4 bg-gradient-secondary text-white">
+                            <i class="bi bi-journal-text fs-3"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Press Kit Engineering</h3>
+                        <p class="text-muted small mb-4">High-impact digital press kits with dynamic data, editable bios, and localized talking points.</p>
+                        <a href="service-details.html" class="text-primary fw-bold small d-inline-flex align-items-center gap-1">
+                            Learn more <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="prism-card media-card h-100">
+                        <div class="media-card-icon mb-4 bg-gradient-warning text-white">
+                            <i class="bi bi-shield-exclamation fs-3"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Crisis Command</h3>
+                        <p class="text-muted small mb-4">Rapid-response playbooks, stakeholder comms, and trusted spokespeople training for high-stakes moments.</p>
+                        <a href="contact.html" class="text-primary fw-bold small d-inline-flex align-items-center gap-1">
+                            Learn more <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
@@ -221,7 +340,7 @@
                                 <input type="email" class="form-control form-control-lg bg-white bg-opacity-10 text-white border-white border-opacity-20 rounded-pill px-4 placeholder-light" placeholder="your@email.com" required>
                             </div>
                             <div class="col-md-auto">
-                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">Join the Briefing</button>
+                                <button type="submit" class="btn btn-prism btn-prism-primary btn-lg rounded-pill px-5 fw-bold">Join the Briefing</button>
                             </div>
                         </form>
                     </div>
@@ -236,7 +355,7 @@
             <div class="row g-5 mb-5">
                 <div class="col-lg-4">
                     <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
-                        <i class="bi bi-pentagon-half text-primary me-2 fs-3"></i>
+                        <img src="assets/images/favicon.svg" width="32" height="32" class="me-2 rounded-2" alt="Prism PR Logo">
                         <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
                     </a>
                     <p class="text-muted mb-4 small">Strategic tech startup communications. We bridge the gap between complex innovation and global media influence.</p>
@@ -270,7 +389,7 @@
                     <form class="mt-4">
                         <div class="input-group">
                             <input type="email" class="form-control rounded-start-pill ps-4 py-3" placeholder="Founder's Email" required>
-                            <button type="submit" class="btn btn-primary rounded-end-pill px-4">Join Hub</button>
+                            <button type="submit" class="btn btn-prism btn-prism-primary rounded-end-pill px-4">Join Hub</button>
                         </div>
                     </form>
                 </div>
@@ -294,5 +413,3 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-

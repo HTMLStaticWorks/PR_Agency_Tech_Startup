@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#01132a"/>
+      <stop offset="100%" stop-color="#021b42"/>
+    </linearGradient>
+    <linearGradient id="horizon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1f39"/>
+      <stop offset="100%" stop-color="#030b1b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="60%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="earth-light" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0d223d"/>
+      <stop offset="0.7" stop-color="#050c1b"/>
+      <stop offset="1" stop-color="#010305"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="32" fill="url(#sky)"/>
+  <circle cx="720" cy="130" r="90" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="640" cy="96" r="60" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="820" cy="230" r="40" fill="rgba(255,255,255,0.12)"/>
+  <rect x="60" y="80" width="700" height="340" rx="180" fill="url(#earth-light)" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  <path d="M120 330 C240 290 320 360 420 320 C520 280 600 340 720 300" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M160 310 C280 270 360 340 480 300 C600 260 680 320 800 280" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 8"/>
+  <circle cx="320" cy="320" r="6" fill="#fef08a" opacity="0.7"/>
+  <circle cx="450" cy="285" r="5" fill="#34d399" opacity="0.8"/>
+  <circle cx="620" cy="260" r="8" fill="#38bdf8" opacity="0.6"/>
+  <circle cx="540" cy="200" r="9" fill="#a855f7" opacity="0.65"/>
+  <circle cx="690" cy="150" r="7" fill="#f97316" opacity="0.7"/>
+  <ellipse cx="420" cy="360" rx="250" ry="100" fill="url(#horizon)" opacity="0.9"/>
+  <circle cx="420" cy="360" r="260" fill="url(#glow)" opacity="0.4"/>
+</svg>

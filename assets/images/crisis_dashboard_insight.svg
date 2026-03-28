@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360" height="220" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
+  <defs>
+    <linearGradient id="crisis-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="crisis-grid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="1%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="24" ry="24" fill="url(#crisis-gradient)"/>
+  <rect x="30" y="30" width="60" height="20" rx="8" fill="#ffffff25"/>
+  <rect x="110" y="30" width="120" height="20" rx="12" fill="#ffffff20"/>
+  <rect x="240" y="30" width="80" height="20" rx="10" fill="#ffffff20"/>
+  <path d="M35 90 H325" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <path d="M35 140 H325" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <path d="M35 190 H325" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <path d="M34 35 V190" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <path d="M320 35 V190" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <rect x="80" y="90" width="60" height="90" rx="16" fill="rgba(255,255,255,0.45)"/>
+  <rect x="180" y="105" width="50" height="80" rx="14" fill="rgba(255,255,255,0.3)"/>
+  <rect x="250" y="120" width="70" height="60" rx="12" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="130" cy="140" r="14" fill="#f8fafc"/>
+  <circle cx="240" cy="90" r="10" fill="#fecdd3"/>
+  <circle cx="300" cy="180" r="8" fill="#fde68a"/>
+  <rect x="40" y="60" width="30" height="12" rx="6" fill="#ffffff35"/>
+  <rect x="80" y="60" width="40" height="12" rx="6" fill="#ffffff35"/>
+  <rect x="130" y="60" width="60" height="12" rx="6" fill="#ffffff35"/>
+</svg>
