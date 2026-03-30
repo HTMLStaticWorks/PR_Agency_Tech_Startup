@@ -29,13 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // RTL Toggle
+    // RTL Toggle Performance
     const rtlBtn = document.getElementById('rtl-toggle');
+    const getDir = localStorage.getItem('dir') || 'ltr';
+    document.documentElement.setAttribute('dir', getDir);
+
     if (rtlBtn) {
         rtlBtn.addEventListener('click', () => {
             const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
             document.documentElement.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
         });
     }
 

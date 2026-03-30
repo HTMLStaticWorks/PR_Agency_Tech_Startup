@@ -208,6 +208,10 @@
             }
             .media-item .btn {
                 width: 100% !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                height: 42px !important; /* Slightly more height for better mobile touch and centering */
             }
         }
 
@@ -240,7 +244,7 @@
             </div>
 
             <div class="mt-auto pt-5">
-                <a href="login.html" class="sidebar-link text-error"><i data-lucide="log-out"></i> Logout</a>
+                <a href="index.html" class="sidebar-link text-error"><i data-lucide="log-out"></i> Logout</a>
             </div>
         </aside>
 
@@ -374,7 +378,7 @@
                     <div class="glass-card">
                         <h5 class="fw-bold mb-3">Your Strategist</h5>
                         <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary rounded-circle me-3" style="width: 48px; height: 48px;"></div>
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" class="rounded-circle me-3 object-fit-cover" style="width: 48px; height: 48px; border: 1px solid rgba(0, 255, 198, 0.4);" alt="Alex Sterling">
                             <div>
                                 <h6 class="mb-0">Alex Sterling</h6>
                                 <small class="opacity-50">Senior Director, NEO-PR</small>
@@ -416,14 +420,14 @@
                 <div class="glass-card">
                     <h4 class="fw-bold mb-4">Strategy Timeline</h4>
                     <div class="row g-3">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="stat-card border-primary border-opacity-25">
                                 <span class="badge bg-primary mb-2 text-dark">Upcoming</span>
                                 <h6>Product Hunt Launch</h6>
                                 <p class="small opacity-50 mb-0">Scheduled for May 5, 2026</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="stat-card">
                                 <span class="badge bg-secondary mb-2">Planning</span>
                                 <h6>Founder Podcast Tour</h6>

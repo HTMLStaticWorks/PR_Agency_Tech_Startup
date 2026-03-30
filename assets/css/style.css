@@ -33,7 +33,7 @@
     --footer-bg: #fdfdfd;
     --footer-border: rgba(11, 15, 20, 0.05);
     --glass-bg: rgba(255, 255, 255, 0.9);
-    --hero-overlay: rgba(200, 215, 212, 0.6);
+    --hero-overlay: rgba(11, 15, 20, 0.05); /* Reduced white-washing effect */
 }
 
 [data-theme="dark"] {
@@ -98,6 +98,17 @@ body {
     color: var(--text-body);
     transition: var(--transition);
 }
+
+/* Light Mode Contrast Improvements */
+[data-theme="light"] .opacity-75 { opacity: 0.9 !important; }
+[data-theme="light"] .opacity-50 { opacity: 0.75 !important; }
+[data-theme="light"] img { opacity: 1 !important; filter: contrast(1.1) brightness(0.95); }
+[data-theme="light"] .glass-card { background: rgba(255, 255, 255, 0.8) !important; border-color: rgba(11, 15, 20, 0.1) !important; }
+[data-theme="light"] .section-padding[style*="background: rgba(0, 0, 0"] { background: rgba(11, 15, 20, 0.03) !important; }
+[data-theme="light"] .text-white { color: var(--text-dark) !important; }
+[data-theme="light"] .bg-dark { background-color: var(--bg-light) !important; }
+
+.text-always-white { color: #ffffff !important; }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
@@ -334,6 +345,28 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
+@media (max-width: 991.98px) {
+    .home-2-hero {
+        align-items: flex-start !important;
+        padding-top: 120px;
+        padding-bottom: 64px;
+    }
+
+    .home-2-hero .row {
+        row-gap: 2.5rem;
+    }
+
+    #analytics .analytics-heading,
+    #analytics .analytics-title {
+        text-align: center;
+    }
+
+    #analytics .analytics-cta {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 /* Bento Item Theme Overrides */
 .bento-card-link {
     background-size: cover !important;
@@ -447,6 +480,22 @@ h1, h2, h3, h4, h5, h6 {
     }
     [data-theme="light"] .metric-divider {
         border-bottom: 1px solid rgba(11, 15, 20, 0.1);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .home-2-hero-actions {
+        justify-content: center;
+    }
+
+    .final-cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .final-cta-btn {
+        width: 100%;
+        max-width: 240px;
     }
 }
 
@@ -607,6 +656,21 @@ footer .text-primary,
     footer .row.g-5 > [class*="col-"] {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    #services .glass-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #services .services-card-body {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+    }
+
+    #services .services-card-link {
+        margin-top: auto;
     }
 }
 

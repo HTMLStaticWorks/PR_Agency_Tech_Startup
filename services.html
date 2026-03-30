@@ -32,8 +32,9 @@
                 <ul class="navbar-nav align-items-center mb-0">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -80,7 +81,7 @@
     <section class="section-padding">
         <div class="container">
             <div class="row g-5 align-items-center mb-5">
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-center text-lg-start">
                     <h5 class="text-primary text-uppercase mb-3">01. Media Relations</h5>
                     <h2 class="display-5 fw-bold mb-4">Securing Headlines where it Matters.</h2>
                     <p class="opacity-75 mb-4">Our relationships with editors at Forbes, TechCrunch, WIRED, and The Verge ensure your story isn't just told, but heard by the right people at the right time.</p>
@@ -99,7 +100,7 @@
             </div>
 
             <div class="row g-5 align-items-center mb-5 flex-lg-row-reverse">
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-center text-lg-start">
                     <h5 class="text-primary text-uppercase mb-3">02. Crisis Management</h5>
                     <h2 class="display-5 fw-bold mb-4">NAR (Narrative Control) Protocol.</h2>
                     <p class="opacity-75 mb-4">Protecting your brand’s reputation isn’t just about reaction; it’s about proactive defense strategy that keeps your vision safe.</p>
@@ -166,7 +167,7 @@
     <section class="section-padding">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-5">
+                <div class="col-lg-5 text-center text-lg-start">
                     <h5 class="text-primary text-uppercase mb-3 tracking-widest">Capabilities</h5>
                     <h2 class="display-4 fw-bold mb-4">Beyond the Headlines.</h2>
                     <p class="opacity-75 mb-5">Our influence ecosystem extends into technical ghostwriting and category creation for first-movers.</p>
@@ -255,14 +256,15 @@
             transition: var(--transition);
         }
         .capability-card:hover { border-color: var(--primary); transform: translateX(10px); background: rgba(0, 255, 198, 0.05); }
+        [data-theme="light"] .capability-card { background: rgba(11, 15, 20, 0.03) !important; border-color: rgba(11, 15, 20, 0.08) !important; }
         .capability-tag { padding: 0.75rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-weight: bold; }
     </style>
 
     <!-- Services CTA -->
     <section class="section-padding bg-primary" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop'); background-attachment: fixed; background-size: cover;">
         <div class="container text-center py-5">
-            <h2 class="display-4 fw-bold mb-4 text-white">Customized PR Strategy.</h2>
-            <p class="lead mb-5 opacity-75 mx-auto text-white" style="max-width: 600px;">Each startup has a different trajectory. We build the engine to match yours.</p>
+            <h2 class="display-4 fw-bold mb-4 text-always-white">Customized PR Strategy.</h2>
+            <p class="lead mb-5 opacity-75 mx-auto text-always-white" style="max-width: 600px;">Each startup has a different trajectory. We build the engine to match yours.</p>
             <a href="pricing.html" class="btn btn-primary">Explore Pricing</a>
         </div>
     </section>

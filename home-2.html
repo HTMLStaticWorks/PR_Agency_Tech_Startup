@@ -12,19 +12,7 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <style>
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 200px;
-            gap: 1.5rem;
-        }
-        .bento-item-1 { grid-column: span 2; grid-row: span 2; }
-        .bento-item-2 { grid-column: span 1; grid-row: span 1; }
-        .bento-item-3 { grid-column: span 1; grid-row: span 2; }
-        .bento-item-4 { grid-column: span 1; grid-row: span 1; }
-        .bento-item-5 { grid-column: span 1; grid-row: span 1; }
-    </style>
+
 </head>
 <body>
 
@@ -45,8 +33,8 @@
                 <ul class="navbar-nav align-items-center mb-0">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -81,14 +69,14 @@
     </nav>
 
     <!-- Advanced Hero Section -->
-    <section class="hero hero-overlay d-flex align-items-center min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
+    <section class="home-2-hero hero hero-overlay d-flex align-items-center min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h5 class="text-primary text-uppercase mb-3 tracking-widest">Premium PR Agency</h5>
-                    <h1 class="display-2 fw-bold mb-4 text-gradient">Your Narrative, <br> amplified.</h1>
-                    <p class="lead mb-5 opacity-75">We don't just pitch media. We architect the authority of the next generation of tech unicorns.</p>
-                    <div class="d-flex flex-wrap gap-3">
+                    <h1 class="display-2 fw-bold mb-4 text-always-white">Your Narrative, <br> amplified.</h1>
+                    <p class="lead mb-5 opacity-75 text-always-white">We don't just pitch media. We architect the authority of the next generation of tech unicorns.</p>
+                    <div class="home-2-hero-actions d-flex flex-wrap gap-3">
                         <a href="#analytics" class="btn btn-primary">Our Process</a>
                         <a href="case-studies.html" class="btn btn-outline-primary">The Results</a>
                     </div>
@@ -162,72 +150,59 @@
                 <div class="col-lg-5 order-2 order-lg-1">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" class="img-fluid rounded-4 shadow-lg border border-white border-opacity-10" alt="Analytics Dashboard">
                 </div>
-                <div class="col-lg-6 offset-lg-1 order-1 order-lg-2 mb-5 mb-lg-0 text-start">
-                    <h5 class="text-primary text-uppercase mb-3">Data Led</h5>
-                    <h2 class="display-5 fw-bold mb-4">Real-time Visibility into your Campaign.</h2>
+                <div class="analytics-copy col-lg-6 offset-lg-1 order-1 order-lg-2 mb-5 mb-lg-0 text-start">
+                    <h5 class="analytics-heading text-primary text-uppercase mb-3">Data Led</h5>
+                    <h2 class="analytics-title display-5 fw-bold mb-4">Real-time Visibility into your Campaign.</h2>
                     <p class="opacity-75 mb-5">Our proprietary dashboard gives you access to real-time media monitoring, sentiment analysis, and ROI tracking. No more waiting for monthly reports.</p>
-                    <a href="dashboard.html" class="btn btn-primary">Access Portal</a>
+                    <div class="analytics-cta">
+                        <a href="dashboard.html" class="btn btn-primary">Access Portal</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bento Grid Section -->
+    <!-- Why NEO-PR Section -->
     <section class="section-padding" style="background: rgba(0, 0, 0, 0.2);">
         <div class="container">
             <h2 class="display-5 fw-bold mb-5 text-center">Why NEO-PR?</h2>
-            <div class="bento-grid d-none d-lg-grid">
-                <div class="glass-card bento-item-1 d-flex flex-column justify-content-end p-5 bento-card-link" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop');">
-                    <div class="glass-bento-inner p-4">
-                        <span class="badge bg-primary text-dark mb-2">Primary Core</span>
-                        <h4 class="fw-bold">Strategic Positioning</h4>
-                        <p class="mb-0 opacity-75">We don't just tell stories. We build the high-authority categories where you are the uncontested leader. Every narrative is engineered for long-term category dominance.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 border-0" style="background: rgba(255,255,255,0.03);">
+                        <h4 class="fw-bold mb-3 text-primary">Strategic Positioning</h4>
+                        <p class="opacity-75 mb-0">We build high-authority categories where you are the uncontested leader. Every narrative is engineered for long-term category dominance.</p>
                     </div>
                 </div>
-                <div class="glass-card bento-item-2 d-flex flex-column justify-content-center p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <i data-lucide="users" class="text-primary" style="width: 24px; height: 24px;"></i>
-                        <span class="small opacity-50">12k+ Global</span>
-                    </div>
-                    <h5 class="fw-bold mb-2">Journalist Network</h5>
-                    <p class="small opacity-75 mb-0">Direct access to Tier-1 editors at Forbes, TechCrunch, and WIRED. We don't pitch; we provide news.</p>
-                </div>
-                <div class="glass-card bento-item-3 p-5 d-flex flex-column justify-content-center bento-item-3-gradient">
-                    <div class="display-5 fw-bold text-primary mb-3">Zero-Friction</div>
-                    <h4 class="fw-bold mb-3">Execution Engine</h4>
-                    <p class="opacity-75">From the first strategy sprint to the final global headline, we handle 100% of the operational heavy lifting. You build the future; we build the audience.</p>
-                    <div class="mt-4 pt-4 border-top border-white border-opacity-10 d-flex gap-3">
-                        <div class="small"><span class="text-primary fw-bold">24/7</span> Monitoring</div>
-                        <div class="small"><span class="text-primary fw-bold">Instant</span> Slack Sync</div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 border-0" style="background: rgba(255,255,255,0.03);">
+                        <h4 class="fw-bold mb-3 text-primary">Journalist Network</h4>
+                        <p class="opacity-75 mb-0">Direct access to Tier-1 editors at flagship publications. We don't just pitch stories; we provide the news that defines industries.</p>
                     </div>
                 </div>
-                <div class="glass-card bento-item-4 d-flex flex-column justify-content-center p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <i data-lucide="globe" class="text-primary" style="width: 24px; height: 24px;"></i>
-                        <div class="d-flex align-items-center gap-1">
-                            <div class="bg-primary rounded-circle" style="width: 6px; height: 6px;"></div>
-                            <span class="small opacity-50" style="font-size: 10px; text-transform: uppercase;">Live Signals</span>
-                        </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 border-0" style="background: rgba(255,255,255,0.03);">
+                        <h4 class="fw-bold mb-3 text-primary">Execution Engine</h4>
+                        <p class="opacity-75 mb-0">From initial strategy to final global headlines, we handle 100% of the operational heavy lifting. You build the future; we build the audience.</p>
                     </div>
-                    <h5 class="fw-bold mb-2">Global Coverage</h5>
-                    <p class="small opacity-75 mb-0">Multi-territory campaigns spanning SF, London, and Tokyo markets simultaneously.</p>
                 </div>
-                <div class="glass-card bento-item-5 d-flex flex-column justify-content-center p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <i data-lucide="pie-chart" class="text-primary" style="width: 24px; height: 24px;"></i>
-                        <span class="small opacity-50">Sentiment AI</span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 border-0" style="background: rgba(255,255,255,0.03);">
+                        <h4 class="fw-bold mb-3 text-primary">Global Coverage</h4>
+                        <p class="opacity-75 mb-0">Multi-territory campaigns spanning SF, London, and Tokyo markets simultaneously to ensure your story resonates worldwide.</p>
                     </div>
-                    <h5 class="fw-bold mb-2">Sentiment Tracking</h5>
-                    <p class="small opacity-75 mb-0">Proprietary logic to monitor brand perception in real-time across all news cycles.</p>
                 </div>
-            </div>
-            <!-- Mobile Bento Fallback -->
-            <div class="row g-4 d-lg-none">
-                <div class="col-12"><div class="glass-card p-4"><h4>Strategic Positioning</h4></div></div>
-                <div class="col-6"><div class="glass-card p-4 text-center"><i data-lucide="users" class="text-primary mb-2"></i><h5>Network</h5></div></div>
-                <div class="col-6"><div class="glass-card p-4 text-center"><i data-lucide="globe" class="text-primary mb-2"></i><h5>Global</h5></div></div>
-                <div class="col-6"><div class="glass-card p-4 text-center"><i data-lucide="pie-chart" class="text-primary mb-2"></i><h5>Sentiment</h5></div></div>
-                <div class="col-6"><div class="glass-card p-4 text-center"><i data-lucide="activity" class="text-primary mb-2"></i><h5>Frictionless</h5></div></div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 border-0" style="background: rgba(255,255,255,0.03);">
+                        <h4 class="fw-bold mb-3 text-primary">Sentiment Tracking</h4>
+                        <p class="opacity-75 mb-0">Proprietary logic to monitor brand perception in real-time across all news cycles, ensuring you always own the narrative.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-4 h-100 border-0" style="background: rgba(255,255,255,0.03);">
+                        <h4 class="fw-bold mb-3 text-primary">Authority Building</h4>
+                        <p class="opacity-75 mb-0">Engineering the technical narratives and thought leadership that position your brand as the uncontested expert in your sector.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -261,7 +236,7 @@
         <div class="container">
             <h2 class="display-5 fw-bold mb-5 text-center">Loved by Founders.</h2>
             <div class="row g-4 overflow-hidden">
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <div class="glass-card p-4 p-lg-5 d-flex flex-column h-100">
                         <i data-lucide="quote" class="text-primary mb-4" style="width: 32px; height: 32px;"></i>
                         <p class="fs-5 opacity-75 mb-4">"NEO-PR transformed our Series B announcement from a routine press release into a week-long media blitz."</p>
@@ -277,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <div class="glass-card p-4 p-lg-5 d-flex flex-column h-100">
                         <i data-lucide="quote" class="text-primary mb-4" style="width: 32px; height: 32px;"></i>
                         <p class="fs-5 opacity-75 mb-4">"The real-time dashboard is a game changer. We finally know exactly what we are getting for our spend."</p>
@@ -293,7 +268,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <div class="glass-card p-4 p-lg-5 d-flex flex-column h-100">
                         <i data-lucide="quote" class="text-primary mb-4" style="width: 32px; height: 32px;"></i>
                         <p class="fs-5 opacity-75 mb-4">"Strategic, aggressive, and highly connected. They are the best PR partner for any tech visionary."</p>
@@ -315,18 +290,18 @@
 
     <!-- NEW SECTION 1: The Media Command -->
     <section class="section-padding position-relative overflow-hidden" style="background: linear-gradient(rgba(11, 15, 20, 0.92), rgba(11, 15, 20, 0.92)), url('assets/img/media_command_command_nano_v4_1774805095748.png'); background-attachment: fixed; background-size: cover;">
-        <div class="container text-center py-5">
+        <div class="container text-center py-5 text-white">
             <h5 class="text-primary text-uppercase mb-4 tracking-widest">Global Operations</h5>
-            <h2 class="display-3 fw-bold mb-4 text-white">The Media Command.</h2>
-            <p class="lead opacity-75 mx-auto mb-5" style="max-width: 700px;">Our war rooms in SF, London, and NYC operate 24/7 to ensure your story is never just a whisper. We engineer cultural momentum through calculated technical precision.</p>
+            <h2 class="display-3 fw-bold mb-4 text-always-white">The Media Command.</h2>
+            <p class="lead opacity-75 mx-auto mb-5 text-always-white" style="max-width: 700px;">Our war rooms in SF, London, and NYC operate 24/7 to ensure your story is never just a whisper. We engineer cultural momentum through calculated technical precision.</p>
             <div class="d-flex justify-content-center gap-4 mt-2">
-                <div class="command-stat">
+                <div class="command-stat border-white border-opacity-10">
                     <h2 class="fw-bold text-primary mb-0">12TB</h2>
-                    <p class="small opacity-50 uppercase tracking-tighter">Daily Signal Data</p>
+                    <p class="small opacity-50 uppercase tracking-tighter text-always-white">Daily Signal Data</p>
                 </div>
-                <div class="command-stat">
+                <div class="command-stat border-white border-opacity-10">
                     <h2 class="fw-bold text-primary mb-0">94%</h2>
-                    <p class="small opacity-50 uppercase tracking-tighter">Placement Success</p>
+                    <p class="small opacity-50 uppercase tracking-tighter text-always-white">Placement Success</p>
                 </div>
             </div>
         </div>
