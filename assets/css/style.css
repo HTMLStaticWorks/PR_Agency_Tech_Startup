@@ -259,6 +259,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(15deg) translateY(-10%);
     animation: gridMove 60s linear infinite;
     z-index: 0;
+    pointer-events: none;
 }
 
 @keyframes gridMove {
@@ -331,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Theme Awareness for Visuals */
 [data-theme="light"] .floating-analytics-card {
     box-shadow: 0 25px 50px -12px rgba(11, 15, 20, 0.1);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 [data-theme="light"] .tech-grid-bg {
