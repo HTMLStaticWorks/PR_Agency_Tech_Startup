@@ -12,6 +12,39 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <style>
+        .accordion-item.glass-card {
+            border: 1px solid var(--border-color) !important;
+            background: var(--glass-bg) !important;
+            transition: var(--transition);
+            border-radius: 12px !important;
+            overflow: hidden;
+        }
+        .accordion-button {
+            background: transparent !important;
+            color: var(--primary) !important;
+            font-weight: 600;
+            padding: 1.5rem !important;
+        }
+        .accordion-button:focus {
+            box-shadow: none !important;
+        }
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2300FFC6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+            background-size: 1.25rem;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2300FFC6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m18 15-6-6-6 6'/%3E%3C/svg%3E") !important;
+            transform: rotate(0deg);
+        }
+        .accordion-body {
+            color: var(--text-body);
+            opacity: 0.75;
+            padding: 0 1.5rem 1.5rem 1.5rem !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -133,18 +166,35 @@
     <section class="section-padding" style="background: rgba(0, 0, 0, 0.2);">
         <div class="container text-center">
             <h2 class="fw-bold mb-5">Frequently Asked.</h2>
-            <div class="row g-4 text-start">
-                <div class="col-md-6">
-                    <div class="glass-card p-4 h-100">
-                        <h6>Do you guarantee media placements?</h6>
-                        <p class="small opacity-50 mb-0">While no agency can ethically "guarantee" third-party editorial, our success rate is 94% due to our data-led strategy.</p>
+            <div class="faq-container mx-auto" style="max-width: 850px;">
+                <div class="accordion accordion-flush" id="faqAccordion">
+                    
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1">
+                                Do you guarantee media placements?
+                            </button>
+                        </h2>
+                        <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-start">
+                                While no agency can ethically "guarantee" third-party editorial, our success rate is 94% due to our data-led strategy. We focus on architectural consistency and narrative authority to ensure editors see your value immediately.
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="glass-card p-4 h-100">
-                        <h6>How long do campaigns last?</h6>
-                        <p class="small opacity-50 mb-0">We recommend a minimum of 6 months to build sustainable authority, but we offer monthly rolling contracts.</p>
+
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2">
+                                How long do campaigns last?
+                            </button>
+                        </h2>
+                        <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-start">
+                                We recommend a minimum of 6 months to build sustainable authority, but we offer monthly rolling contracts to ensure maximum flexibility for high-growth tech companies.
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
