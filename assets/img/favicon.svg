@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+    <!-- Rounded Background Square: Primary Neon Teal (#00FFC6) -->
+    <rect width="32" height="32" rx="6" fill="#00FFC6" />
+    
+    <!-- Orbit Icon Paths from Lucide (scaled and centered) stroke: #0B0F14 -->
+    <g transform="translate(6, 6) scale(0.83)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B0F14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-orbit">
+            <circle cx="12" cy="12" r="3"/>
+            <circle cx="19" cy="5" r="2"/>
+            <circle cx="5" cy="19" r="2"/>
+            <path d="M10.4 21.9a10 10 0 0 0 9.941-15.45"/>
+            <path d="M13.6 2.1a10 10 0 0 0-9.941 15.45"/>
+        </svg>
+    </g>
+</svg>

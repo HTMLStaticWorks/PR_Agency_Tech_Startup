@@ -1,129 +1,88 @@
-/**
- * PRISM PR - CORE JAVASCRIPT
- * Includes: Dark Mode, RTL Toggle, Smooth Scroll, Form Validation, Navbar Scroll Effect
- */
+// PR Agency Common Logic Initialization
 
 document.addEventListener('DOMContentLoaded', () => {
-    'use strict';
+    // Dark/Light Mode
+    const themeBtn = document.getElementById('theme-toggle');
+    const getTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', getTheme);
+    
+    // Initial icon update
+    updateThemeIcon(getTheme);
 
-    // 1. PRELOADER
-    const preloader = document.querySelector('#preloader');
-    if (preloader) {
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                preloader.classList.add('fade-out');
-            }, 600);
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
         });
     }
 
-    // 2. NAVBAR SCROLL EFFECT
-    const navbar = document.querySelector('.navbar-prism');
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar ? navbar.classList.add('scrolled') : null;
+            navbar.classList.add('navbar-scrolled');
         } else {
-            navbar ? navbar.classList.remove('scrolled') : null;
+            navbar.classList.remove('navbar-scrolled');
         }
     });
 
-    // 3. DARK MODE TOGGLE
-    const themeToggle = document.querySelector('#theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    
-    document.documentElement.setAttribute('data-bs-theme', currentTheme);
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-bs-theme');
-            let newTheme = theme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-bs-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        });
-    }
-
-    // 4. RTL TOGGLE (For Demonstration/Market-Ready)
-    const rtlToggle = document.querySelector('#rtl-toggle');
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
-            let dir = document.documentElement.getAttribute('dir');
-            let newDir = dir === 'rtl' ? 'ltr' : 'rtl';
+    // RTL Toggle
+    const rtlBtn = document.getElementById('rtl-toggle');
+    if (rtlBtn) {
+        rtlBtn.addEventListener('click', () => {
+            const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+            const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
             document.documentElement.setAttribute('dir', newDir);
         });
     }
 
-    // 5. FORM VALIDATION
-    const forms = document.querySelectorAll('.needs-validation');
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        }, false);
-    });
-
-    // 6. SMOOTH SCROLL FOR ANCHOR LINKS
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return; // Ignore single #
-            
-            try {
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    
-                    // Auto-collapse navbar if open (Bootstrap 5)
-                    const navbarCollapse = document.querySelector('.navbar-collapse.show');
-                    if (navbarCollapse) {
-                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                        if (bsCollapse) {
-                            bsCollapse.hide();
-                        } else {
-                            // Fallback if instance not found
-                            const navbarToggler = document.querySelector('.navbar-toggler');
-                            if (navbarToggler) navbarToggler.click();
-                        }
-                    }
-                }
-            } catch (err) {
-                // Silently handle invalid selectors
-                console.warn('Invalid anchor link:', href);
-            }
-        });
-    });
-
-    // 7. ACTIVE LINK HIGHLIGHT
-    const currentLocation = location.href;
+    // Handle Active Links
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        if (link.href === currentLocation) {
+        if (link.getAttribute('href') === currentPath) {
             link.classList.add('active');
+        } else {
+            link.classList.remove('active');
         }
     });
 
-    // 8. ACCESSIBILITY: Keyboard Nav for Hamburger
-    const navbarTogglers = document.querySelectorAll('.navbar-toggler');
-    navbarTogglers.forEach(toggler => {
-        toggler.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggler.click();
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
+    // Back to Top functionality
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
             }
         });
-    });
-    // 9. READING PROGRESS BAR (For Blog Details)
-    const progressBar = document.querySelector('#reading-progress-bar');
-    if (progressBar) {
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            progressBar.style.width = scrolled + "%";
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     }
 });
+
+function updateThemeIcon(theme) {
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+        themeBtn.innerHTML = theme === 'dark' 
+            ? '<i data-lucide="sun"></i>' 
+            : '<i data-lucide="moon"></i>';
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    }
+}

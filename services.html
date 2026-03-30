@@ -1,323 +1,209 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-bs-theme="light">
+<html lang="en" data-theme="dark">
 <head>
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://prismpr.agency/services.html">
-    <meta property="og:title" content="Our Services | PR Solutions for High-Growth Startups">
-    <meta property="og:description" content="Explore our full range of PR services including media relations, press kit engineering, and crisis management.">
-    <meta property="og:image" content="assets/images/og-image.png">
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | PR Solutions for High-Growth Startups</title>
-    <meta name="description" content="Explore Prism PR's specialized services: Media relations, press kit strategy, and crisis management for tech startups.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Services | NEO-PR Agency</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Style -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
 <body>
-    <!-- Sticky Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-prism sticky-top">
+
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/images/favicon.svg" width="32" height="32" class="me-2 rounded-2" alt="Prism PR Logo">
-                <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
+                <div class="bg-primary rounded-1 me-2" style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="orbit" style="color: #0B0F14; width: 22px; height: 22px;"></i>
+                </div>
+                <span class="fw-bold fs-4" style="color: var(--primary);">NEO-PR</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i data-lucide="menu" style="color: var(--primary); width: 24px; height: 24px;"></i>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Home
-                            </a>
-                            <ul class="dropdown-menu border-0 shadow-sm">
-                                <li><a class="dropdown-item" href="index.html">Home 1 (Default)</a></li>
-                                <li><a class="dropdown-item" href="index2.html">Home 2 (Enterprise)</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <div class="d-flex align-items-center gap-3">
-                        <button id="theme-toggle" class="theme-toggle btn-link p-0" title="Toggles light & dark" aria-label="Toggle theme">
-                            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-                                <mask class="moon" id="moon-mask">
-                                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                                    <circle cx="24" cy="10" r="6" fill="black" />
-                                </mask>
-                                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
-                                <g class="sun-beams" stroke="currentColor">
-                                    <line x1="12" y1="1" x2="12" y2="3" />
-                                    <line x1="12" y1="21" x2="12" y2="23" />
-                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                                    <line x1="1" y1="12" x2="3" y2="12" />
-                                    <line x1="21" y1="12" x2="23" y2="12" />
-                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                                </g>
-                            </svg>
-                        </button>
-                        <button id="rtl-toggle" class="btn btn-link text-main p-0" aria-label="Toggle RTL">
-                            <i class="bi bi-translate"></i>
-                        </button>
-                        <a href="login.html" class="btn btn-outline-primary btn-prism btn-sm btn-prism-ghost navbar-btn">
-                            <span class="btn-icon-circle">
-                                <i class="bi bi-person-badge"></i>
-                            </span>
-                            Client Login
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="d-none d-lg-block flex-grow-1"></div>
+                <ul class="navbar-nav align-items-center mb-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-none d-lg-block flex-grow-1"></div>
+                <ul class="navbar-nav align-items-center">
+                    <!-- Dashboard Icon Button -->
+                    <li class="nav-item ms-lg-3">
+                        <a class="header-icon-btn" href="dashboard.html" title="Dashboard">
+                            <i data-lucide="layout-dashboard"></i>
                         </a>
-                        <a href="contact.html" class="btn btn-prism btn-prism-primary btn-sm navbar-btn">
-                            <span class="btn-icon-circle bg-white bg-opacity-10 text-white">
-                                <i class="bi bi-rocket-takeoff"></i>
-                            </span>
-                            Get Started
-                        </a>
-                    </div>
-                </div>
+                    </li>
+                    <!-- RTL Icon Button -->
+                    <li class="nav-item ms-2">
+                        <div class="header-icon-btn" id="rtl-toggle" title="RTL/LTR">
+                            <i data-lucide="languages"></i>
+                        </div>
+                    </li>
+                    <!-- Theme Toggle Icon Button -->
+                    <li class="nav-item ms-2">
+                        <div class="header-icon-btn" id="theme-toggle" title="Toggle Theme">
+                            <i data-lucide="sun"></i>
+                        </div>
+                    </li>
+                    <!-- Login Button -->
+                    <li class="nav-item ms-3">
+                        <a href="login.html" class="btn btn-primary btn-sm px-4 py-2" style="height: auto; text-transform: none; font-size: 13px;">Login</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    
-
-
-    
-
-
-    <!-- Services Hero -->
-    <section class="section-padding position-relative overflow-hidden text-white bg-dark" style="min-height: 450px; display: flex; align-items: center;">
-        <!-- Premium SVG Background Pattern -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-20">
-            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0 0L100 100M100 0L0 100" stroke="#0d6efd" stroke-width="0.1"/>
-            </svg>
-        </div>
-        <!-- Glassmorphism Overlay -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-60 backdrop-blur-md"></div>
-        
-        <div class="container position-relative z-1">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                    <h1 class="display-3 fw-bold text-white">PR for the <span class="text-primary">Modern Tech</span> Stack</h1>
-                    <p class="lead opacity-90">We offer a comprehensive suite of communication tools designed specifically for startups, from seed stage to IPO.</p>
-                </div>
-            </div>
+    <!-- Services Header -->
+    <section class="section-padding pt-5 mt-5" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="container text-center pt-5">
+            <h5 class="text-primary text-uppercase mb-3 tracking-widest">Our Expertise</h5>
+            <h1 class="display-3 fw-bold mb-4">Precision PR <br> for High-Growth Startups.</h1>
+            <p class="lead opacity-75 mx-auto" style="max-width: 600px;">We don't just send press releases. We engineer the visibility that matters to investors and customers alike.</p>
         </div>
     </section>
 
-    <!-- Services Grid Section -->
-    <section class="section-padding bg-theme-white">
+    <!-- Detailed Services -->
+    <section class="section-padding">
         <div class="container">
-            <div class="row g-4">
-                <!-- Service 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="prism-card h-100 d-flex flex-column">
-                        <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="assets/images/ai_llm_insight.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800';" class="img-fluid w-100 h-100 object-fit-cover" alt="Global Media Relations">
-                        </div>
-                        <h3>Global Media Relations</h3>
-                        <p class="text-muted">Pitching to TechCrunch, Wired, The Verge, and tier-1 business outlets.</p>
-                        <hr class="my-4 opacity-10">
-                        <ul class="list-unstyled mb-4 small text-muted">
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Exclusive Story Placement</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Targeted Reporter Lists</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Interview Hosting</li>
-                        </ul>
-
+            <div class="row g-5 align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h5 class="text-primary text-uppercase mb-3">01. Media Relations</h5>
+                    <h2 class="display-5 fw-bold mb-4">Securing Headlines where it Matters.</h2>
+                    <p class="opacity-75 mb-4">Our relationships with editors at Forbes, TechCrunch, WIRED, and The Verge ensure your story isn't just told, but heard by the right people at the right time.</p>
+                    <ul class="list-unstyled mb-5 small opacity-75">
+                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Strategic Story Pitching</li>
+                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Press Release Distribution</li>
+                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Exclusive Interview Logistics</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="glass-card p-0 overflow-hidden" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?q=80&w=2070&auto=format&fit=crop" class="w-100 h-100 object-fit-cover opacity-50 transition-hover" alt="Media Relations">
                     </div>
                 </div>
-                <!-- Service 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="prism-card h-100 d-flex flex-column">
-                        <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" class="img-fluid w-100 h-100 object-fit-cover" alt="Launch Campaigns">
-                        </div>
-                        <h3>Launch Campaigns</h3>
-                        <p class="text-muted">High-impact strategies for product launches and funding announcements.</p>
-                        <hr class="my-4 opacity-10">
-                        <ul class="list-unstyled mb-4 small text-muted">
-                            <li class="mb-2"><i class="bi bi-check2 text-secondary me-2"></i> Social Media Amplification</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-secondary me-2"></i> Influencer Partnerships</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-secondary me-2"></i> KPI-Driven Reporting</li>
-                        </ul>
+            </div>
 
-                    </div>
+            <div class="row g-5 align-items-center mb-5 flex-lg-row-reverse">
+                <div class="col-lg-6">
+                    <h5 class="text-primary text-uppercase mb-3">02. Crisis Management</h5>
+                    <h2 class="display-5 fw-bold mb-4">NAR (Narrative Control) Protocol.</h2>
+                    <p class="opacity-75 mb-4">Protecting your brand’s reputation isn’t just about reaction; it’s about proactive defense strategy that keeps your vision safe.</p>
+                    <ul class="list-unstyled mb-5 small opacity-75">
+                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> 24/7 Media Monitoring</li>
+                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Executive Vulnerability Audit</li>
+                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Fast-Response Messaging</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">View Details</a>
                 </div>
-                <!-- Service 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="prism-card h-100 d-flex flex-column">
-                        <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="assets/images/crisis_tech_insight.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&q=80&w=800';" class="img-fluid w-100 h-100 object-fit-cover" alt="Crisis Management">
-                        </div>
-                        <h3>Crisis Management</h3>
-                        <p class="text-muted">Rapid response for security breaches, outages, and reputation repair.</p>
-                        <hr class="my-4 opacity-10">
-                        <ul class="list-unstyled mb-4 small text-muted">
-                            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i> 24/7 Response Desk</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i> Executive Briefing</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i> Dark Site Setup</li>
-                        </ul>
-
-                    </div>
-                </div>
-                <!-- Service 4 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="prism-card h-100 d-flex flex-column">
-                        <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="assets/images/web3_crypto_insight.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800';" class="img-fluid w-100 h-100 object-fit-cover" alt="Press Kit Engineering">
-                        </div>
-                        <h3>Press Kit Engineering</h3>
-                        <p class="text-muted">High-performance digital press kits that make it effortless for journalists to cover you.</p>
-                        <hr class="my-4 opacity-10">
-                        <ul class="list-unstyled mb-4 small text-muted">
-                            <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i> Exclusive Material Access</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i> Asset Hosting</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-info me-2"></i> Data-Driven Pitching</li>
-                        </ul>
-
-                    </div>
-                </div>
-                <!-- Service 5 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="prism-card h-100 d-flex flex-column">
-                        <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="https://images.unsplash.com/photo-1475721027187-40ae0bd95325?auto=format&fit=crop&q=80&w=800" class="img-fluid w-100 h-100 object-fit-cover" alt="Media Training">
-                        </div>
-                        <h3>Media Training</h3>
-                        <p class="text-muted">Briefing founders for the spotlight and mastering the art of the interview.</p>
-                        <hr class="my-4 opacity-10">
-                        <ul class="list-unstyled mb-4 small text-muted">
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Mock Interview Prep</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Narrative Refinement</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> On-Camera Coaching</li>
-                        </ul>
-
-                    </div>
-                </div>
-                <!-- Service 6 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="prism-card h-100 d-flex flex-column">
-                        <div class="mb-4 rounded-3 overflow-hidden" style="height: 200px;">
-                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800" class="img-fluid w-100 h-100 object-fit-cover" alt="Thought Leadership">
-                        </div>
-                        <h3>Thought Leadership</h3>
-                        <p class="text-muted">Strategic positioning of your founders as leading voices in their technical domains.</p>
-                        <hr class="my-4 opacity-10">
-                        <ul class="list-unstyled mb-4 small text-muted">
-                            <li class="mb-2"><i class="bi bi-check2 text-danger me-2"></i> Op-Ed ghostwriting</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-danger me-2"></i> Speaking Placement</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-danger me-2"></i> Newsletter strategy</li>
-                        </ul>
-
+                <div class="col-lg-6">
+                    <div class="glass-card p-0 overflow-hidden" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-100 h-100 object-fit-cover opacity-50 transition-hover" alt="Crisis Management">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Process Section -->
-    <section class="section-padding bg-main text-white">
+    <!-- NEW SECTION 1: The Influence Pipeline -->
+    <section class="section-padding" style="background: rgba(0, 0, 0, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <h2 class="display-6 fw-bold mb-3">Roadmap to <span class="text-primary">Media Dominance</span></h2>
-                    <p class="opacity-75">Our 4-step framework designed to take you from stealth to scale.</p>
-                </div>
-            </div>
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <div class="p-4 text-center border-end border-white border-opacity-10">
-                        <div class="display-4 fw-bold text-primary mb-3">01</div>
-                        <h5>Deep Audit</h5>
-                        <p class="small opacity-75">Analysis of your product-market-media fit and narrative strengths.</p>
+            <h5 class="text-primary text-uppercase mb-3 tracking-widest text-center">Global Process</h5>
+            <h2 class="display-5 fw-bold mb-5 text-center">The Influence Pipeline.</h2>
+            
+            <div class="row g-4 mt-5">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="pipeline-node mx-auto mb-4">
+                        <div class="pipeline-inner">01</div>
+                        <div class="pipeline-outer"></div>
                     </div>
+                    <h6>Signal Discovery</h6>
+                    <p class="small opacity-50 px-3">Identifying high-potential narrative hooks before they trend.</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="p-4 text-center border-end border-white border-opacity-10">
-                        <div class="display-4 fw-bold text-secondary mb-3">02</div>
-                        <h5>Media Prep</h5>
-                        <p class="small opacity-75">Engineering your digital press kit and briefing your founders for the spotlight.</p>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="pipeline-node mx-auto mb-4">
+                        <div class="pipeline-inner">02</div>
+                        <div class="pipeline-outer"></div>
                     </div>
+                    <h6>Narrative Engineering</h6>
+                    <p class="small opacity-50 px-3">Translating complex tech specs into relatable human impact.</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="p-4 text-center border-end border-white border-opacity-10">
-                        <div class="display-4 fw-bold text-warning mb-3">03</div>
-                        <h5>The Launch</h5>
-                        <p class="small opacity-75">Coordinated multi-channel outreach to tier-1 and trade publications.</p>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="pipeline-node mx-auto mb-4">
+                        <div class="pipeline-inner">03</div>
+                        <div class="pipeline-outer"></div>
                     </div>
+                    <h6>Elite Placement</h6>
+                    <p class="small opacity-50 px-3">Targeted outreach to editors at Forbes, Wired, and TechCrunch.</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="p-4 text-center">
-                        <div class="display-4 fw-bold text-info mb-3">04</div>
-                        <h5>Velocity</h5>
-                        <p class="small opacity-75">Ongoing momentum through thought leadership and feature scaling.</p>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="pipeline-node mx-auto mb-4">
+                        <div class="pipeline-inner">04</div>
+                        <div class="pipeline-outer"></div>
                     </div>
+                    <h6>Amplification Pulse</h6>
+                    <p class="small opacity-50 px-3">Coordinating multi-channel distribution for maximum SOV.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section-padding bg-theme-white">
+    <!-- NEW SECTION 2: Tactical Capabilities -->
+    <section class="section-padding">
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <h2 class="display-6 fw-bold mb-3">Strategic <span class="text-primary">FAQ</span></h2>
-                    <p class="text-muted">Answers to the most common questions from high-growth founders.</p>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <h5 class="text-primary text-uppercase mb-3 tracking-widest">Capabilities</h5>
+                    <h2 class="display-4 fw-bold mb-4">Beyond the Headlines.</h2>
+                    <p class="opacity-75 mb-5">Our influence ecosystem extends into technical ghostwriting and category creation for first-movers.</p>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="capability-tag"><i data-lucide="check" class="me-2 text-primary" style="width:16px;"></i> Founder Thought Leadership</div>
+                        <div class="capability-tag"><i data-lucide="check" class="me-2 text-primary" style="width:16px;"></i> High-Tier TV Interviews</div>
+                        <div class="capability-tag"><i data-lucide="check" class="me-2 text-primary" style="width:16px;"></i> Series A/B Fundraising PR</div>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
-                        <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    When is the best time for a startup to start PR?
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted pb-4">
-                                    Ideally, 2-3 months before your next major milestone (Funding, Product Launch, Core Hire). This allows time for narrative development and building reporter relationships.
-                                </div>
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="capability-card">
+                                <i data-lucide="terminal" class="text-primary mb-3" style="width: 32px; height: 32px;"></i>
+                                <h5 class="fw-bold">Technical PR</h5>
+                                <p class="small opacity-50 mb-0">Engineers writing for engineers. We handle the complexity.</p>
                             </div>
                         </div>
-                        <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Do you guarantee coverage in specific outlets?
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted pb-4">
-                                    In earned media, there are no guarantees, but our success rate for tier-1 placements (Wired, TechCrunch, FT) is over 85% for qualified technical narratives.
-                                </div>
+                        <div class="col-sm-6">
+                            <div class="capability-card" style="transition-delay: 0.1s;">
+                                <i data-lucide="activity" class="text-primary mb-3" style="width: 32px; height: 32px;"></i>
+                                <h5 class="fw-bold">Vibe Sentiment</h5>
+                                <p class="small opacity-50 mb-0">Real-time monitoring of how the tech world views you.</p>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    How is your agency different from a traditional PR firm?
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted pb-4">
-                                    We specialty is in deep tech. Our team includes former engineers and technical editors who can actually explain how your LLM or L2 blockchain works to a journalist.
-                                </div>
+                        <div class="col-sm-6">
+                            <div class="capability-card" style="transition-delay: 0.2s;">
+                                <i data-lucide="cpu" class="text-primary mb-3" style="width: 32px; height: 32px;"></i>
+                                <h5 class="fw-bold">AI Narrative</h5>
+                                <p class="small opacity-50 mb-0">Positioning your LLMs and SaaS as industry standard-bearers.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="capability-card" style="transition-delay: 0.3s;">
+                                <i data-lucide="rocket" class="text-primary mb-3" style="width: 32px; height: 32px;"></i>
+                                <h5 class="fw-bold">Launch Blitz</h5>
+                                <p class="small opacity-50 mb-0">24-hour total media domination for product launches.</p>
                             </div>
                         </div>
                     </div>
@@ -326,68 +212,156 @@
         </div>
     </section>
 
-    <footer class="section-padding bg-theme-white border-top">
+    <style>
+        .pipeline-node {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pipeline-inner {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: #0B0F14;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            z-index: 2;
+        }
+        .pipeline-outer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            animation: pulse-node 2s infinite;
+        }
+        @keyframes pulse-node {
+            0% { transform: scale(0.6); opacity: 1; }
+            100% { transform: scale(1.2); opacity: 0; }
+        }
+
+        .capability-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 12px;
+            height: 100%;
+            transition: var(--transition);
+        }
+        .capability-card:hover { border-color: var(--primary); transform: translateX(10px); background: rgba(0, 255, 198, 0.05); }
+        .capability-tag { padding: 0.75rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-weight: bold; }
+    </style>
+
+    <!-- Services CTA -->
+    <section class="section-padding bg-primary" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop'); background-attachment: fixed; background-size: cover;">
+        <div class="container text-center py-5">
+            <h2 class="display-4 fw-bold mb-4 text-white">Customized PR Strategy.</h2>
+            <p class="lead mb-5 opacity-75 mx-auto text-white" style="max-width: 600px;">Each startup has a different trajectory. We build the engine to match yours.</p>
+            <a href="pricing.html" class="btn btn-primary">Explore Pricing</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5">
         <div class="container">
-            <div class="row g-5 mb-5">
-                <div class="col-lg-4">
+            <div class="row g-5">
+                <!-- Branding Column -->
+                <div class="col-lg-4 col-md-6">
                     <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
-                        <img src="assets/images/favicon.svg" width="32" height="32" class="me-2 rounded-2" alt="Prism PR Logo">
-                        <span class="fw-bold fs-4 text-main">PRISM<span class="text-primary">PR</span></span>
+                        <div class="bg-primary rounded-1 me-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                            <i data-lucide="orbit" style="color: #0B0F14; width: 20px; height: 20px;"></i>
+                        </div>
+                        <span class="fw-bold fs-4 text-primary">NEO-PR</span>
                     </a>
-                    <p class="text-muted mb-4 small">Strategic tech startup communications. We bridge the gap between complex innovation and global media influence.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-primary fs-5" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-primary fs-5" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="text-primary fs-5" aria-label="Github"><i class="bi bi-github"></i></a>
+                    <p class="mb-4 opacity-75" style="max-width: 300px;">Revolutionizing PR for the tech elite. We don't just pitch stories; we architect industry authority through science-backed narratives.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: currentColor; stroke: none !important;">
+                                <path d="M18.244 2H21l-6.56 7.497L22 22h-6.828l-5.345-6.994L3.707 22H1l7.02-8.026L2 2h7.001l4.832 6.403L18.244 2Zm-1.008 18.14h1.506L6.183 3.763H4.568L17.236 20.14Z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: currentColor; stroke: none !important;">
+                                <path d="M20.447 20.452H17.21V15.4c0-1.204-.024-2.755-1.679-2.755-1.68 0-1.937 1.31-1.937 2.668v5.139H10.36V9h3.111v1.561h.045c.433-.824 1.494-1.693 3.072-1.693 3.289 0 3.895 2.164 3.895 4.977v6.607ZM5.337 7.433c-1.039 0-1.878-.84-1.878-1.879s.839-1.879 1.878-1.879c1.039 0 1.879.84 1.879 1.879s-.84 1.879-1.879 1.879ZM6.976 20.452H3.695V9h3.281v11.452ZM22.225 0H1.771C.793 0 0 .774 0 1.729v20.542C0 23.227.793 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: currentColor; stroke: none !important;">
+                                <path d="M12 2.163c3.204 0 3.584.013 4.849.07 3.252.149 4.771 1.691 4.92 4.92.057 1.265.069 1.644.069 4.848 0 3.205-.013 3.584-.069 4.849-.149 3.225-1.665 4.771-4.92 4.92-1.265.056-1.644.068-4.849.068-3.204 0-3.583-.013-4.848-.069-3.226-.149-4.771-1.664-4.92-4.919C2.176 15.584 2.163 15.205 2.163 12c0-3.204.013-3.583.069-4.848.149-3.227 1.691-4.771 4.92-4.92 1.265-.057 1.644-.069 4.848-.069ZM12 0C8.741 0 8.332.014 7.052.072 2.694.272.273 2.69.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.201 4.354 2.618 6.781 6.98 6.979 1.28.059 1.689.073 4.948.073 3.259 0 3.668-.014 4.948-.072 4.354-.201 6.781-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948C23.728 2.695 21.31.273 16.948.072 15.668.014 15.259 0 12 0Zm0 5.838A6.162 6.162 0 0 0 5.838 12 6.162 6.162 0 0 0 12 18.162 6.162 6.162 0 0 0 18.162 12 6.162 6.162 0 0 0 12 5.838Zm0 10.162A4 4 0 1 1 12 8a4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-2">
-                    <h5 class="fw-bold mb-4">Services</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Media Relations</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Press Kit Strategy</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Crisis Management</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none small">Media Training</a></li>
+
+                <!-- Company Column -->
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-4" style="letter-spacing: 1px; text-transform: uppercase; font-size: 13px;">Company</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Our Story</a></li>
+                        <li><a href="case-studies.html" class="footer-link">Manifesto</a></li>
+                        <li><a href="contact.html" class="footer-link">Careers</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-6 col-lg-2">
-                    <h5 class="fw-bold mb-4">Explore</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">Agency Story</a></li>
-                        <li class="mb-2"><a href="blog.html" class="text-muted text-decoration-none small">Technical Insights</a></li>
-                        <li class="mb-2"><a href="pricing.html" class="text-muted text-decoration-none small">Pricing Plans</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact Hub</a></li>
+
+                <!-- Services Column -->
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-4" style="letter-spacing: 1px; text-transform: uppercase; font-size: 13px;">Expertise</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="services.html" class="footer-link">Media Strategy</a></li>
+                        <li><a href="services.html" class="footer-link">Crisis Mgmt</a></li>
+                        <li><a href="services.html" class="footer-link">Thought Lead</a></li>
+                        <li><a href="services.html" class="footer-link">Brand Audit</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-4">Stay Informed</h5>
-                    <p class="text-muted small">Get the latest deep-tech PR insights delivered to your inbox.</p>
-                    <form class="mt-4">
-                        <div class="input-group">
-                            <input type="email" class="form-control rounded-start-pill ps-4 py-3" placeholder="Founder's Email" required>
-                            <button type="submit" class="btn btn-primary rounded-end-pill px-4">Join Hub</button>
+
+                <!-- Contact Column -->
+                <div class="col-lg-4 col-md-12">
+                    <h6 class="fw-bold mb-4" style="letter-spacing: 1px; text-transform: uppercase; font-size: 13px;">Connect With Us</h6>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="text-primary mt-1"><i data-lucide="mail" style="width: 18px; height: 18px;"></i></div>
+                            <div>
+                                <p class="small mb-0 opacity-50">General Inquiries</p>
+                                <a href="mailto:hello@neo-pr.com" class="footer-link p-0">hello@neo-pr.com</a>
+                            </div>
                         </div>
-                    </form>
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="text-primary mt-1"><i data-lucide="map-pin" style="width: 18px; height: 18px;"></i></div>
+                            <div>
+                                <p class="small mb-0 opacity-50">HQ Location</p>
+                                <p class="small mb-0">121 Tech Plaza, Silicon Valley, CA</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <hr class="opacity-10">
-            <div class="row align-items-center g-3 mt-4">
-                <div class="col-md-6">
-                    <p class="text-muted small mb-0">&copy; 2026 Prism PR Agency. Elevating the next technical billion.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <ul class="list-inline mb-0 footer-links">
-                        <li class="list-inline-item me-4"><a href="#" class="text-muted small text-decoration-none">Privacy Engine</a></li>
-                        <li class="list-inline-item"><a href="#" class="text-muted small text-decoration-none">Terms of Service</a></li>
-                    </ul>
+
+            <hr class="my-5 opacity-10">
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <p class="small mb-0 opacity-50">© 2026 NEO-PR Agency. Powered by Neon Science.</p>
+                <div class="d-flex gap-4 small">
+                    <a href="index.html" class="footer-link p-0">Privacy</a>
+                    <a href="index.html" class="footer-link p-0">Terms</a>
+                    <a href="index.html" class="footer-link p-0">Security</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
