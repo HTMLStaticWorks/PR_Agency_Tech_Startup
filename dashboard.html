@@ -1,558 +1,338 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard | NEO-PR Agency</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Style -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | TechPulse PR</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
     <style>
-        :root {
-            --sidebar-width: 280px;
-        }
-        [data-theme="light"] {
-            --sidebar-bg: #FFFFFF;
-            --stat-card-bg: rgba(11, 15, 20, 0.03);
-        }
-        [data-theme="dark"] {
-            --sidebar-bg: #0B0F14;
-            --stat-card-bg: rgba(255, 255, 255, 0.02);
-        }
-        .dashboard-wrapper {
-            display: flex;
-            min-height: 100vh;
-        }
         .sidebar {
-            width: var(--sidebar-width);
-            background: var(--sidebar-bg, var(--bg-dark));
-            border-right: 1px solid var(--border-color);
-            padding: 2rem;
-            position: fixed;
+            display: flex;
+            flex-direction: column;
             height: 100vh;
-            left: 0;
-            top: 0;
-            z-index: 1000;
+            padding: 30px 24px;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            text-decoration: none;
+        }
+
+        .sidebar-nav {
+            flex: 1;
             overflow-y: auto;
-            transition: var(--transition);
+            margin-bottom: 20px;
         }
-        .main-content {
-            flex-grow: 1;
-            margin-left: var(--sidebar-width);
-            background: var(--bg-body);
-            padding: 2rem;
-        }
+
         .sidebar-link {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            color: var(--text-body);
-            text-decoration: none;
-            padding: 0.8rem 1rem;
-            border-radius: 4px;
-            margin-bottom: 0.5rem;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            color: var(--text);
+            opacity: 0.7;
             transition: var(--transition);
         }
-        .sidebar-link:hover, .sidebar-link.active {
-            background: rgba(0, 255, 198, 0.1);
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background: var(--secondary);
             color: var(--primary);
+            opacity: 1;
+            font-weight: 600;
         }
-        .topbar {
+
+        .sidebar-footer {
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .logout-link {
+            background: rgba(255, 77, 77, 0.1);
+            color: #ff4d4d !important;
+            opacity: 1 !important;
+            justify-content: center;
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            margin-top: 10px;
+        }
+
+        .logout-link:hover {
+            background: #ff4d4d !important;
+            color: #ffffff !important;
+        }
+
+        .dash-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 3rem;
+            margin-bottom: 40px;
         }
-        .stat-card {
-            border: 1px solid var(--border-color);
-            background: var(--stat-card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            transition: var(--transition);
+
+        .dash-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 24px;
         }
-        .media-item {
+
+        .mention-item {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .badge-media {
-            padding: 0.5rem 0.8rem;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.75rem;
-            background: var(--stat-card-bg);
-            border: 1px solid var(--border-color);
-        }
-        [dir="rtl"] .sidebar { left: auto; right: 0; }
-        [dir="rtl"] .main-content { margin-left: 0; margin-right: var(--sidebar-width); }
-        [dir="rtl"] .mobile-toggle { left: auto; right: 1.5rem; }
-
-        .sidebar { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1050; }
-        .topbar-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--primary);
-            padding: 8px;
-            margin-right: 1.5rem;
-            cursor: pointer;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
         }
 
-        @media (max-width: 1024px) {
-            .sidebar { transform: translateX(-100%); width: 280px; }
-            .sidebar.active { transform: translateX(0); box-shadow: 20px 0 60px rgba(0,0,0,0.8); }
-            .main-content { margin-left: 0; padding: 1.5rem; }
-            .topbar-toggle { display: flex; align-items: center; justify-content: center; margin-right: 0.75rem !important; padding: 4px; }
-            .topbar { 
-                margin-bottom: 2rem; 
-                position: sticky; 
-                top: 0; 
-                background: var(--bg-body); 
-                z-index: 999; 
-                padding: 12px 1.5rem; 
-                border-bottom: 1px solid var(--border-color);
-                display: flex !important;
-                flex-wrap: nowrap !important;
-                justify-content: space-between !important;
-                align-items: center !important;
-                width: 100vw;
-                margin-left: -1.5rem; /* Match main content padding to span full width */
-                margin-right: -1.5rem;
-            }
-            .topbar h3 { font-size: 1.1rem !important; white-space: nowrap; }
-            .topbar .gap-3 { gap: 0.5rem !important; }
-            .media-item {
-                flex-direction: row !important;
-                flex-wrap: nowrap !important;
-                align-items: center !important;
-                text-align: left !important;
-                gap: 1.5rem !important;
-            }
-            .media-item .ms-auto {
-                margin-left: auto !important;
-                width: auto !important;
-            }
+        .mention-item:last-child {
+            border-bottom: none;
         }
 
-        .notification-btn {
-            position: relative;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
+        .mention-source {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
             border-radius: 8px;
-            padding: 10px;
-            transition: var(--transition);
-            color: var(--text-body);
-            cursor: pointer;
-        }
-        .notification-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-        [data-theme="light"] .notification-btn {
-            background: rgba(11, 15, 20, 0.05);
-            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 0.8rem;
         }
 
-        @media (max-width: 767.98px) {
-            .main-content {
-                width: 100% !important;
-                margin-left: 0 !important;
-                padding: 1.5rem 0.75rem !important;
-                padding-top: 1.5rem !important;
-                overflow-x: hidden;
-            }
-            .sidebar {
-                width: 280px;
-                z-index: 2000;
-            }
-            .main-content .row {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                width: 100% !important;
-            }
-            .main-content .row > div {
-                flex: 0 0 100% !important;
-                max-width: 100% !important;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                margin-bottom: 1rem;
-            }
-            .stat-card, .glass-card {
-                width: 100% !important;
-                max-width: 100% !important;
-                word-wrap: break-word;
-            }
-
-            h3, h2, h5 {
-                word-wrap: break-word;
-                max-width: 100%;
-            }
-            .media-item {
-                flex-direction: column !important;
-                align-items: center !important;
-                text-align: center !important;
-                gap: 1.2rem !important;
-                padding: 1.5rem !important;
-            }
-            .media-item .ms-auto {
-                margin-left: 0 !important;
-                width: 100% !important;
-                display: block !important;
-            }
-            .media-item .btn {
-                width: 100% !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                height: 42px !important; /* Slightly more height for better mobile touch and centering */
-            }
+        .press-kit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
         }
 
-        .main-content { overflow-x: hidden; }
-    </style>
+        .kit-card {
+            border: 1px dashed var(--border);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .kit-card:hover {
+            border-color: var(--secondary);
+            background: var(--bg);
+        }
+
+        /* Calendar Mock */
+        .calendar-mock {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .cal-day {
+            aspect-ratio: 1;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            position: relative;
+        }
+
+        .cal-event {
+            position: absolute;
+            bottom: 4px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--secondary);
+        }
+
+        .sidebar-toggle-btn {
+            display: none;
+        }
+
+        @media (max-width: 1023px) {
+            .sidebar-toggle-btn {
+                display: flex;
+            }
+        }
     </style>
 </head>
+
 <body>
-
-    <div class="dashboard-wrapper">
-        <!-- Mobile Toggle -->
-
-
+    <div class="sidebar-overlay"></div>
+    <div class="dashboard-layout">
         <!-- Sidebar -->
-        <aside class="sidebar" id="sidebar">
-            <a href="index.html" class="d-flex align-items-center mb-5 text-decoration-none">
-                <div class="bg-primary rounded-1 me-2" style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
-                    <i data-lucide="orbit" style="color: #0B0F14; width: 14px; height: 14px;"></i>
-                </div>
-                <span class="fw-bold fs-5 text-primary">NEO-PR</span>
+        <aside class="sidebar">
+            <a href="index.html" class="sidebar-logo">
+                <i data-lucide="zap" style="color: var(--secondary);"></i>
+                <span class="logo-text"
+                    style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem;">TECHPULSE</span>
             </a>
-
-            <div class="sidebar-nav">
-                <a href="javascript:void(0)" class="sidebar-link active" data-target="overview-section"><i data-lucide="layout-dashboard"></i> Overview</a>
-                <a href="javascript:void(0)" class="sidebar-link" data-target="mentions-section"><i data-lucide="rss"></i> Media Mentions</a>
-                <a href="javascript:void(0)" class="sidebar-link" data-target="calendar-section"><i data-lucide="calendar"></i> Campaign Calendar</a>
-                <a href="javascript:void(0)" class="sidebar-link" data-target="presskits-section"><i data-lucide="folder-open"></i> Press Kits</a>
-                <a href="javascript:void(0)" class="sidebar-link" data-target="reports-section"><i data-lucide="bar-chart-3"></i> Reports</a>
-                <a href="javascript:void(0)" class="sidebar-link" data-target="settings-section"><i data-lucide="settings"></i> Settings</a>
-            </div>
-
-            <div class="mt-auto pt-5">
-                <a href="index.html" class="sidebar-link text-error"><i data-lucide="log-out"></i> Logout</a>
-            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active"><i data-lucide="layout-dashboard"></i> Overview</a>
+                <a href="#" class="sidebar-link"><i data-lucide="newspaper"></i> Media Mentions</a>
+                <a href="#" class="sidebar-link"><i data-lucide="folder-kanban"></i> Press Kits</a>
+                <a href="#" class="sidebar-link"><i data-lucide="calendar"></i> Campaign Calendar</a>
+                <a href="#" class="sidebar-link"><i data-lucide="bell"></i> Notifications</a>
+                <a href="#" class="sidebar-link"><i data-lucide="settings"></i> Settings</a>
+                <a href="index.html" class="sidebar-link logout-link"><i data-lucide="log-out"></i> Logout</a>
+            </nav>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <div class="topbar">
-                <div class="d-flex align-items-center">
-                    <button class="topbar-toggle" id="menu-toggle">
-                        <i data-lucide="menu"></i>
-                    </button>
-                    <div>
-                        <h3 class="fw-bold mb-0">Dashboard</h3>
-                    </div>
+            <header class="dash-header">
+                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <h1>Dashboard</h1>
+                    <button id="sidebar-menu-btn" class="sidebar-toggle-btn"
+                        style="background:none; border:none; cursor:pointer; color:var(--text);"><i
+                            data-lucide="menu"></i></button>
                 </div>
-                <div class="d-flex align-items-center gap-3">
-                    <button class="header-icon-btn" id="theme-toggle" title="Toggle Theme">
-                        <i data-lucide="sun"></i>
-                    </button>
-                    <button class="notification-btn" title="Toggle Notifications">
-                        <i data-lucide="bell" style="width: 20px; height: 20px;"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" style="font-size: 8px; color: #0B0F14; padding: 4px 6px; transform: translate(-50%, 0) !important;">2</span>
-                    </button>
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="toggle-btn"><i data-lucide="moon"></i></button>
+                    <div
+                        style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700;">
+                        AR</div>
+                </div>
+            </header>
+
+            <!-- Metrics -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Media Reach</p>
+                    <div class="metric-value">1.2M</div>
+                    <p style="font-size: 0.75rem; color: #10b981;">+12% vs last month</p>
+                </div>
+                <div class="metric-card" style="border-left-color: var(--accent);">
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Active Pitches</p>
+                    <div class="metric-value">14</div>
+                    <p style="font-size: 0.75rem; color: #10b981;">3 pending review</p>
+                </div>
+                <div class="metric-card">
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Share of Voice</p>
+                    <div class="metric-value">28%</div>
+                    <p style="font-size: 0.75rem; color: #10b981;">Leading competitors</p>
                 </div>
             </div>
 
-            <!-- Content Sections -->
-            <div id="overview-section" class="content-section">
-                <div class="row g-4 mb-5">
-                <div class="col-12 col-md-3">
-                    <div class="stat-card">
-                        <p class="small opacity-50 mb-1">Total Placements</p>
-                        <h2 class="fw-bold text-primary mb-0">24</h2>
+            <div class="grid" style="grid-template-columns: 1.5fr 1fr; gap: 24px;">
+                <!-- Media Mentions -->
+                <div class="dash-card">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                        <h3>Recent Media Mentions</h3>
+                        <a href="#" style="font-size: 0.8rem; color: var(--secondary);">View All</a>
                     </div>
-                </div>
-                <div class="col-12 col-md-3">
-                    <div class="stat-card">
-                        <p class="small opacity-50 mb-1">Potential Reach</p>
-                        <h2 class="fw-bold text-primary mb-0">1.2M</h2>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3">
-                    <div class="stat-card">
-                        <p class="small opacity-50 mb-1">Average Sentiment</p>
-                        <h2 class="fw-bold text-primary mb-0">Positive</h2>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3">
-                    <div class="stat-card">
-                        <p class="small opacity-50 mb-1">Days to Goal</p>
-                        <h2 class="fw-bold text-primary mb-0">12</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-12 col-lg-8">
-                    <div class="glass-card mb-4" id="mentions">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="fw-bold">Recent Media Mentions</h5>
-                            <a href="#" class="text-primary text-decoration-none small">View All</a>
+                    <div class="mention-item">
+                        <div class="mention-source" style="background: #000;">TC</div>
+                        <div style="flex: 1;">
+                            <h4 style="font-size: 0.95rem;">NexaStream AI raises $15M Series A</h4>
+                            <p style="font-size: 0.8rem; opacity: 0.6;">TechCrunch • 2 hours ago</p>
                         </div>
-                        <div class="media-list">
-                            <div class="media-item">
-                                <div class="badge-media">Forbes</div>
-                                <div>
-                                    <h6 class="mb-0">NeuroFlow's AI is changing mental health at scale.</h6>
-                                    <small class="opacity-50">Published: 2 hours ago</small>
-                                </div>
-                                <a href="#" class="ms-auto"><i data-lucide="external-link" style="width: 16px;"></i></a>
-                            </div>
-                            <div class="media-item">
-                                <div class="badge-media">Crunch</div>
-                                <div>
-                                    <h6 class="mb-0">How Sarah Chen raised $12M for her neural interface startup.</h6>
-                                    <small class="opacity-50">Published: Yesterday</small>
-                                </div>
-                                <a href="#" class="ms-auto"><i data-lucide="external-link" style="width: 16px;"></i></a>
-                            </div>
-                            <div class="media-item">
-                                <div class="badge-media">Wired</div>
-                                <div>
-                                    <h6 class="mb-0">The future of BCI: What NeuroFlow's launch means.</h6>
-                                    <small class="opacity-50">Published: 3 days ago</small>
-                                </div>
-                                <a href="#" class="ms-auto"><i data-lucide="external-link" style="width: 16px;"></i></a>
-                            </div>
-                        </div>
+                        <i data-lucide="external-link" size="16"></i>
                     </div>
-
-                    <div class="glass-card" id="calendar">
-                        <h5 class="fw-bold mb-4">Upcoming Benchmarks</h5>
-                        <div class="d-flex gap-4 scroll-x overflow-auto pb-3">
-                            <div class="p-4 border border-primary border-opacity-10 rounded-2 text-center" style="min-width: 160px; background: rgba(0,255,198,0.05);">
-                                <h4 class="mb-1">12</h4>
-                                <p class="small opacity-50 mb-3">APRIL</p>
-                                <hr class="border-primary border-opacity-25 my-3">
-                                <p class="small fw-bold">Series A Press Release</p>
-                            </div>
-                            <div class="p-4 border border-white border-opacity-10 rounded-2 text-center" style="min-width: 160px;">
-                                <h4 class="mb-1">18</h4>
-                                <p class="small opacity-50 mb-3">APRIL</p>
-                                <hr class="border-white border-opacity-25 my-3">
-                                <p class="small fw-bold">Founder Interview - Wired</p>
-                            </div>
-                            <div class="p-4 border border-white border-opacity-10 rounded-2 text-center" style="min-width: 160px;">
-                                <h4 class="mb-1">22</h4>
-                                <p class="small opacity-50 mb-3">APRIL</p>
-                                <hr class="border-white border-opacity-25 my-3">
-                                <p class="small fw-bold">Podcast Guest Spot</p>
-                            </div>
+                    <div class="mention-item">
+                        <div class="mention-source" style="background: #1e3a8a;">VB</div>
+                        <div style="flex: 1;">
+                            <h4 style="font-size: 0.95rem;">How NexaStream is changing LLM metrics</h4>
+                            <p style="font-size: 0.8rem; opacity: 0.6;">VentureBeat • 1 day ago</p>
                         </div>
+                        <i data-lucide="external-link" size="16"></i>
+                    </div>
+                    <div class="mention-item">
+                        <div class="mention-source" style="background: #ef4444;">TW</div>
+                        <div style="flex: 1;">
+                            <h4 style="font-size: 0.95rem;">Top 10 AI Startups to watch in 2026</h4>
+                            <p style="font-size: 0.8rem; opacity: 0.6;">The Verge • 3 days ago</p>
+                        </div>
+                        <i data-lucide="external-link" size="16"></i>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-4">
-                    <div class="glass-card mb-4">
-                        <h5 class="fw-bold mb-4">Campaign Analytics</h5>
-                        <div class="text-center py-4">
-                            <div class="mx-auto border border-primary border-4 rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px;">
-                                <h3 class="mb-0">78%</h3>
-                            </div>
-                            <p class="small opacity-50">Goal Completion</p>
+                <!-- Press Kits -->
+                <div class="dash-card">
+                    <h3 style="margin-bottom: 24px;">Press Assets</h3>
+                    <div class="press-kit-grid">
+                        <div class="kit-card">
+                            <i data-lucide="image" style="color: var(--secondary); margin-bottom: 10px;"></i>
+                            <p style="font-size: 0.8rem;">Brand Identity v2</p>
                         </div>
-                        <ul class="list-unstyled opacity-75 small mt-4">
-                            <li class="mb-3 d-flex justify-content-between"><span>Authority Score</span> <span class="text-primary">8.4/10</span></li>
-                            <li class="mb-3 d-flex justify-content-between"><span>Share of Voice</span> <span class="text-primary">42%</span></li>
-                            <li class="mb-3 d-flex justify-content-between"><span>Backlinks Gained</span> <span class="text-primary">+154</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="glass-card">
-                        <h5 class="fw-bold mb-3">Your Strategist</h5>
-                        <div class="d-flex align-items-center mb-4">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" class="rounded-circle me-3 object-fit-cover" style="width: 48px; height: 48px; border: 1px solid rgba(0, 255, 198, 0.4);" alt="Alex Sterling">
-                            <div>
-                                <h6 class="mb-0">Alex Sterling</h6>
-                                <small class="opacity-50">Senior Director, NEO-PR</small>
-                            </div>
+                        <div class="kit-card">
+                            <i data-lucide="file-text" style="color: var(--accent); margin-bottom: 10px;"></i>
+                            <p style="font-size: 0.8rem;">Fact Sheet PDF</p>
                         </div>
-                        <button class="btn btn-outline-primary w-100 btn-sm" style="height: 40px; font-size: 12px;">Message Alex</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <!-- Media Mentions Section -->
-            <div id="mentions-section" class="content-section" style="display: none;">
-                <div class="glass-card mb-4">
-                    <h4 class="fw-bold mb-4">Comprehensive Media Tracking</h4>
-                    <div class="media-list">
-                        <div class="media-item border-0">
-                            <div class="badge-media">Yahoo Finance</div>
-                            <div>
-                                <h6 class="mb-0">NEO-PR Client NeuroFlow hits $50M Valuation.</h6>
-                                <small class="opacity-50">Published: 5 hours ago</small>
-                            </div>
-                            <a href="#" class="ms-auto btn btn-outline-primary btn-sm px-3" style="height: 35px;">Check</a>
+                        <div class="kit-card">
+                            <i data-lucide="video" style="color: var(--secondary); margin-bottom: 10px;"></i>
+                            <p style="font-size: 0.8rem;">B-Roll Footage</p>
                         </div>
-                        <div class="media-item border-0">
-                            <div class="badge-media">Business Insider</div>
-                            <div>
-                                <h6 class="mb-0">The 10 startups changing the face of AI in 2026.</h6>
-                                <small class="opacity-50">Published: 12 hours ago</small>
-                            </div>
-                            <a href="#" class="ms-auto btn btn-outline-primary btn-sm px-3" style="height: 35px;">Check</a>
+                        <div class="kit-card">
+                            <i data-lucide="plus-circle" style="opacity: 0.3; margin-bottom: 10px;"></i>
+                            <p style="font-size: 0.8rem;">Add New</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Campaign Calendar Section -->
-            <div id="calendar-section" class="content-section" style="display: none;">
-                <div class="glass-card">
-                    <h4 class="fw-bold mb-4">Strategy Timeline</h4>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="stat-card border-primary border-opacity-25">
-                                <span class="badge bg-primary mb-2 text-dark">Upcoming</span>
-                                <h6>Product Hunt Launch</h6>
-                                <p class="small opacity-50 mb-0">Scheduled for May 5, 2026</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="stat-card">
-                                <span class="badge bg-secondary mb-2">Planning</span>
-                                <h6>Founder Podcast Tour</h6>
-                                <p class="small opacity-50 mb-0">Targeting Top 10 Tech Pods</p>
-                            </div>
-                        </div>
+            <!-- Calendar -->
+            <div class="dash-card">
+                <h3>Campaign Calendar - April 2026</h3>
+                <div class="calendar-mock">
+                    <!-- 35 squares for grid -->
+                    <div class="cal-day">1</div>
+                    <div class="cal-day">2</div>
+                    <div class="cal-day">3<div class="cal-event"></div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Press Kits Section -->
-            <div id="presskits-section" class="content-section" style="display: none;">
-                <div class="glass-card">
-                    <h4 class="fw-bold mb-4">Media Assets</h4>
-                    <div class="row g-3">
-                        <div class="col-md-3">
-                            <div class="stat-card text-center">
-                                <i data-lucide="file-text" class="mb-3 text-primary"></i>
-                                <h6>Brand Brief.pdf</h6>
-                                <button class="btn btn-primary btn-sm w-100 mt-2" style="height: 35px;">Download</button>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="stat-card text-center">
-                                <i data-lucide="image" class="mb-3 text-primary"></i>
-                                <h6>HQ_Logos.zip</h6>
-                                <button class="btn btn-primary btn-sm w-100 mt-2" style="height: 35px;">Download</button>
-                            </div>
-                        </div>
+                    <div class="cal-day">4</div>
+                    <div class="cal-day">5</div>
+                    <div class="cal-day">6</div>
+                    <div class="cal-day">7</div>
+                    <div class="cal-day">8</div>
+                    <div class="cal-day">9<div class="cal-event"></div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Reports Section -->
-            <div id="reports-section" class="content-section" style="display: none;">
-                <div class="glass-card">
-                    <h4 class="fw-bold mb-4">Impact Analytics</h4>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="stat-card">
-                                <h6>Monthly Coverage Report</h6>
-                                <div class="d-flex justify-content-between mt-3 small">
-                                    <span class="opacity-50">Total Reach</span>
-                                    <span class="text-primary fw-bold">4.2M</span>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2 small">
-                                    <span class="opacity-50">New Backlinks</span>
-                                    <span class="text-primary fw-bold">89</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="cal-day">10</div>
+                    <div class="cal-day">11</div>
+                    <div class="cal-day">12<div class="cal-event" style="background: var(--accent);"></div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Settings Section -->
-            <div id="settings-section" class="content-section" style="display: none;">
-                <div class="glass-card">
-                    <h4 class="fw-bold mb-4">Preferences</h4>
-                    <div class="mb-4">
-                        <label class="form-label small opacity-50 uppercase fw-bold">Notification Email</label>
-                        <input type="email" class="form-control" value="sarah@neuroflow.tech">
+                    <div class="cal-day">13</div>
+                    <div class="cal-day">14</div>
+                    <div class="cal-day">15</div>
+                    <div class="cal-day">16</div>
+                    <div class="cal-day">17<div class="cal-event"></div>
                     </div>
-                    <div class="form-check form-switch mb-3">
-                        <input class="form-check-input" type="checkbox" checked>
-                        <label class="form-check-label small opacity-75">Weekly Performance Email</label>
+                    <div class="cal-day">18</div>
+                    <div class="cal-day">19</div>
+                    <div class="cal-day">20</div>
+                    <div class="cal-day">21</div>
+                    <div class="cal-day">22</div>
+                    <div class="cal-day">23<div class="cal-event"></div>
                     </div>
-                    <button class="btn btn-primary btn-sm px-4" style="height: 40px;">Save Changes</button>
+                    <div class="cal-day">24</div>
+                    <div class="cal-day">25</div>
+                    <div class="cal-day">26</div>
+                    <div class="cal-day">27</div>
+                    <div class="cal-day">28</div>
+                    <div class="cal-day">29</div>
+                    <div class="cal-day">30</div>
+                    <div class="cal-day">31</div>
                 </div>
             </div>
         </main>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.getElementById('menu-toggle');
-            const sidebar = document.getElementById('sidebar');
-
-            if (menuToggle && sidebar) {
-                menuToggle.addEventListener('click', () => {
-                    sidebar.classList.toggle('active');
-                    const icon = menuToggle.querySelector('i');
-                    const isShown = sidebar.classList.contains('active');
-                    icon.setAttribute('data-lucide', isShown ? 'x' : 'menu');
-                    lucide.createIcons();
-                });
-            }
-
-            // Section Toggling
-            const navLinks = document.querySelectorAll('.sidebar-link[data-target]');
-            const sections = document.querySelectorAll('.content-section');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('data-target');
-                    if (!targetId) return;
-
-                    // Update Active Link
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-
-                    // Show Target Section, Hide Others
-                    sections.forEach(section => {
-                        if (section.id === targetId) {
-                            section.style.display = 'block';
-                        } else {
-                            section.style.display = 'none';
-                        }
-                    });
-
-                    // Re-initialize Icons for new content
-                    lucide.createIcons();
-
-                    // Close sidebar on mobile after click
-                    if (window.innerWidth <= 1024) {
-                        sidebar.classList.remove('active');
-                        const icon = menuToggle.querySelector('i');
-                        icon.setAttribute('data-lucide', 'menu');
-                        lucide.createIcons();
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

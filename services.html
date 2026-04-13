@@ -1,369 +1,255 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Services | NEO-PR Agency</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Style -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | TechPulse PR</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-
-    <!-- Header Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <div class="bg-primary rounded-1 me-2" style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">
-                    <i data-lucide="orbit" style="color: #0B0F14; width: 22px; height: 22px;"></i>
-                </div>
-                <span class="fw-bold fs-4" style="color: var(--primary);">NEO-PR</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i data-lucide="menu" style="color: var(--primary); width: 24px; height: 24px;"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="d-none d-lg-block flex-grow-1"></div>
-                <ul class="navbar-nav align-items-center mb-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-                <div class="d-none d-lg-block flex-grow-1"></div>
-                <ul class="navbar-nav align-items-center">
-                    <!-- Dashboard Icon Button -->
-                    <li class="nav-item ms-lg-3">
-                        <a class="header-icon-btn" href="dashboard.html" title="Dashboard">
-                            <i data-lucide="layout-dashboard"></i>
-                        </a>
-                    </li>
-                    <!-- RTL Icon Button -->
-                    <li class="nav-item ms-2">
-                        <div class="header-icon-btn" id="rtl-toggle" title="RTL/LTR">
-                            <i data-lucide="languages"></i>
-                        </div>
-                    </li>
-                    <!-- Theme Toggle Icon Button -->
-                    <li class="nav-item ms-2">
-                        <div class="header-icon-btn" id="theme-toggle" title="Toggle Theme">
-                            <i data-lucide="sun"></i>
-                        </div>
-                    </li>
-                    <!-- Login Button -->
-                    <li class="nav-item ms-3">
-                        <a href="login.html" class="btn btn-primary btn-sm px-4 py-2" style="height: auto; text-transform: none; font-size: 13px;">Login</a>
-                    </li>
-                </ul>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i data-lucide="zap"></i><span>TECHPULSE</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="home2.html">Home 2</a>
+                <a href="services.html" style="color: var(--secondary);">Services</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn btn-secondary" style="padding: 8px 16px;">Login</a>
+                <a href="dashboard.html" class="btn btn-primary" style="padding: 8px 16px;">Dashboard</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="toggle-btn"><i data-lucide="moon"></i></button>
+                <button id="rtl-toggle" class="btn btn-secondary"
+                    style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
             </div>
+            <button id="mobile-hamburger" class="hamburger"><i data-lucide="menu"></i></button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Services Header -->
-    <section class="section-padding pt-5 mt-5" style="background: rgba(0, 0, 0, 0.3);">
-        <div class="container text-center pt-5">
-            <h5 class="text-primary text-uppercase mb-3 tracking-widest">Our Expertise</h5>
-            <h1 class="display-3 fw-bold mb-4">Precision PR <br> for High-Growth Startups.</h1>
-            <p class="lead opacity-75 mx-auto" style="max-width: 600px;">We don't just send press releases. We engineer the visibility that matters to investors and customers alike.</p>
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+    <div id="mobile-nav" class="mobile-nav">
+        <button id="mobile-close" class="mobile-close"><i data-lucide="x"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="home2.html">Home 2</a>
+            <a href="services.html">Services</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+            </div>
+            <button id="mobile-rtl-toggle" class="btn btn-secondary" style="margin-top: 10px; width: 100%;">RTL</button>
         </div>
-    </section>
+    </div>
 
-    <!-- Detailed Services -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row g-5 align-items-center mb-5">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h5 class="text-primary text-uppercase mb-3">01. Media Relations</h5>
-                    <h2 class="display-5 fw-bold mb-4">Securing Headlines where it Matters.</h2>
-                    <p class="opacity-75 mb-4">Our relationships with editors at Forbes, TechCrunch, WIRED, and The Verge ensure your story isn't just told, but heard by the right people at the right time.</p>
-                    <ul class="list-unstyled mb-5 small opacity-75">
-                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Strategic Story Pitching</li>
-                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Press Release Distribution</li>
-                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Exclusive Interview Logistics</li>
+    <main>
+        <!-- HERO -->
+        <section class="hero"
+            style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2074');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in">
+                <h1>Comprehensive PR Solutions</h1>
+                <p>Tailored strategies for every stage of the startup lifecycle, from stealth mode to IPO.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">Start Your Campaign</a>
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <!-- NEW SECTION 1: THE AUDIT -->
+        <section class="reveal" data-animation="fade-left" style="padding: 100px 0;">
+            <div class="container grid grid-responsive" style="grid-template-columns: 1fr 1fr; align-items: center;">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;">The PR Audit</h2>
+                    <p style="opacity: 0.8; font-size: 1.1rem;">Before we pitch, we dissect. We analyze your tech, your
+                        competitors, and your current share of voice to find the gaps in the market.</p>
+                </div>
+                <div
+                    style="background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid var(--border);">
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 12px;"><i data-lucide="check" style="color: var(--secondary);"></i>
+                            Tech Stack Analysis</li>
+                        <li style="margin-bottom: 12px;"><i data-lucide="check" style="color: var(--secondary);"></i>
+                            Narrative Hook Identification</li>
+                        <li><i data-lucide="check" style="color: var(--secondary);"></i> Competitor Share-of-Voice Audit
+                        </li>
                     </ul>
-                    <a href="#" class="btn btn-primary">View Details</a>
                 </div>
-                <div class="col-lg-6">
-                    <div class="glass-card p-0 overflow-hidden" style="height: 400px;">
-                        <img src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?q=80&w=2070&auto=format&fit=crop" class="w-100 h-100 object-fit-cover opacity-50 transition-hover" alt="Media Relations">
+            </div>
+        </section>
+
+        <!-- NEW SECTION 2: STRATEGY -->
+        <section class="reveal" data-animation="fade-right" style="background: var(--card); padding: 100px 0;">
+            <div class="container grid grid-responsive" style="grid-template-columns: 1fr 1fr; align-items: center;">
+                <div style="border-radius: 20px; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=2070"
+                        style="width: 100%;">
+                </div>
+                <div style="padding-left: 40px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;">Custom Strategy Phase</h2>
+                    <p style="opacity: 0.8; font-size: 1.1rem;">No cookie-cutter campaigns. We build a bespoke roadmap
+                        for your startup, aligning media milestones with your growth targets and funding rounds.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION 3: EXECUTION -->
+        <section class="reveal" data-animation="zoom-in" style="padding: 100px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Precision Execution</h2>
+                <div class="grid grid-responsive" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="card">
+                        <i data-lucide="target" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>Targeting</h3>
+                        <p>Identifying the exact journalists who move the needle for your niche.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="feather" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>Pitching</h3>
+                        <p>Crafting narrative-driven pitches that bypass the noise.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="award" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3>Placement</h3>
+                        <p>Securing high-authority mentions in Tier-1 media outlets.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="row g-5 align-items-center mb-5 flex-lg-row-reverse">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h5 class="text-primary text-uppercase mb-3">02. Crisis Management</h5>
-                    <h2 class="display-5 fw-bold mb-4">NAR (Narrative Control) Protocol.</h2>
-                    <p class="opacity-75 mb-4">Protecting your brand’s reputation isn’t just about reaction; it’s about proactive defense strategy that keeps your vision safe.</p>
-                    <ul class="list-unstyled mb-5 small opacity-75">
-                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> 24/7 Media Monitoring</li>
-                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Executive Vulnerability Audit</li>
-                        <li class="mb-3"><i data-lucide="arrow-right" class="text-primary me-2" style="width:16px;"></i> Fast-Response Messaging</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">View Details</a>
+        <!-- NEW SECTION 4: DATA REPORTING -->
+        <section class="reveal" data-animation="fade-in"
+            style="background: var(--primary); color: white; padding: 100px 0;">
+            <div class="container grid grid-responsive" style="align-items: center;">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;">Real-Time Data Reporting</h2>
+                    <p style="opacity: 0.8; font-size: 1.1rem; margin-bottom: 30px;">PR shouldn't be a black box. Track
+                        every mention, every pitch, and every impression through our proprietary client dashboard.</p>
+                    <a href="dashboard.html" class="btn btn-secondary">Explore Dashboard</a>
                 </div>
-                <div class="col-lg-6">
-                    <div class="glass-card p-0 overflow-hidden" style="height: 400px;">
-                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-100 h-100 object-fit-cover opacity-50 transition-hover" alt="Crisis Management">
+                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 20px; text-align: center;">
+                    <i data-lucide="bar-chart-3" size="80" style="color: var(--secondary);"></i>
+                    <h3 style="margin-top: 20px;">Live Metrics</h3>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="grid grid-responsive" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div class="card card-exception" style="padding: 40px;">
+                        <i data-lucide="rocket" style="color: var(--secondary); margin-bottom: 24px;" size="48"></i>
+                        <h2 style="margin-bottom: 16px;">Launch Acceleration</h2>
+                        <p style="margin-bottom: 24px;">Creating massive momentum for product launches and funding
+                            rounds. We ensure the world knows when you arrive.</p>
+                        <ul style="opacity: 0.8; margin-bottom: 30px;">
+                            <li><i data-lucide="check" size="16"></i> TechCrunch Exclusive Placement</li>
+                            <li><i data-lucide="check" size="16"></i> Product Hunt Strategy</li>
+                            <li><i data-lucide="check" size="16"></i> Social Media Blitz</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                    <div class="card card-exception" style="padding: 40px;">
+                        <i data-lucide="trending-up" style="color: var(--secondary); margin-bottom: 24px;"
+                            size="48"></i>
+                        <h2 style="margin-bottom: 16px;">Growth Engine PR</h2>
+                        <p style="margin-bottom: 24px;">Sustained media presence to drive organic traffic and inbound
+                            leads for scaling SaaS and fintech companies.</p>
+                        <ul style="opacity: 0.8; margin-bottom: 30px;">
+                            <li><i data-lucide="check" size="16"></i> Monthly Media Mentions</li>
+                            <li><i data-lucide="check" size="16"></i> Podcast Guest Booking</li>
+                            <li><i data-lucide="check" size="16"></i> SEO-Optimized Press Releases</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                    <div class="card card-exception" style="padding: 40px;">
+                        <i data-lucide="star" style="color: var(--secondary); margin-bottom: 24px;" size="48"></i>
+                        <h2 style="margin-bottom: 16px;">Thought Leadership</h2>
+                        <p style="margin-bottom: 24px;">Establishing your founders as the definitive voices in your
+                            niche through strategic op-eds and expert commentary.</p>
+                        <ul style="opacity: 0.8; margin-bottom: 30px;">
+                            <li><i data-lucide="check" size="16"></i> Forbes/HBR Contribution</li>
+                            <li><i data-lucide="check" size="16"></i> Keynote Speaking Slots</li>
+                            <li><i data-lucide="check" size="16"></i> Award Nominations</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                    <div class="card card-exception" style="padding: 40px;">
+                        <i data-lucide="globe" style="color: var(--secondary); margin-bottom: 24px;" size="48"></i>
+                        <h2 style="margin-bottom: 16px;">Global Expansion</h2>
+                        <p style="margin-bottom: 24px;">Localizing your PR strategy for new markets in EMEA, APAC, and
+                            North America with regional specialists.</p>
+                        <ul style="opacity: 0.8; margin-bottom: 30px;">
+                            <li><i data-lucide="check" size="16"></i> Multilingual Press Kits</li>
+                            <li><i data-lucide="check" size="16"></i> Regional Media Tours</li>
+                            <li><i data-lucide="check" size="16"></i> Global Wire Distribution</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- NEW SECTION 1: The Influence Pipeline -->
-    <section class="section-padding" style="background: rgba(0, 0, 0, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <footer>
         <div class="container">
-            <h5 class="text-primary text-uppercase mb-3 tracking-widest text-center">Global Process</h5>
-            <h2 class="display-5 fw-bold mb-5 text-center">The Influence Pipeline.</h2>
-            
-            <div class="row g-4 mt-5">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="pipeline-node mx-auto mb-4">
-                        <div class="pipeline-inner">01</div>
-                        <div class="pipeline-outer"></div>
-                    </div>
-                    <h6>Signal Discovery</h6>
-                    <p class="small opacity-50 px-3">Identifying high-potential narrative hooks before they trend.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="pipeline-node mx-auto mb-4">
-                        <div class="pipeline-inner">02</div>
-                        <div class="pipeline-outer"></div>
-                    </div>
-                    <h6>Narrative Engineering</h6>
-                    <p class="small opacity-50 px-3">Translating complex tech specs into relatable human impact.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="pipeline-node mx-auto mb-4">
-                        <div class="pipeline-inner">03</div>
-                        <div class="pipeline-outer"></div>
-                    </div>
-                    <h6>Elite Placement</h6>
-                    <p class="small opacity-50 px-3">Targeted outreach to editors at Forbes, Wired, and TechCrunch.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="pipeline-node mx-auto mb-4">
-                        <div class="pipeline-inner">04</div>
-                        <div class="pipeline-outer"></div>
-                    </div>
-                    <h6>Amplification Pulse</h6>
-                    <p class="small opacity-50 px-3">Coordinating multi-channel distribution for maximum SOV.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW SECTION 2: Tactical Capabilities -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 text-center text-lg-start">
-                    <h5 class="text-primary text-uppercase mb-3 tracking-widest">Capabilities</h5>
-                    <h2 class="display-4 fw-bold mb-4">Beyond the Headlines.</h2>
-                    <p class="opacity-75 mb-5">Our influence ecosystem extends into technical ghostwriting and category creation for first-movers.</p>
-                    <div class="d-flex flex-column gap-3">
-                        <div class="capability-tag"><i data-lucide="check" class="me-2 text-primary" style="width:16px;"></i> Founder Thought Leadership</div>
-                        <div class="capability-tag"><i data-lucide="check" class="me-2 text-primary" style="width:16px;"></i> High-Tier TV Interviews</div>
-                        <div class="capability-tag"><i data-lucide="check" class="me-2 text-primary" style="width:16px;"></i> Series A/B Fundraising PR</div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row g-4">
-                        <div class="col-sm-6">
-                            <div class="capability-card">
-                                <i data-lucide="terminal" class="text-primary mb-3" style="width: 32px; height: 32px;"></i>
-                                <h5 class="fw-bold">Technical PR</h5>
-                                <p class="small opacity-50 mb-0">Engineers writing for engineers. We handle the complexity.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="capability-card" style="transition-delay: 0.1s;">
-                                <i data-lucide="activity" class="text-primary mb-3" style="width: 32px; height: 32px;"></i>
-                                <h5 class="fw-bold">Vibe Sentiment</h5>
-                                <p class="small opacity-50 mb-0">Real-time monitoring of how the tech world views you.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="capability-card" style="transition-delay: 0.2s;">
-                                <i data-lucide="cpu" class="text-primary mb-3" style="width: 32px; height: 32px;"></i>
-                                <h5 class="fw-bold">AI Narrative</h5>
-                                <p class="small opacity-50 mb-0">Positioning your LLMs and SaaS as industry standard-bearers.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="capability-card" style="transition-delay: 0.3s;">
-                                <i data-lucide="rocket" class="text-primary mb-3" style="width: 32px; height: 32px;"></i>
-                                <h5 class="fw-bold">Launch Blitz</h5>
-                                <p class="small opacity-50 mb-0">24-hour total media domination for product launches.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <style>
-        .pipeline-node {
-            width: 80px;
-            height: 80px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .pipeline-inner {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: #0B0F14;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            z-index: 2;
-        }
-        .pipeline-outer {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--primary);
-            border-radius: 50%;
-            animation: pulse-node 2s infinite;
-        }
-        @keyframes pulse-node {
-            0% { transform: scale(0.6); opacity: 1; }
-            100% { transform: scale(1.2); opacity: 0; }
-        }
-
-        .capability-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 2.5rem;
-            border-radius: 12px;
-            height: 100%;
-            transition: var(--transition);
-        }
-        .capability-card:hover { border-color: var(--primary); transform: translateX(10px); background: rgba(0, 255, 198, 0.05); }
-        [data-theme="light"] .capability-card { background: rgba(11, 15, 20, 0.03) !important; border-color: rgba(11, 15, 20, 0.08) !important; }
-        .capability-tag { padding: 0.75rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-weight: bold; }
-    </style>
-
-    <!-- Services CTA -->
-    <section class="section-padding bg-primary" style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop'); background-attachment: fixed; background-size: cover;">
-        <div class="container text-center py-5">
-            <h2 class="display-4 fw-bold mb-4 text-always-white">Customized PR Strategy.</h2>
-            <p class="lead mb-5 opacity-75 mx-auto text-always-white" style="max-width: 600px;">Each startup has a different trajectory. We build the engine to match yours.</p>
-            <a href="pricing.html" class="btn btn-primary">Explore Pricing</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-5 mt-5">
-        <div class="container">
-            <div class="row g-5">
-                <!-- Branding Column -->
-                <div class="col-lg-4 col-md-6">
-                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
-                        <div class="bg-primary rounded-1 me-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
-                            <i data-lucide="orbit" style="color: #0B0F14; width: 20px; height: 20px;"></i>
-                        </div>
-                        <span class="fw-bold fs-4 text-primary">NEO-PR</span>
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="logo" style="color: white; margin-bottom: 20px;">
+                        <i data-lucide="zap" style="color: var(--secondary);"></i>
+                        <span>TECHPULSE</span>
                     </a>
-                    <p class="mb-4 opacity-75" style="max-width: 300px;">Revolutionizing PR for the tech elite. We don't just pitch stories; we architect industry authority through science-backed narratives.</p>
-                    <div class="d-flex gap-2">
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: currentColor; stroke: none !important;">
-                                <path d="M18.244 2H21l-6.56 7.497L22 22h-6.828l-5.345-6.994L3.707 22H1l7.02-8.026L2 2h7.001l4.832 6.403L18.244 2Zm-1.008 18.14h1.506L6.183 3.763H4.568L17.236 20.14Z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: currentColor; stroke: none !important;">
-                                <path d="M20.447 20.452H17.21V15.4c0-1.204-.024-2.755-1.679-2.755-1.68 0-1.937 1.31-1.937 2.668v5.139H10.36V9h3.111v1.561h.045c.433-.824 1.494-1.693 3.072-1.693 3.289 0 3.895 2.164 3.895 4.977v6.607ZM5.337 7.433c-1.039 0-1.878-.84-1.878-1.879s.839-1.879 1.878-1.879c1.039 0 1.879.84 1.879 1.879s-.84 1.879-1.879 1.879ZM6.976 20.452H3.695V9h3.281v11.452ZM22.225 0H1.771C.793 0 0 .774 0 1.729v20.542C0 23.227.793 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: currentColor; stroke: none !important;">
-                                <path d="M12 2.163c3.204 0 3.584.013 4.849.07 3.252.149 4.771 1.691 4.92 4.92.057 1.265.069 1.644.069 4.848 0 3.205-.013 3.584-.069 4.849-.149 3.225-1.665 4.771-4.92 4.92-1.265.056-1.644.068-4.849.068-3.204 0-3.583-.013-4.848-.069-3.226-.149-4.771-1.664-4.92-4.919C2.176 15.584 2.163 15.205 2.163 12c0-3.204.013-3.583.069-4.848.149-3.227 1.691-4.771 4.92-4.92 1.265-.057 1.644-.069 4.848-.069ZM12 0C8.741 0 8.332.014 7.052.072 2.694.272.273 2.69.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.201 4.354 2.618 6.781 6.98 6.979 1.28.059 1.689.073 4.948.073 3.259 0 3.668-.014 4.948-.072 4.354-.201 6.781-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948C23.728 2.695 21.31.273 16.948.072 15.668.014 15.259 0 12 0Zm0 5.838A6.162 6.162 0 0 0 5.838 12 6.162 6.162 0 0 0 12 18.162 6.162 6.162 0 0 0 18.162 12 6.162 6.162 0 0 0 12 5.838Zm0 10.162A4 4 0 1 1 12 8a4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"></path>
-                            </svg>
-                        </a>
+                    <p style="opacity: 0.7; margin-bottom: 20px;">Production-grade PR for the next generation of tech
+                        titans.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook/white"
+                                alt="Facebook"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram/white"
+                                alt="Instagram"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x/white" alt="X"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/linkedin/white"
+                                alt="LinkedIn"></a>
                     </div>
                 </div>
-
-                <!-- Company Column -->
-                <div class="col-lg-2 col-md-3">
-                    <h6 class="fw-bold mb-4" style="letter-spacing: 1px; text-transform: uppercase; font-size: 13px;">Company</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="services.html" class="footer-link">Our Story</a></li>
-                        <li><a href="case-studies.html" class="footer-link">Manifesto</a></li>
-                        <li><a href="contact.html" class="footer-link">Careers</a></li>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="services.html">Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="case-studies.html">Case Studies</a></li>
+                        <li style="margin-bottom: 10px;"><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
-                <!-- Services Column -->
-                <div class="col-lg-2 col-md-3">
-                    <h6 class="fw-bold mb-4" style="letter-spacing: 1px; text-transform: uppercase; font-size: 13px;">Expertise</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2">
-                        <li><a href="services.html" class="footer-link">Media Strategy</a></li>
-                        <li><a href="services.html" class="footer-link">Crisis Mgmt</a></li>
-                        <li><a href="services.html" class="footer-link">Thought Lead</a></li>
-                        <li><a href="services.html" class="footer-link">Brand Audit</a></li>
+                <div>
+                    <h4>Legal</h4>
+                    <ul style="margin-top: 20px; opacity: 0.7;">
+                        <li style="margin-bottom: 10px;"><a href="#">Privacy Policy</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookies</a></li>
                     </ul>
-                </div>
-
-                <!-- Contact Column -->
-                <div class="col-lg-4 col-md-12">
-                    <h6 class="fw-bold mb-4" style="letter-spacing: 1px; text-transform: uppercase; font-size: 13px;">Connect With Us</h6>
-                    <div class="d-flex flex-column gap-3">
-                        <div class="d-flex align-items-start gap-3">
-                            <div class="text-primary mt-1"><i data-lucide="mail" style="width: 18px; height: 18px;"></i></div>
-                            <div>
-                                <p class="small mb-0 opacity-50">General Inquiries</p>
-                                <a href="mailto:hello@neo-pr.com" class="footer-link p-0">hello@neo-pr.com</a>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-start gap-3">
-                            <div class="text-primary mt-1"><i data-lucide="map-pin" style="width: 18px; height: 18px;"></i></div>
-                            <div>
-                                <p class="small mb-0 opacity-50">HQ Location</p>
-                                <p class="small mb-0">121 Tech Plaza, Silicon Valley, CA</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-
-            <hr class="my-5 opacity-10">
-
-            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-                <p class="small mb-0 opacity-50">© 2026 NEO-PR Agency. Powered by Neon Science.</p>
-                <div class="d-flex gap-4 small">
-                    <a href="index.html" class="footer-link p-0">Privacy</a>
-                    <a href="index.html" class="footer-link p-0">Terms</a>
-                    <a href="index.html" class="footer-link p-0">Security</a>
-                </div>
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; opacity: 0.6; font-size: 0.9rem;">
+                <p>&copy; 2026 TechPulse PR. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" title="Back to Top">
-        <i data-lucide="arrow-up"></i>
-    </button>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
