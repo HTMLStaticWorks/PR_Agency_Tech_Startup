@@ -40,17 +40,19 @@ window.toggleMenu = function (show) {
         });
 
         // 2. Theme Management
-        const themeBtn = document.getElementById('theme-toggle');
+        const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.body.setAttribute('data-theme', savedTheme);
 
-        if (themeBtn) {
-            themeBtn.onclick = () => {
-                const current = document.body.getAttribute('data-theme');
-                const next = current === 'light' ? 'dark' : 'light';
-                document.body.setAttribute('data-theme', next);
-                localStorage.setItem('theme', next);
-            };
+        if (themeBtns.length) {
+            themeBtns.forEach((themeBtn) => {
+                themeBtn.onclick = () => {
+                    const current = document.body.getAttribute('data-theme');
+                    const next = current === 'light' ? 'dark' : 'light';
+                    document.body.setAttribute('data-theme', next);
+                    localStorage.setItem('theme', next);
+                };
+            });
         }
 
         // 3. RTL Management
@@ -92,6 +94,7 @@ window.toggleMenu = function (show) {
 
         // 5. Dashboard Support
         const dashMenu = document.getElementById('sidebar-menu-btn');
+        const dashClose = document.getElementById('sidebar-close');
         const sidebar = document.querySelector('.sidebar');
         const dashOverlay = document.querySelector('.sidebar-overlay');
         if (dashMenu && sidebar) {
@@ -100,12 +103,35 @@ window.toggleMenu = function (show) {
                 dashOverlay?.classList.toggle('active');
             };
         }
+        if (dashClose) dashClose.onclick = () => {
+            sidebar?.classList.remove('active');
+            dashOverlay?.classList.remove('active');
+        };
         if (dashOverlay) dashOverlay.onclick = () => {
             sidebar?.classList.remove('active');
             dashOverlay.classList.remove('active');
         };
 
-        // 6. Lucide
+        // 6. Back to Top
+        const backToTop = document.getElementById('back-to-top');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.onclick = () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+        }
+
+        // 7. Lucide
         if (window.lucide) lucide.createIcons();
     };
 

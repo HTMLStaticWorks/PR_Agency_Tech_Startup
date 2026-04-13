@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechPulse PR | Results-Driven Startup Visibility</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <meta name="description"
         content="TechPulse PR specializes in getting tech startups featured in top-tier media. Data-driven PR for SaaS, Fintech, and AI companies.">
     <!-- Fonts -->
@@ -29,7 +30,7 @@
             </a>
 
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="index.html" aria-current="page">Home</a>
                 <a href="home2.html">Home 2</a>
                 <a href="services.html">Services</a>
                 <a href="case-studies.html">Case Studies</a>
@@ -55,7 +56,7 @@
     <div id="mobile-nav" class="mobile-nav">
         <button id="mobile-close" class="mobile-close"><i data-lucide="x"></i></button>
         <div class="mobile-nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
             <a href="home2.html">Home 2</a>
             <a href="services.html">Services</a>
             <a href="case-studies.html">Case Studies</a>
@@ -65,7 +66,12 @@
                 <a href="login.html" class="btn btn-secondary">Login</a>
                 <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
             </div>
-            <button id="mobile-rtl-toggle" class="btn btn-secondary" style="margin-top: 10px; width: 100%;">RTL</button>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="mobile-theme-toggle" class="btn btn-secondary" style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 10px; border-radius: 8px;">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="mobile-rtl-toggle" class="btn btn-secondary" style="margin-top: 0; flex: 1; padding: 10px; font-size: 0.8rem;">RTL</button>
+            </div>
         </div>
     </div>
 
@@ -94,23 +100,22 @@
                 </div>
                 <div class="grid grid-responsive grid-flex">
                     <div class="card">
-                        <i data-lucide="send" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <img src="images/pr_distribution.png" alt="PR Distribution" class="card-img">
                         <h3>PR Distribution</h3>
                         <p>Strategic placement across major tech publications and news outlets globally.</p>
                     </div>
                     <div class="card">
-                        <i data-lucide="megaphone" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <img src="images/media_outreach.png" alt="Media Outreach" class="card-img">
                         <h3>Media Outreach</h3>
                         <p>Direct lines to journalists covering SaaS, AI, and emerging technologies.</p>
                     </div>
                     <div class="card">
-                        <i data-lucide="user-check" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <img src="images/founder_branding.png" alt="Founder Branding" class="card-img">
                         <h3>Founder Branding</h3>
                         <p>Positioning founders as industry thought leaders through op-eds and interviews.</p>
                     </div>
                     <div class="card">
-                        <i data-lucide="shield-alert" style="color: var(--secondary); margin-bottom: 20px;"
-                            size="40"></i>
+                        <img src="images/crisis_management.png" alt="Crisis Management" class="card-img">
                         <h3>Crisis Management</h3>
                         <p>Rapid response and reputation protection for high-stakes startup environments.</p>
                     </div>
@@ -189,7 +194,8 @@
                         <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
                             <div
                                 style="width: 40px; height: 40px; border-radius: 50%; background: #ddd; overflow: hidden;">
-                                <img src="https://i.pravatar.cc/100?u=1" alt="Founder">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100&h=100"
+                                    alt="Alex Rivera" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <div style="text-align: left;">
                                 <h4 style="font-size: 1rem;">Alex Rivera</h4>
@@ -204,7 +210,8 @@
                         <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
                             <div
                                 style="width: 40px; height: 40px; border-radius: 50%; background: #ddd; overflow: hidden;">
-                                <img src="https://i.pravatar.cc/100?u=2" alt="Founder">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100&h=100"
+                                    alt="Sarah Chen" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <div style="text-align: left;">
                                 <h4 style="font-size: 1rem;">Sarah Chen</h4>
@@ -216,27 +223,98 @@
             </div>
         </section>
 
+        <!-- PROCESS -->
+        <section id="process">
+            <div class="container">
+                <div class="section-title">
+                    <p>How We Work</p>
+                    <h2>Simple, Fast, Repeatable PR Execution</h2>
+                </div>
+                <div class="grid grid-responsive grid-flex">
+                    <div class="card">
+                        <i data-lucide="search" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <h3>1. Positioning Sprint</h3>
+                        <p>We define your strongest media angle using product traction, market timing, and founder
+                            narrative.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="send" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <h3>2. Targeted Outreach</h3>
+                        <p>We pitch the right story to the right journalists across SaaS, fintech, AI, and venture
+                            media circles.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="bar-chart-3" style="color: var(--secondary); margin-bottom: 20px;"
+                            size="40"></i>
+                        <h3>3. Performance Optimization</h3>
+                        <p>We track placements, backlinks, and share-of-voice to improve every next campaign cycle.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="award" style="color: var(--secondary); margin-bottom: 20px;" size="40"></i>
+                        <h3>4. Scale & Sustain</h3>
+                        <p>Leverage your wins into consistent industry authority and long-term brand equity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" style="background: var(--card);">
+            <div class="container">
+                <div class="section-title">
+                    <p>FAQ</p>
+                    <h2>Answers Before You Book a Call</h2>
+                </div>
+                <div class="grid grid-responsive">
+                    <div class="card card-exception">
+                        <h3 style="margin-bottom: 10px;">How quickly can we expect media coverage?</h3>
+                        <p>Most clients start seeing first placements within 2 to 4 weeks, depending on readiness and
+                            newsworthiness.</p>
+                    </div>
+                    <div class="card card-exception">
+                        <h3 style="margin-bottom: 10px;">Do you work with early-stage startups?</h3>
+                        <p>Yes. We work with pre-seed through growth-stage teams, especially in SaaS, fintech, and AI.
+                        </p>
+                    </div>
+                    <div class="card card-exception">
+                        <h3 style="margin-bottom: 10px;">Do you guarantee publications?</h3>
+                        <p>We guarantee disciplined execution and clear reporting, with strategy built to maximize
+                            publish probability.</p>
+                    </div>
+                    <div class="card card-exception">
+                        <h3 style="margin-bottom: 10px;">What does onboarding include?</h3>
+                        <p>Onboarding includes narrative mapping, media target alignment, and a 30-day campaign
+                            execution roadmap.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
+
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <a href="#" class="logo" style="color: white; margin-bottom: 20px;">
+                    <a href="#" class="logo footer-logo" style="margin-bottom: 20px;">
                         <i data-lucide="zap" style="color: var(--secondary);"></i>
                         <span>TECHPULSE</span>
                     </a>
                     <p style="opacity: 0.7; margin-bottom: 20px;">Production-grade PR for the next generation of tech
                         titans.</p>
                     <div class="footer-socials">
-                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook/white"
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook"
                                 alt="Facebook"></a>
-                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram/white"
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram"
                                 alt="Instagram"></a>
-                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x/white" alt="X"></a>
-                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/linkedin/white"
-                                alt="LinkedIn"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x" alt="X"></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin" aria-label="LinkedIn"
+                                style="color: var(--footer-text);"></i></a>
                     </div>
                 </div>
                 <div>
@@ -255,6 +333,16 @@
                         <li style="margin-bottom: 10px;"><a href="#">Terms of Service</a></li>
                         <li><a href="#">Cookies</a></li>
                     </ul>
+                </div>
+                <div>
+                    <h4>Newsletter</h4>
+                    <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">Stay updated with the latest in tech PR and media trends.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit" class="btn btn-primary" title="Subscribe">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div

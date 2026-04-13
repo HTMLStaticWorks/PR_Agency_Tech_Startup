@@ -4,26 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | TechPulse PR</title>
+    <title>Client Dashboard | TechPulse PR</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet">
     <style>
+        body {
+            padding-top: 0 !important;
+        }
+
         .sidebar {
             display: flex;
             flex-direction: column;
             height: 100vh;
             padding: 30px 24px;
+            top: 0;
+            z-index: 2001; /* Above global header if any */
         }
 
         .sidebar-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 30px;
-            text-decoration: none;
+            margin-bottom: 40px;
+            padding: 0 16px;
         }
 
         .sidebar-nav {
@@ -35,13 +39,20 @@
         .sidebar-link {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
             padding: 12px 16px;
             border-radius: 12px;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             color: var(--text);
             opacity: 0.7;
             transition: var(--transition);
+        }
+
+        .sidebar-link i {
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         .sidebar-link:hover,
@@ -62,9 +73,9 @@
             background: rgba(255, 77, 77, 0.1);
             color: #ff4d4d !important;
             opacity: 1 !important;
-            justify-content: center;
+            justify-content: flex-start;
             border: 1px solid rgba(255, 77, 77, 0.2);
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         .logout-link:hover {
@@ -72,11 +83,29 @@
             color: #ffffff !important;
         }
 
+        .main-content {
+            padding: 0 !important;
+        }
+
         .dash-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 40px;
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            z-index: 1000;
+            width: 100% !important;
+            left: auto !important;
+            padding: 20px 40px !important;
+            border-bottom: 1px solid var(--border);
+            height: 80px;
+            box-sizing: border-box;
+        }
+
+        .dash-content {
+            padding: 0 40px 40px 40px;
         }
 
         .dash-card {
@@ -91,8 +120,25 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            padding: 16px 0;
+            padding: 12px 10px;
+            margin: 0 -10px;
+            border-radius: 10px;
             border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mention-item:hover {
+            background: var(--bg);
+        }
+
+        .mention-item i {
+            transition: var(--transition);
+        }
+
+        .mention-item:hover i {
+            color: var(--secondary);
+            transform: scale(1.1);
         }
 
         .mention-item:last-child {
@@ -148,6 +194,17 @@
             font-size: 0.8rem;
             opacity: 0.5;
             position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cal-day:hover {
+            opacity: 1;
+            background: var(--secondary);
+            color: var(--primary);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+            z-index: 2;
         }
 
         .cal-event {
@@ -163,9 +220,53 @@
             display: none;
         }
 
-        @media (max-width: 1023px) {
-            .sidebar-toggle-btn {
-                display: flex;
+        .dash-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1024px) {
+            .dash-header {
+                position: fixed !important;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                padding: 10px 20px !important;
+                gap: 10px;
+                z-index: 2000;
+                background: var(--bg);
+            }
+
+            .dash-content {
+                padding-top: 80px !important;
+            }
+
+            .dash-header h1 {
+                font-size: 1.2rem !important;
+                flex: 1;
+                margin: 0 !important;
+            }
+
+            .dash-header .nav-actions {
+                display: flex !important;
+                gap: 8px;
+            }
+
+            .dash-header .nav-actions button,
+            .dash-header .nav-actions .btn {
+                padding: 4px 8px !important;
+                font-size: 0.7rem !important;
+                min-width: auto;
+            }
+
+            .dash-header .nav-actions div {
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 0.8rem !important;
+            }
+
+            .hamburger,
+            #sidebar-close {
+                display: flex !important;
             }
         }
     </style>
@@ -176,10 +277,13 @@
     <div class="dashboard-layout">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <a href="index.html" class="sidebar-logo">
+            <button id="sidebar-close" class="mobile-close"
+                style="display: none; position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text); z-index: 10;">
+                <i data-lucide="x"></i>
+            </button>
+            <a href="index.html" class="sidebar-logo logo logo-accent">
                 <i data-lucide="zap" style="color: var(--secondary);"></i>
-                <span class="logo-text"
-                    style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem;">TECHPULSE</span>
+                <span>TECHPULSE</span>
             </a>
             <nav class="sidebar-nav">
                 <a href="#" class="sidebar-link active"><i data-lucide="layout-dashboard"></i> Overview</a>
@@ -195,22 +299,25 @@
         <!-- Main Content -->
         <main class="main-content">
             <header class="dash-header">
-                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                    <h1>Dashboard</h1>
-                    <button id="sidebar-menu-btn" class="sidebar-toggle-btn"
-                        style="background:none; border:none; cursor:pointer; color:var(--text);"><i
-                            data-lucide="menu"></i></button>
-                </div>
+                <button id="sidebar-menu-btn" class="hamburger"
+                    style="display: none; border: none; background: none; color: var(--text); padding: 0; cursor: pointer; margin-right: 15px;">
+                    <i data-lucide="menu"></i>
+                </button>
+                <h1 style="margin: 0; font-size: 1.5rem;">Dashboard</h1>
                 <div class="nav-actions">
-                    <button id="theme-toggle" class="toggle-btn"><i data-lucide="moon"></i></button>
+                    <button id="theme-toggle" class="toggle-btn" title="Toggle Theme"><i
+                            data-lucide="moon"></i></button>
+                    <button id="rtl-toggle" class="btn btn-secondary"
+                        style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
                     <div
-                        style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700;">
+                        style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary); display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; color: var(--primary);">
                         AR</div>
                 </div>
             </header>
 
-            <!-- Metrics -->
-            <div class="metrics-grid">
+            <div class="dash-content">
+                <!-- Metrics -->
+                <div class="metrics-grid">
                 <div class="metric-card">
                     <p style="font-size: 0.8rem; opacity: 0.6;">Media Reach</p>
                     <div class="metric-value">1.2M</div>
@@ -228,7 +335,7 @@
                 </div>
             </div>
 
-            <div class="grid" style="grid-template-columns: 1.5fr 1fr; gap: 24px;">
+            <div class="grid grid-responsive" style="gap: 24px;">
                 <!-- Media Mentions -->
                 <div class="dash-card">
                     <div
@@ -329,6 +436,7 @@
                     <div class="cal-day">31</div>
                 </div>
             </div>
+                </div>
         </main>
     </div>
 

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | TechPulse PR</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
     <link
@@ -15,11 +16,14 @@
 <body>
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo"><i data-lucide="zap"></i><span>TECHPULSE</span></a>
+            <a href="index.html" class="logo">
+                <i data-lucide="zap" style="color: var(--secondary);"></i>
+                <span>TECHPULSE</span>
+            </a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="home2.html">Home 2</a>
-                <a href="services.html" style="color: var(--secondary);">Services</a>
+                <a href="services.html" aria-current="page">Services</a>
                 <a href="case-studies.html">Case Studies</a>
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
@@ -42,7 +46,7 @@
         <div class="mobile-nav-links">
             <a href="index.html">Home</a>
             <a href="home2.html">Home 2</a>
-            <a href="services.html">Services</a>
+            <a href="services.html" aria-current="page">Services</a>
             <a href="case-studies.html">Case Studies</a>
             <a href="pricing.html">Pricing</a>
             <a href="contact.html">Contact</a>
@@ -50,7 +54,12 @@
                 <a href="login.html" class="btn btn-secondary">Login</a>
                 <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
             </div>
-            <button id="mobile-rtl-toggle" class="btn btn-secondary" style="margin-top: 10px; width: 100%;">RTL</button>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="mobile-theme-toggle" class="btn btn-secondary" style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 10px; border-radius: 8px;">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="mobile-rtl-toggle" class="btn btn-secondary" style="margin-top: 0; flex: 1; padding: 10px; font-size: 0.8rem;">RTL</button>
+            </div>
         </div>
     </div>
 
@@ -72,8 +81,8 @@
 
         <!-- NEW SECTION 1: THE AUDIT -->
         <section class="reveal" data-animation="fade-left" style="padding: 100px 0;">
-            <div class="container grid grid-responsive" style="grid-template-columns: 1fr 1fr; align-items: center;">
-                <div>
+            <div class="container grid grid-responsive" style="align-items: center;">
+                <div class="mobile-center-text">
                     <h2 style="font-size: 2.5rem; margin-bottom: 24px;">The PR Audit</h2>
                     <p style="opacity: 0.8; font-size: 1.1rem;">Before we pitch, we dissect. We analyze your tech, your
                         competitors, and your current share of voice to find the gaps in the market.</p>
@@ -94,12 +103,12 @@
 
         <!-- NEW SECTION 2: STRATEGY -->
         <section class="reveal" data-animation="fade-right" style="background: var(--card); padding: 100px 0;">
-            <div class="container grid grid-responsive" style="grid-template-columns: 1fr 1fr; align-items: center;">
+            <div class="container grid grid-responsive" style="align-items: center;">
                 <div style="border-radius: 20px; overflow: hidden;">
                     <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=2070"
                         style="width: 100%;">
                 </div>
-                <div style="padding-left: 40px;">
+                <div class="mobile-center-text" style="padding-left: 0;">
                     <h2 style="font-size: 2.5rem; margin-bottom: 24px;">Custom Strategy Phase</h2>
                     <p style="opacity: 0.8; font-size: 1.1rem;">No cookie-cutter campaigns. We build a bespoke roadmap
                         for your startup, aligning media milestones with your growth targets and funding rounds.</p>
@@ -111,7 +120,7 @@
         <section class="reveal" data-animation="zoom-in" style="padding: 100px 0; text-align: center;">
             <div class="container">
                 <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Precision Execution</h2>
-                <div class="grid grid-responsive" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="grid grid-flex">
                     <div class="card">
                         <i data-lucide="target" size="40" style="color: var(--secondary); margin-bottom: 20px;"></i>
                         <h3>Targeting</h3>
@@ -135,7 +144,7 @@
         <section class="reveal" data-animation="fade-in"
             style="background: var(--primary); color: white; padding: 100px 0;">
             <div class="container grid grid-responsive" style="align-items: center;">
-                <div>
+                <div class="mobile-center-text">
                     <h2 style="font-size: 2.5rem; margin-bottom: 24px;">Real-Time Data Reporting</h2>
                     <p style="opacity: 0.8; font-size: 1.1rem; margin-bottom: 30px;">PR shouldn't be a black box. Track
                         every mention, every pitch, and every impression through our proprietary client dashboard.</p>
@@ -150,7 +159,7 @@
 
         <section>
             <div class="container">
-                <div class="grid grid-responsive" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div class="grid grid-responsive" style="gap: 40px;">
                     <div class="card card-exception" style="padding: 40px;">
                         <i data-lucide="rocket" style="color: var(--secondary); margin-bottom: 24px;" size="48"></i>
                         <h2 style="margin-bottom: 16px;">Launch Acceleration</h2>
@@ -205,24 +214,28 @@
         </section>
     </main>
 
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <a href="#" class="logo" style="color: white; margin-bottom: 20px;">
+                    <a href="#" class="logo footer-logo" style="margin-bottom: 20px;">
                         <i data-lucide="zap" style="color: var(--secondary);"></i>
                         <span>TECHPULSE</span>
                     </a>
                     <p style="opacity: 0.7; margin-bottom: 20px;">Production-grade PR for the next generation of tech
                         titans.</p>
                     <div class="footer-socials">
-                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook/white"
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/facebook"
                                 alt="Facebook"></a>
-                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram/white"
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/instagram"
                                 alt="Instagram"></a>
-                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x/white" alt="X"></a>
-                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/linkedin/white"
-                                alt="LinkedIn"></a>
+                        <a href="#" class="social-link"><img src="https://cdn.simpleicons.org/x" alt="X"></a>
+                        <a href="#" class="social-link"><i data-lucide="linkedin" aria-label="LinkedIn"
+                                style="color: var(--footer-text);"></i></a>
                     </div>
                 </div>
                 <div>
@@ -241,6 +254,16 @@
                         <li style="margin-bottom: 10px;"><a href="#">Terms of Service</a></li>
                         <li><a href="#">Cookies</a></li>
                     </ul>
+                </div>
+                <div>
+                    <h4>Newsletter</h4>
+                    <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">Stay updated with the latest in tech PR and media trends.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit" class="btn btn-primary" title="Subscribe">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div

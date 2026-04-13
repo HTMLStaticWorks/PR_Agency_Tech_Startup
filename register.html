@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | TechPulse PR</title>
+    <title>Join TechPulse | Start Your PR Journey</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
     <link
@@ -122,6 +123,10 @@
             font-weight: 600;
         }
 
+        .auth-card a:not(.logo):hover {
+            text-decoration: underline;
+        }
+
         .auth-controls {
             position: fixed;
             top: 20px;
@@ -130,6 +135,36 @@
             align-items: center;
             gap: 15px;
             z-index: 1000;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper .toggle-pass {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .input-wrapper:hover .toggle-pass {
+            opacity: 0.6;
+        }
+
+        .input-wrapper .toggle-pass:hover {
+            opacity: 1 !important;
+            color: var(--secondary);
+        }
+
+        .auth-card a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 480px) {
@@ -144,17 +179,17 @@
 
 <body>
     <div class="auth-controls">
-        <button id="theme-toggle" class="toggle-btn" title="Toggle Theme">
-            <i data-lucide="moon"></i>
-        </button>
+        <button id="theme-toggle" class="toggle-btn" title="Toggle Theme"><i data-lucide="moon"></i></button>
         <button id="rtl-toggle" class="btn btn-secondary" style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
     </div>
 
     <div class="auth-wrapper">
+
+    <div class="auth-wrapper">
         <div class="auth-card">
             <div class="auth-header">
-                <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 20px;">
-                    <i data-lucide="zap"></i><span>TECHPULSE</span>
+                <a href="index.html" class="logo logo-accent" style="justify-content: center; margin-bottom: 20px;">
+                    <i data-lucide="zap" style="color: var(--secondary);"></i><span>TECHPULSE</span>
                 </a>
                 <h2>Create Your Account</h2>
                 <p style="opacity: 0.6;">Start scaling your visibility today</p>
@@ -169,15 +204,13 @@
             <div class="divider">OR USE COMPANY EMAIL</div>
 
             <form id="register-form">
-                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" class="form-control" placeholder="Jane Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Startup Name</label>
-                        <input type="text" class="form-control" placeholder="Velox AI" required>
-                    </div>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Startup Name</label>
+                    <input type="text" class="form-control" placeholder="Velox AI" required>
                 </div>
                 <div class="form-group">
                     <label>Work Email</label>
@@ -185,7 +218,10 @@
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control" placeholder="••••••••" required>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                        <i data-lucide="eye" class="toggle-pass" id="pass-toggle"></i>
+                    </div>
                 </div>
                 <div class="form-group"
                     style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; opacity: 0.8;">
@@ -204,6 +240,20 @@
         </div>
     </div>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('click', function (e) {
+            const toggle = e.target.closest('#pass-toggle');
+            if (toggle) {
+                const passInput = document.getElementById('password');
+                const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passInput.setAttribute('type', type);
+                if (window.lucide) {
+                    toggle.setAttribute('data-lucide', type === 'password' ? 'eye' : 'eye-off');
+                    lucide.createIcons();
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
