@@ -56,6 +56,16 @@ window.toggleMenu = function (show) {
         }
 
         // 3. RTL Management
+        const savedDir = localStorage.getItem('dir') || 'ltr';
+        document.documentElement.dir = savedDir;
+        
+        const syncRTLButtons = (isCurrentlyRTL) => {
+            document.querySelectorAll('#rtl-toggle, #mobile-rtl-toggle').forEach(b => {
+                b.textContent = isCurrentlyRTL ? 'LTR' : 'RTL';
+            });
+        };
+        syncRTLButtons(savedDir === 'rtl');
+
         const setupRTL = (id) => {
             const btn = document.getElementById(id);
             if (btn) {
@@ -63,11 +73,8 @@ window.toggleMenu = function (show) {
                     const isRTL = document.documentElement.dir === 'rtl';
                     const targetDir = isRTL ? 'ltr' : 'rtl';
                     document.documentElement.dir = targetDir;
-
-                    // Sync all RTL buttons text
-                    document.querySelectorAll('#rtl-toggle, #mobile-rtl-toggle').forEach(b => {
-                        b.textContent = isRTL ? 'RTL' : 'LTR';
-                    });
+                    localStorage.setItem('dir', targetDir);
+                    syncRTLButtons(targetDir === 'rtl');
                 };
             }
         };

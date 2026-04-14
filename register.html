@@ -147,15 +147,11 @@
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
-            opacity: 0;
+            opacity: 0.6;
             transition: var(--transition);
             display: flex;
             align-items: center;
             z-index: 10;
-        }
-
-        .input-wrapper:hover .toggle-pass {
-            opacity: 0.6;
         }
 
         .input-wrapper .toggle-pass:hover {
@@ -163,7 +159,7 @@
             color: var(--secondary);
         }
 
-        .auth-card a:hover {
+        .auth-card a:not(.logo):hover {
             text-decoration: underline;
         }
 
@@ -177,7 +173,7 @@
     </style>
 </head>
 
-<body>
+<body class="auth-body">
     <div class="auth-controls">
         <button id="theme-toggle" class="toggle-btn" title="Toggle Theme"><i data-lucide="moon"></i></button>
         <button id="rtl-toggle" class="btn btn-secondary" style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>

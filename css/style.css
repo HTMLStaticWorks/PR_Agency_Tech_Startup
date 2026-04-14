@@ -222,6 +222,11 @@ body {
     padding-top: 80px;
 }
 
+body.auth-body {
+    padding-top: 0;
+    overflow: hidden;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -254,31 +259,15 @@ body {
 
 
 
+@media (max-width: 1024px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .logo {
         font-size: 1.2rem;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .footer-logo {
-        justify-content: center;
-    }
-
-    .footer-socials {
-        justify-content: center;
-    }
-
-    .newsletter-form {
-        justify-content: center;
-    }
-
-    footer ul {
-        padding: 0;
     }
 }
 
@@ -581,7 +570,24 @@ footer ul a:hover {
     opacity: 0.8;
 }
 
-/* --- DASHBOARD --- */
+.impact-metrics, .media-cloud {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .impact-metrics, .media-cloud {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 40px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .impact-metrics, .media-cloud {
+        grid-template-columns: 1fr;
+    }
+}
+
 .dashboard-layout {
     display: flex;
     min-height: 100vh;
@@ -826,12 +832,19 @@ footer ul a:hover {
     }
     
     .about-content ul {
-        display: inline-block;
+        display: block;
+        width: fit-content;
+        margin: 0 auto 30px auto;
         text-align: left;
     }
     
     .about-content li {
-        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .about-content .btn {
+        display: inline-block;
+        margin: 0 auto;
     }
 
     .vision-text, .exec-text, .mobile-center-text {
@@ -881,3 +894,87 @@ footer ul a:hover {
     }
 }
 
+
+/* Responsive Footer Overrides */
+@media (max-width: 1024px) {
+    footer .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 40px;
+    }
+
+    footer .footer-logo {
+        justify-content: center;
+    }
+
+    footer .footer-socials {
+        justify-content: center;
+    }
+
+    footer .newsletter-form {
+        justify-content: center;
+    }
+
+    footer ul {
+        padding: 0;
+        text-align: center;
+    }
+    
+    footer .container > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --- AUTH PAGES BRANDING --- */
+.auth-header .logo {
+    font-size: 2rem !important;
+}
+
+.auth-header h2 {
+    font-size: 1.5rem !important;
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    .auth-header .logo {
+        font-size: 1.9rem !important;
+    }
+
+    .auth-header h2 {
+        font-size: 1.4rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .auth-header .logo {
+        font-size: 1.8rem !important;
+    }
+
+    .auth-header h2 {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* --- DARK MODE CONTRAST --- */
+[data-theme="dark"] .footer-socials a,
+[data-theme="dark"] .contact-social a {
+    color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .footer-socials a i,
+[data-theme="dark"] .contact-social a svg {
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+}
+
+[data-theme="dark"] .social-link i {
+    color: #FFFFFF !important;
+}
+
+/* Specific fix for X icon image which is a static IMG from CDN */
+[data-theme="dark"] .footer-socials .social-link img[alt="X"],
+[data-theme="dark"] .contact-social .social-link img[alt="X"] {
+    filter: invert(1) brightness(10) !important;
+}

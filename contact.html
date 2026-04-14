@@ -16,7 +16,8 @@
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 60px;
-            padding: 80px 0;
+            padding: 80px 20px;
+            margin: 0 auto;
         }
 
         .contact-info {
@@ -33,6 +34,7 @@
             align-items: center;
             gap: 20px;
             border: 1px solid var(--border);
+            width: 100%;
         }
 
         .icon-box {
@@ -134,9 +136,14 @@
         @media (max-width: 1024px) {
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 20px;
             }
             .contact-social {
                 justify-content: center;
+            }
+            .contact-form-container {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -156,10 +163,10 @@
                 <a href="case-studies.html">Case Studies</a>
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html" aria-current="page">Contact</a>
-                <a href="login.html" class="btn btn-secondary" style="padding: 8px 16px;">Login</a>
-                <a href="dashboard.html" class="btn btn-primary" style="padding: 8px 16px;">Dashboard</a>
             </nav>
             <div class="nav-actions">
+                <a href="dashboard.html" class="btn btn-primary" style="padding: 8px 16px;">Dashboard</a>
+                <a href="login.html" class="btn btn-secondary" style="padding: 8px 16px;">Login</a>
                 <button id="theme-toggle" class="toggle-btn"><i data-lucide="moon"></i></button>
                 <button id="rtl-toggle" class="btn btn-secondary"
                     style="padding: 4px 12px; font-size: 0.8rem;">RTL</button>
@@ -180,8 +187,9 @@
             <a href="pricing.html">Pricing</a>
             <a href="contact.html" aria-current="page">Contact</a>
             <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
-                <a href="login.html" class="btn btn-secondary">Login</a>
+                
                 <a href="dashboard.html" class="btn btn-primary">Dashboard</a>
+                <a href="login.html" class="btn btn-secondary">Login</a>
             </div>
             <div style="display: flex; gap: 10px; margin-top: 20px;">
                 <button id="mobile-theme-toggle" class="btn btn-secondary" style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 10px; border-radius: 8px;">
